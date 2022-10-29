@@ -1,7 +1,36 @@
+@font-face {
+  font-family: "Josefin Sans";
+  src: url(./assets/JosefinSans-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Bagnard";
+  src: url(./assets/Bagnard.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url(./assets/AtkinsonHyperlegible-Regular.ttf) format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url(./assets/AtkinsonHyperlegible-Bold.ttf) format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url(./assets/AtkinsonHyperlegible-Italic.ttf) format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
 :root {
-  font-family: Arial, sans-serif;
+  font-family: "Josefin Sans", Arial, sans-serif;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.15;
 
   color-scheme: light dark;
 
@@ -15,9 +44,4 @@
 body {
   margin: 0;
   min-height: 100vh;
-}
-
-#app {
-  margin: 0 auto;
-  text-align: center;
 }
