@@ -9,7 +9,7 @@
 
 <style scoped>
 .navigation-bar {
-  margin: 10px 0;
+  margin: 5vh 0;
   display: flex;
   justify-content: center;
   gap: 2vw;
