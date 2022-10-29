@@ -2,6 +2,7 @@
 import LogoVue from '../components/Logo.vue';
 import SloganVue from '../components/Slogan.vue';
 import SocialsBar from "../components/SocialsBar.vue"
+import SocialButton from "../components/SocialButton.vue"
 import NavigationButton from "../components/NavigationButton.vue"
 import NavigationBar from "../components/NavigationBar.vue"
 </script>
@@ -9,9 +10,14 @@ import NavigationBar from "../components/NavigationBar.vue"
 <template>
   <div class="home">
     <div class="home__info info">
-      <LogoVue />
-      <SocialsBar />
-      <SloganVue />
+      <LogoVue class="info__logo" />
+      <SocialsBar class="info__socials">
+        <SocialButton src="../assets/gradient-background.svg">G</SocialButton>
+        <SocialButton>I</SocialButton>
+        <SocialButton>T</SocialButton>
+        <SocialButton>+</SocialButton>
+      </SocialsBar>
+      <SloganVue class="info__slogan" />
     </div>
     <div class="home__navigation">
       <NavigationBar>
@@ -31,7 +37,7 @@ import NavigationBar from "../components/NavigationBar.vue"
   grid-template-areas:
     "info"
     "navigation";
-  grid-template-rows: 50% 50%;
+  grid-template-rows: min-content auto;
 }
 
 .home__info {
@@ -53,6 +59,21 @@ import NavigationBar from "../components/NavigationBar.vue"
     "logo socials"
     "slogan socials";
   grid-template-columns: auto min-content;
+}
+
+.info__logo {
+  grid-area: logo;
+  align-self: flex-end;
+}
+
+.info__socials {
+  grid-area: socials;
+  align-self: center;
+}
+
+.info__slogan {
+  grid-area: slogan;
+  align-self: flex-start;
 }
 
 @media only screen and (min-width: 110vmin) {
