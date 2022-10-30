@@ -2,7 +2,6 @@
 import LogoVue from '../components/Logo.vue';
 import SloganVue from '../components/Slogan.vue';
 import SocialsBar from "../components/SocialsBar.vue"
-import SocialButton from "../components/SocialButton.vue"
 import NavigationButton from "../components/NavigationButton.vue"
 import NavigationBar from "../components/NavigationBar.vue"
 </script>
@@ -11,12 +10,7 @@ import NavigationBar from "../components/NavigationBar.vue"
   <div class="home">
     <div class="home__info info">
       <LogoVue class="info__logo" />
-      <SocialsBar class="info__socials">
-        <SocialButton src="../assets/gradient-background.svg">G</SocialButton>
-        <SocialButton>I</SocialButton>
-        <SocialButton>T</SocialButton>
-        <SocialButton>+</SocialButton>
-      </SocialsBar>
+      <SocialsBar class="info__socials" />
       <SloganVue class="info__slogan" />
     </div>
     <div class="home__navigation">
