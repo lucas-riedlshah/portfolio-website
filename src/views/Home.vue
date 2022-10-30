@@ -4,21 +4,30 @@ import SloganVue from '../components/Slogan.vue';
 import SocialsBar from "../components/SocialsBar.vue"
 import NavigationButton from "../components/NavigationButton.vue"
 import NavigationBar from "../components/NavigationBar.vue"
+import SocialButton from "../components/SocialButton.vue"
+import githubIconUrl from "../assets/GitHub.svg"
+import instagramIconUrl from "../assets/Instagram.svg"
+import twitterIconUrl from "../assets/Twitter.svg"
 </script>
 
 <template>
   <div class="home">
     <div class="home__info info">
       <LogoVue class="info__logo" />
-      <SocialsBar class="info__socials" />
+      <SocialsBar class="info__socials">
+        <SocialButton :src=githubIconUrl href="https://github.com/generatively/" />
+        <SocialButton :src=instagramIconUrl href="https://www.instagram.com/lucas_riedlshah/" />
+        <SocialButton :src=twitterIconUrl href="https://twitter.com/Lucas_RiedlShah" />
+        <!-- <SocialButton>+</SocialButton> -->
+      </SocialsBar>
       <SloganVue class="info__slogan" />
     </div>
     <div class="home__navigation">
       <NavigationBar>
-        <NavigationButton>Projects</NavigationButton>
-        <NavigationButton>Work</NavigationButton>
-        <NavigationButton>Blog</NavigationButton>
-        <NavigationButton>Contact</NavigationButton>
+        <NavigationButton to="/projects">Projects</NavigationButton>
+        <NavigationButton to="/work">Work</NavigationButton>
+        <NavigationButton to="/blog">Blog</NavigationButton>
+        <NavigationButton to="/contact">Contact</NavigationButton>
       </NavigationBar>
     </div>
   </div>
@@ -74,7 +83,7 @@ import NavigationBar from "../components/NavigationBar.vue"
   .home {
     grid-template-areas: "info navigation";
     grid-template-rows: initial;
-    grid-template-columns: min-content minmax(auto, 50vw); /** trying to get a gap inbetween the two columns but only sometimes... */
+    grid-template-columns: min-content minmax(auto, 50vw);
     justify-content: space-between;
   }
 

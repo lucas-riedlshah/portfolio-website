@@ -1,16 +1,9 @@
 <script setup lang="ts">
-import SocialButton from "../components/SocialButton.vue"
-import githubIconUrl from "../assets/GitHub.svg"
-import instagramIconUrl from "../assets/Instagram.svg"
-import twitterIconUrl from "../assets/Twitter.svg"
 </script>
 
 <template>
   <div class="socials-bar">
-    <SocialButton :src=githubIconUrl />
-    <SocialButton :src=instagramIconUrl />
-    <SocialButton :src=twitterIconUrl />
-    <!-- <SocialButton>+</SocialButton> -->
+    <slot></slot>
   </div>
 </template>
 

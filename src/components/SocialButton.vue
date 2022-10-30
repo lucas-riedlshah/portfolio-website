@@ -1,13 +1,13 @@
 <script setup lang="ts">
 
-defineProps<{ src?: string }>()
+defineProps<{ src?: string, href?: string }>()
 
 </script>
 
 <template>
-  <div class="social-button" :style="{ backgroundImage: src ? `url('${src}')` : '' }">
+  <a class="social-button" :style="{ backgroundImage: src ? `url('${src}')` : '' }" :href="href" target="_blank">
     <slot></slot>
-  </div>
+  </a>
 </template>
 
 <style scoped>
@@ -25,6 +25,15 @@ defineProps<{ src?: string }>()
   background-size: 70%;
   background-repeat: no-repeat;
   background-position: center center;
+  transition: box-shadow 0.2s;
+}
+
+.social-button:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.social-button:active {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 @media only screen and (min-width: 110vmin) {
