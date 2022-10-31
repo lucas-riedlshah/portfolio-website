@@ -19,7 +19,18 @@ const router = createRouter({
     },
     {
       path: "/projects/:project",
-      component: Projects,
+      redirect(to) {
+        if (
+          [
+            "/projects/ethereal-deviations",
+            "/projects/ethereal",
+            "/projects/central-vibrance",
+            "/projects/density",
+          ].includes(to.path)
+        )
+          window.location.href = "https://old.generatively.xyz" + to.path;
+        return { path: "/projects" };
+      },
     },
     {
       path: "/menu",
@@ -27,19 +38,6 @@ const router = createRouter({
       component: MainMenu,
     },
   ],
-});
-
-// Temp redirect to old site for projects.
-router.afterEach((guard) => {
-  if (
-    [
-      "/projects/ethereal-deviations",
-      "/projects/ethereal",
-      "/projects/central-vibrance",
-      "/projects/density",
-    ].includes(guard.path)
-  )
-    window.open('https://old.generatively.xyz' + guard.path);
 });
 
 export default router;
