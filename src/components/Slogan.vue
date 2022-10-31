@@ -2,8 +2,7 @@
 </script>
 
 <template>
-  <p class="slogan">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, omnis est? Ipsam dolores adipisci asperiores
-    similique ducimus commodi ab neque delectus iusto at. A minus corrupti illo, suscipit architecto omnis?</p>
+  <p class="slogan">I am a software developer located in Auckland, New Zealand. Sometimes I do stuff and post it here.</p>
 </template>
 
 <style scoped>
