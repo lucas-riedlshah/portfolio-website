@@ -71,6 +71,9 @@ import twitterIconUrl from "../assets/Twitter.svg"
 .info__socials {
   grid-area: socials;
   align-self: center;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .info__slogan {
@@ -95,6 +98,11 @@ import twitterIconUrl from "../assets/Twitter.svg"
     grid-template-columns: initial;
     grid-template-rows: min-content min-content min-content;
     align-content: center;
+  }
+
+  .info__socials {
+    flex-direction: row;
+    justify-content: flex-start;
   }
 }
 </style>
