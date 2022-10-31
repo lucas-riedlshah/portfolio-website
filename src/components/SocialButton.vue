@@ -5,21 +5,36 @@ defineProps<{ src?: string, href?: string }>()
 </script>
 
 <template>
-  <a class="social-button" :style="{ backgroundImage: src ? `url('${src}')` : '' }" :href="href" target="_blank">
-    <slot></slot>
+  <a class="social-button" :href="href" target="_blank">
+    <div class="social-button__button" :style="{ backgroundImage: src ? `url('${src}')` : '' }" >
+      <slot></slot>
+    </div>
   </a>
 </template>
 
 <style scoped>
 .social-button {
-  --shadow-color: 0, 0, 0;
   --size: clamp(60px, 10vw, 100px);
-  width: var(--size);
-  height: var(--size);
+  font-size: var(--size);
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  font-size: var(--size);
+  transition: padding 0.2s;
+  padding: 0.1em 0;
+}
+
+.social-button:hover {
+  padding: 0.05em 0 0.15em 0;
+}
+
+.social-button:active {
+  padding: 0 0 0.2em 0;
+}
+
+.social-button__button {
+  --shadow-color: 0, 0, 0;
+  width: var(--size);
+  height: var(--size);
   line-height: 1;
   border-radius: 100%;
   box-shadow: 0 0 10px rgba(var(--shadow-color), 0.1);
@@ -27,18 +42,15 @@ defineProps<{ src?: string, href?: string }>()
   background-size: 70%;
   background-repeat: no-repeat;
   background-position: center center;
-  margin: 0.1em 0;
-  transition: box-shadow 0.2s, margin 0.2s;
+  transition: box-shadow 0.2s;
 }
 
-.social-button:hover {
+.social-button:hover > .social-button__button {
   box-shadow: 0 5px 15px rgba(var(--shadow-color), 0.15);
-  margin: 0.05em 0 0.15em 0;
 }
 
-.social-button:active {
+.social-button:active > .social-button__button {
   box-shadow: 0 10px 20px rgba(var(--shadow-color), 0.2);
-  margin: 0 0 0.2em 0;
 }
 
 @media only screen and (min-width: 110vmin) {
@@ -48,7 +60,7 @@ defineProps<{ src?: string, href?: string }>()
 }
 
 @media (prefers-color-scheme: dark) {
-  .social-button {
+  .social-button__button {
     background-color: rgb(25, 25, 25);
     outline: 1pt solid rgb(30, 30, 30);
     --shadow-color: 220, 220, 220;
