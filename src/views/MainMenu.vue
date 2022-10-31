@@ -26,8 +26,4 @@ import twitterIconUrl from "../assets/Twitter.svg"
 .socials {
   margin-bottom: min(1.5rem, 3vw);
 }
-
-.socials > * {
-  background-color: white;
-}
 </style>
