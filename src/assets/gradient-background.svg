@@ -25,6 +25,20 @@
     circle {
       animation: pivot infinite linear;
     }
+
+    .circle-1 {fill: #A2237E; animation-delay: -3s; animation-duration: 11s;}
+    .circle-2 {fill: #E9B99B; animation-delay: -7s; animation-duration: 17s;}
+    .circle-3 {fill: #2D2C7E; animation-delay: -11s; animation-duration: 19s;}
+    .circle-4 {fill: #321B5A; animation-delay: -17s; animation-duration: 23s;}
+    .circle-5 {fill: #C55236; animation-delay: -19s; animation-duration: 31s;}
+
+    @media (prefers-color-scheme: dark) {
+      .circle-2 {fill: #01162E;}
+      .circle-5 {fill: #001D37;}
+      .circle-1 {fill: #002746;}
+      .circle-3 {fill: #013155;}
+      .circle-4 {fill: #003A63;}
+    }
   </style>
 
   <clipPath id="border-clip">
@@ -34,11 +48,11 @@
   <g clip-path="url(#border-clip)">
     <rect width="100" height="100" fill="#0E0B21" />
     <g filter="blur(15px)">
-      <circle style="animation-delay: -3s; animation-duration: 11s;" fill="#A2237E" cx="56" cy="79" r="60" />
-      <circle style="animation-delay: -7s; animation-duration: 17s;" fill="#E9B99B" cx="15" cy="37" r="58" />
-      <circle style="animation-delay: -11s; animation-duration: 19s;" fill="#2D2C7E" cx="10" cy="-35" r="71" />
-      <circle style="animation-delay: -17s; animation-duration: 23s;" fill="#321B5A" cx="119" cy="4" r="54" />
-      <circle style="animation-delay: -19s; animation-duration: 31s;" fill="#C55236" cx="6" cy="117" r="50" />
+      <circle class="circle-1" cx="56" cy="79" r="60" />
+      <circle class="circle-2" cx="15" cy="37" r="58" />
+      <circle class="circle-3" cx="10" cy="-35" r="71" />
+      <circle class="circle-4" cx="119" cy="4" r="54" />
+      <circle class="circle-5" cx="6" cy="117" r="50" />
     </g>
   </g>
 </svg>

@@ -35,4 +35,12 @@ defineProps<{ to: string }>();
 .menu-item:last-child {
   border-bottom: 0.04em solid white;
 }
+
+@media (prefers-color-scheme: dark) {
+
+  .menu-item,
+  .menu-item:last-child {
+    border-width: 0.02em;
+  }
+}
 </style>
