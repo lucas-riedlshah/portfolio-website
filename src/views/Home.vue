@@ -22,7 +22,7 @@ import twitterIconUrl from "../assets/Twitter.svg"
       </SocialsBar>
       <SloganVue class="info__slogan" />
     </div>
-    <div class="home__navigation">
+    <div class="home__navigation gradient-background">
       <NavigationBar>
         <NavigationButton to="/projects">Projects</NavigationButton>
         <NavigationButton to="/work">Work</NavigationButton>
@@ -50,10 +50,9 @@ import twitterIconUrl from "../assets/Twitter.svg"
 
 .home__navigation {
   grid-area: navigation;
-  background-image: url("../assets/gradient-background.svg");
-  background-size: cover;
-  background-position: center center;
-  color: white;
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
 
 .info {
