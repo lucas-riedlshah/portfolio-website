@@ -8,7 +8,7 @@ import MenuContainer from '../components/MenuContainer.vue';
   <div class="menu gradient-background">
     <LogoVue small class="menu__logo" />
     <CloseButton class="menu__close-button" />
-    <MenuContainer class="menu__menu">
+    <MenuContainer class="menu__list">
       <slot></slot>
     </MenuContainer>
   </div>
@@ -36,11 +36,7 @@ import MenuContainer from '../components/MenuContainer.vue';
   justify-self: self-end;
 }
 
-.menu__menu {
+.menu__list {
   grid-area: menu;
-}
-
-.menu__menu > * {
-  white-space: nowrap;
 }
 </style>
