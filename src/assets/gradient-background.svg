@@ -23,7 +23,13 @@
     }
 
     circle {
-      animation: pivot infinite linear;
+      animation: none;
+    }
+
+    @media not (prefers-reduced-motion) and (min-width: 1000px) {
+      circle {
+        animation: pivot infinite linear;
+      }
     }
 
     .circle-1 {fill: #A2237E; animation-delay: -3s; animation-duration: 11s;}
