@@ -10,6 +10,12 @@ import instagramIconUrl from "../assets/Instagram.svg"
 import twitterIconUrl from "../assets/Twitter.svg"
 </script>
 
+<route lang="yaml">
+  alias: '/'
+  meta:
+    layout: Empty
+</route>
+
 <template>
   <div class="home">
     <div class="home__info info">

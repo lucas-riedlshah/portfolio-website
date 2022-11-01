@@ -7,6 +7,11 @@ import instagramIconUrl from "../assets/Instagram.svg"
 import twitterIconUrl from "../assets/Twitter.svg"
 </script>
 
+<route lang="yaml">
+  meta:
+    layout: Menu
+</route>
+
 <template>
   <SocialsBar class="socials">
     <SocialButton :src=githubIconUrl href="https://github.com/generatively/" />
