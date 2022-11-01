@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import CloseButton from '../components/CloseButton.vue';
+import MenuButton from '../components/MenuButton.vue';
 import LogoVue from '../components/Logo.vue';
 </script>
 
 <template>
   <div class="container">
     <LogoVue small class="container__logo" />
-    <CloseButton class="container__close-button" />
+    <MenuButton class="container__menu-button" />
     <div class="container__content">
       <RouterView />
     </div>
@@ -30,7 +30,7 @@ import LogoVue from '../components/Logo.vue';
   grid-area: logo;
 }
 
-.container__close-button {
+.container__menu-button {
   grid-area: close-button;
   justify-self: self-end;
 }
