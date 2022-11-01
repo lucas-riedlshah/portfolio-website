@@ -52,3 +52,14 @@ body {
   background-position: center center;
   color: white;
 }
+
+/* markdown styling */
+
+.markdown-body {
+  font-size: clamp(1em, 2vw, 2rem);
+  font-family: "Atkinson Hyperlegible";
+}
+
+.markdown-body h1 {
+  text-align: center;
+}

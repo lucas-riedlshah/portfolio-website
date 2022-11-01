@@ -18,7 +18,7 @@ import LogoVue from '../components/Logo.vue';
   padding: 1.5rem;
   min-height: calc(100vh - 3rem);
   height: 100%;
-  width: calc(100vmin - 3rem);
+  width: calc(min(100vw, 1100px) - 3rem);
   margin: 0 auto;
   display: grid;
   grid-template-areas:
