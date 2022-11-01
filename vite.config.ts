@@ -4,6 +4,7 @@ import pages from 'vite-plugin-pages'
 import layouts from 'vite-plugin-vue-layouts'
 import markdown from 'vite-plugin-vue-markdown'
 import prism from 'markdown-it-prism'
+import anchor from 'markdown-it-anchor'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -12,7 +13,7 @@ export default defineConfig({
       include: [/\.vue$/, /\.md$/],
     }),
     markdown({
-      markdownItUses: [prism]
+      markdownItUses: [prism, [anchor, { permalink: anchor.permalink.headerLink() }]]
     }),
     pages({
       dirs: ['src/views'],

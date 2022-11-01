@@ -63,3 +63,8 @@ body {
 .markdown-body h1 {
   text-align: center;
 }
+
+.markdown-body .header-anchor {
+  text-decoration: none;
+  color: inherit;
+}
