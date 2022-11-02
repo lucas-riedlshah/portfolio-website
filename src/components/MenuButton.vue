@@ -5,8 +5,7 @@
 
 <style scoped>
 .menu-button {
-  font-size: calc(2.7 * min(1.8rem, 10vw));
-  line-height: 1;
+  font-size: calc(2.5 * min(1.8rem, 10vw));
   text-decoration: none;
   color: inherit;
 }
