@@ -1,7 +1,12 @@
-import { createApp } from 'vue'
-import './style.css'
-import 'prism-themes/themes/prism-lucario.css'
-import App from './App.vue'
-import router from './router'
+import { createApp } from "vue";
+import "prism-themes/themes/prism-lucario.css";
 
-createApp(App).use(router).mount('#app')
+import "./style.css";
+import App from "./App.vue";
+import router from "./router";
+import ImageGallery from "./components/ImageGallery.vue";
+
+createApp(App)
+  .use(router)
+  .component("ImageGallery", ImageGallery)
+  .mount("#app");

@@ -1,1 +1,0 @@
-# [View Central Vibrance on the old website.](https://old.generatively.xyz/projects/central-vibrance)
