@@ -1,43 +1,68 @@
 <script setup lang="ts">
 import MenuButton from '../components/MenuButton.vue';
 import LogoVue from '../components/Logo.vue';
+import smileIconUrl from '../assets/smile.svg'
 </script>
 
 <template>
   <div class="container">
-    <LogoVue small class="container__logo" />
-    <MenuButton class="container__menu-button" />
-    <div class="container__content">
+    <div class="top-bar">
+      <LogoVue small class="top-bar__logo" />
+      <MenuButton class="top-bar__menu-button" />
+    </div>
+    <div class="content">
       <RouterView />
     </div>
+    <div class="smile" :style="{ backgroundImage: `url('${smileIconUrl}')` }"></div>
   </div>
 </template>
 
 <style scoped>
 .container {
-  padding: 1.5rem;
   min-height: calc(100vh - 3rem);
   height: 100%;
-  width: calc(min(100vw, 1100px) - 3rem);
-  margin: 0 auto;
+}
+
+.top-bar {
+  padding: 1.5rem;
   display: grid;
-  grid-template-areas:
-    "logo close-button"
-    "container container";
   grid-template-columns: min-content auto;
-  grid-template-rows: min-content auto;
 }
 
-.container__logo {
-  grid-area: logo;
-}
-
-.container__menu-button {
-  grid-area: close-button;
+.top-bar__menu-button {
   justify-self: self-end;
 }
 
-.container__content {
-  grid-area: container;
+.top-bar,
+.content>* {
+  width: calc(min(100%, 1100px) - 3rem);
+  margin-inline: auto;
+}
+
+.smile {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: 50vmin;
+  background-position: center center;
+  opacity: 0.025;
+}
+
+@media (prefers-color-scheme: dark) {
+  .smile {
+    filter: invert();
+  }
+}
+</style>
+
+<style>
+.content>.markdown-body>* {
+  width: calc(min(100%, 1100px) - 3rem);
+  margin-inline: auto;
+}
+
+.content>.markdown-body,
+.content>.markdown-body>*.full-width {
+  width: initial;
+  margin: initial;
 }
 </style>
