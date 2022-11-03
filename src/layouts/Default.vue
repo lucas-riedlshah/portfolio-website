@@ -49,8 +49,8 @@ function handleScroll() {
   display: grid;
   grid-template-columns: min-content auto;
   z-index: 2;
-  color: white;
-  background-color: black;
+  background-color: white;
+  border-bottom: 1px solid black;
   transition: top 0.2s;
 }
 
@@ -79,6 +79,10 @@ function handleScroll() {
 }
 
 @media (prefers-color-scheme: dark) {
+  .top-bar {
+    background-color: black;
+  }
+
   .smile {
     filter: invert();
   }
