@@ -4,8 +4,8 @@ import LogoVue from '../components/Logo.vue';
 import smileIconUrl from '../assets/smile.svg';
 import { onMounted, onUnmounted, ref } from 'vue';
 
-let previousScrollY = window.scrollY
-let hideTopBar = ref(true);
+let previousScrollY = Infinity
+let hideTopBar = ref(false);
 
 onMounted(() => {
   window.addEventListener("scroll", handleScroll)
