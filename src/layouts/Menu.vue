@@ -9,7 +9,7 @@ import MenuContainer from '../components/MenuContainer.vue';
     <LogoVue small class="menu__logo" />
     <CloseButton class="menu__close-button" />
     <MenuContainer class="menu__list">
-      <RouterView />
+      <RouterView :key="$route.fullPath" /> <!-- The key attribute ensures that the component is updated on route change.-->
     </MenuContainer>
   </div>
 </template>
