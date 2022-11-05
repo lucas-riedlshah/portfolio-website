@@ -12,6 +12,7 @@ import twitterIconUrl from "../assets/Twitter.svg"
   meta:
     gradientBackground: true
     isMenu: true
+    isMainMenu: true
 </route>
 
 <template>
@@ -33,8 +34,4 @@ import twitterIconUrl from "../assets/Twitter.svg"
   margin: min(1.5rem, 3vw);
   justify-content: center;
 }
-</style>
-
-<style>
-.menu-button { display: none }
 </style>

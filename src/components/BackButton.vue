@@ -2,10 +2,11 @@
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
-function close() {
+function back() {
   if (router.options.history.state.back) {
     router.back();
   } else {
+    // If there is no previous page (or if it would be leaving the site), redirect to home page.
     router.push('/');
   }
 }
@@ -14,13 +15,11 @@ function close() {
 
 <template>
   <!-- Check route after back to go home if no back exists. -->
-  <a class="close-button" @click="close()">X</a>
+  <a class="back-button" @click="back()">&larr;</a>
 </template>
 
 <style scoped>
-.close-button {
-  font-size: calc(2.7 * min(1.8rem, 10vw));
-  line-height: 1;
+.back-button {
   cursor: pointer;
   user-select: none;
 }

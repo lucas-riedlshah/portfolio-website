@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import MenuButton from '../components/MenuButton.vue';
+import BackButton from '../components/BackButton.vue';
 import LogoVue from '../components/Logo.vue';
 import smileIconUrl from '../assets/smile.svg';
 import { onMounted, onUnmounted, ref } from 'vue';
@@ -23,17 +24,18 @@ function handleScroll() {
 </script>
 
 <template>
-  <div :class="{ 'container': true, 'gradient-background': $route.meta.gradientBackground, 'container--is-menu': $route.meta.isMenu }">
+  <div :class="{ 'container': true, 'gradient-background': $route.meta.gradientBackground }">
     <div
       :class="{ 'top-bar': true, 'top-bar--hidden': hideTopBar, 'gradient-background': $route.meta.gradientBackground }">
-      <LogoVue small class="top-bar__logo" />
-      <MenuButton class="top-bar__menu-button" />
+      <BackButton />
+      <LogoVue small />
+      <MenuButton :style="{ display: $route.meta.isMainMenu ? 'none' : '' }" />
     </div>
     <div class="content">
       <RouterView :key="$route.fullPath" />
       <!-- The key attribute ensures that the component is updated on route change.-->
     </div>
-    <div class="smile" :style="{ backgroundImage: `url('${smileIconUrl}')` }"></div>
+    <div class="smile" :style="{ backgroundImage: `url('${smileIconUrl}')`, display: $route.meta.isMenu ? 'none' : '' }"></div>
   </div>
 </template>
 
@@ -43,12 +45,15 @@ function handleScroll() {
 }
 
 .top-bar {
+  font-size: calc(2.5 * min(1.8rem, 5vw));
   position: sticky;
   top: 0;
   padding: 1.5rem;
   padding-inline: calc(0.5 * (100% - (min(100%, 1100px) - 3rem)));
   display: grid;
-  grid-template-columns: min-content auto;
+  grid-template-columns: 3ex auto 3ex;
+  justify-items: center;
+  align-items: center;
   z-index: 2;
   background-color: white;
   border-bottom: 1px solid black;
@@ -57,14 +62,6 @@ function handleScroll() {
 
 .top-bar--hidden {
   top: -8rem;
-}
-
-.top-bar>a {
-  margin-bottom: -0.4ch;
-}
-
-.top-bar__menu-button {
-  justify-self: self-end;
 }
 
 .content>* {
@@ -93,10 +90,6 @@ function handleScroll() {
 <style>
 .top-bar.gradient-background {
   border-bottom: 1px solid white;
-}
-
-.container--is-menu .smile {
-  display: none;
 }
 
 .content>.markdown-body>* {
