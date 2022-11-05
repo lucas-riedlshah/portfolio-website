@@ -49,7 +49,7 @@ body {
 .gradient-background {
   background-image: url("./assets/gradient-background.svg");
   background-size: cover;
-  background-position: center center;
+  background-position: top center;
   color: white;
 }
 

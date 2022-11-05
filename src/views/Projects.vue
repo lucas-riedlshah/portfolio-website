@@ -13,21 +13,16 @@ function getMenuItems(path: string) {
     .map(e => e.path
       .split('/')
       .slice(path.split('/').length))
-    .map(e => e[0])
-    )
+    .map(e => e[0]))
   ]
     .map(e => [e.split('-').map(w => w[0].toUpperCase() + w.slice(1)).join(' '), path + '/' + e])
 }
 
 let menuItems = ref(getMenuItems(router.currentRoute.value.path));
-
 </script>
 
-<route lang="yaml">
-  meta:
-    layout: Menu
-</route>
-
 <template>
-  <MenuItemVue v-for="([name, route], _) in menuItems" :to="route">{{ name }}</MenuItemVue>
+  <div>
+    <MenuItemVue v-for="([name, route], _) in menuItems" :to="route">{{ name }}</MenuItemVue>
+  </div>
 </template>

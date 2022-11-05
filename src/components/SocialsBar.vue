@@ -11,12 +11,6 @@
 .socials-bar {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
-}
-
-@media only screen and (min-width: 110vmin) {
-  .socials-bar {
-    gap: min(15px, 1vw);
-  }
+  gap: clamp(1.5rem, 1vw, 3rem);
 }
 </style>

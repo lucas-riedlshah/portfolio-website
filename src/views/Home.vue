@@ -11,7 +11,7 @@ import twitterIconUrl from "../assets/Twitter.svg"
 </script>
 
 <route lang="yaml">
-  alias: '/'
+  path: '/'
   meta:
     layout: Empty
 </route>

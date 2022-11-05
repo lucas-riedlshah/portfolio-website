@@ -7,9 +7,10 @@ import Projects from "../views/Projects.vue";
 const routes = setupLayouts([
   ...generatedPages,
   {
-    path: "/projects/:project+",
+    // All rotues to pages that are not menus and come under /projects/* must be defined prior to this.
+    path: "/projects/:project*",
     component: Projects,
-    meta: { layout: "Menu" },
+    meta: { gradientBackground: true, isMenu: true },
   },
   {
     // Not found redirects to homepage.

@@ -23,13 +23,15 @@ function handleScroll() {
 </script>
 
 <template>
-  <div class="container">
-    <div :class="{ 'top-bar': true, 'top-bar--hidden': hideTopBar }">
+  <div :class="{ 'container': true, 'gradient-background': $route.meta.gradientBackground, 'container--is-menu': $route.meta.isMenu }">
+    <div
+      :class="{ 'top-bar': true, 'top-bar--hidden': hideTopBar, 'gradient-background': $route.meta.gradientBackground }">
       <LogoVue small class="top-bar__logo" />
       <MenuButton class="top-bar__menu-button" />
     </div>
     <div class="content">
-      <RouterView />
+      <RouterView :key="$route.fullPath" />
+      <!-- The key attribute ensures that the component is updated on route change.-->
     </div>
     <div class="smile" :style="{ backgroundImage: `url('${smileIconUrl}')` }"></div>
   </div>
@@ -37,8 +39,7 @@ function handleScroll() {
 
 <style scoped>
 .container {
-  min-height: calc(100vh - 3rem);
-  height: 100%;
+  min-height: 100vh;
 }
 
 .top-bar {
@@ -90,6 +91,14 @@ function handleScroll() {
 </style>
 
 <style>
+.top-bar.gradient-background {
+  border-bottom: 1px solid white;
+}
+
+.container--is-menu .smile {
+  display: none;
+}
+
 .content>.markdown-body>* {
   padding-inline: calc(0.5 * (100% - (min(100%, 1100px) - 3rem)));
 }

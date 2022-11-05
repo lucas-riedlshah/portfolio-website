@@ -4,17 +4,15 @@ defineProps<{ to: string }>();
 
 <template>
   <RouterLink :to="to" class="menu-item">
-    <span>
-      <slot></slot>
-    </span>
+    <slot></slot>
   </RouterLink>
 </template>
 
 <style scoped>
 .menu-item {
-  font-size: clamp(0.8rem, 7vw, 7rem);
+  font-size: clamp(0.4rem, 7vw, 4rem);
   white-space: nowrap;
-  border-top: 0.04em solid white;
+  border-bottom: 0.04em solid white;
   height: 2em;
   display: grid;
   align-items: center;
@@ -23,23 +21,20 @@ defineProps<{ to: string }>();
   transition: font-size 0.5s, padding-left 0.5s;
 }
 
-.menu-item:hover {
-  font-size: clamp(0.8rem, 9vw, 10rem);
-  padding-left: 4vw;
+@media (hover: hover) {
+  .menu-item:hover {
+    font-size: clamp(0.4rem, 9vw, 6rem);
+    padding-left: 4vw;
+  }
 }
 
 .menu-item:active {
   text-decoration: line-through;
 }
 
-.menu-item:last-child {
-  border-bottom: 0.04em solid white;
-}
-
 @media (prefers-color-scheme: dark) {
 
-  .menu-item,
-  .menu-item:last-child {
+  .menu-item {
     border-width: 0.02em;
   }
 }
