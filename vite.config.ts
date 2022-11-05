@@ -5,6 +5,7 @@ import layouts from 'vite-plugin-vue-layouts'
 import markdown from 'vite-plugin-md'
 import prism from 'markdown-it-prism'
 import anchor from 'markdown-it-anchor'
+import container from "markdown-it-container";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -13,7 +14,11 @@ export default defineConfig({
       include: [/\.vue$/, /\.md$/],
     }),
     markdown({
-      markdownItUses: [prism, [anchor, { permalink: anchor.permalink.headerLink() }]]
+      markdownItUses: [
+        prism, 
+        [anchor, { permalink: anchor.permalink.headerLink() }],
+        [container, 'full-width'],
+      ]
     }),
     pages({
       dirs: ['src/views'],
