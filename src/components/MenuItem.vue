@@ -18,11 +18,12 @@ defineProps<{ to: string }>();
   align-items: center;
   color: inherit;
   text-decoration: none;
-  transition: font-size 0.5s, padding-left 0.5s;
+  transition: font-size 0.5s 0.15s, padding-left 0.5s 0.15s;
 }
 
 @media (hover: hover) {
-  .menu-item:hover {
+  .menu-item:hover,
+  .menu-item:focus {
     font-size: clamp(0.4rem, 9vw, 6rem);
     padding-left: 4vw;
   }
