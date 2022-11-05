@@ -61,7 +61,7 @@ function handleScroll() {
 }
 
 .top-bar--hidden {
-  top: -8rem;
+  top: -10rem;
 }
 
 .content>* {
