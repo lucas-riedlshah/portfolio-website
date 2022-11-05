@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import pages from 'vite-plugin-pages'
 import layouts from 'vite-plugin-vue-layouts'
-import markdown from 'vite-plugin-vue-markdown'
+import markdown from 'vite-plugin-md'
 import prism from 'markdown-it-prism'
 import anchor from 'markdown-it-anchor'
 
