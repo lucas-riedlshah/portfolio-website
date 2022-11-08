@@ -8,7 +8,7 @@ import { ref } from "vue";
 const router = useRouter()
 
 function getMenuItems(path: string) {
-  return [...new Set(generatedPages
+  const menuItems = [...new Set(generatedPages
     .filter(e => e.path.startsWith(path) && path !== e.path)
     .map(e => e.path
       .split('/')
@@ -16,6 +16,10 @@ function getMenuItems(path: string) {
     .map(e => e[0]))
   ]
     .map(e => [e.split('-').map(w => w[0].toUpperCase() + w.slice(1)).join(' '), path + '/' + e])
+
+  if (menuItems.length == 0) router.push('/projects')
+
+  return menuItems
 }
 
 let menuItems = ref(getMenuItems(router.currentRoute.value.path));
