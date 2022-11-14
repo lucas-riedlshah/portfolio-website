@@ -11,8 +11,6 @@ import twitterIconUrl from "../assets/Twitter.svg"
   path: '/menu'
   meta:
     gradientBackground: true
-    isMenu: true
-    isMainMenu: true
 </route>
 
 <template>
