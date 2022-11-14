@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import MenuButton from '../components/MenuButton.vue';
+import MenuToggleButton from '../components/MenuToggleButton.vue';
 import BackButton from '../components/BackButton.vue';
 import LogoVue from '../components/Logo.vue';
 import smileIconUrl from '../assets/smile.svg';
@@ -29,13 +29,13 @@ function handleScroll() {
       :class="{ 'top-bar': true, 'top-bar--hidden': hideTopBar, 'gradient-background': $route.meta.gradientBackground }">
       <BackButton />
       <LogoVue small />
-      <MenuButton :style="{ display: $route.meta.isMainMenu ? 'none' : '' }" />
+      <MenuToggleButton :style="{ display: $route.meta.hideMenuToggleButton ? 'none' : '' }" />
     </div>
     <div class="content">
       <RouterView :key="$route.fullPath" />
       <!-- The key attribute ensures that the component is updated on route change.-->
     </div>
-    <div class="smile" :style="{ backgroundImage: `url('${smileIconUrl}')`, display: $route.meta.isMenu ? 'none' : '' }"></div>
+    <div class="smile" :style="{ backgroundImage: `url('${smileIconUrl}')` }"></div>
   </div>
 </template>
 
@@ -64,10 +64,6 @@ function handleScroll() {
   top: -10rem;
 }
 
-.content>* {
-  padding-inline: calc(0.5 * (100% - (min(100%, 1100px) - 3rem)));
-}
-
 .smile {
   height: 100vh;
   background-repeat: no-repeat;
@@ -92,10 +88,12 @@ function handleScroll() {
   border-bottom: 1px solid white;
 }
 
+.content>*,
 .content>.markdown-body>* {
   padding-inline: calc(0.5 * (100% - (min(100%, 1100px) - 3rem)));
 }
 
+.content>*.full-width,
 .content>.markdown-body,
 .content>.markdown-body>*.full-width {
   padding-inline: initial;
