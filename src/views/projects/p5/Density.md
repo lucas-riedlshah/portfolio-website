@@ -1,4 +1,9 @@
-# Density
+---
+name: Density
+tags: [p5]
+---
+
+# {{ name }}
 
 ::: full-width
 <ImageGallery :images="[

@@ -1,4 +1,9 @@
-# Ethereal Deviations
+---
+name: Ethereal Deviations
+tags: [p5]
+---
+
+# {{ name }}
 
 ::: full-width
 <ImageGallery :images="[

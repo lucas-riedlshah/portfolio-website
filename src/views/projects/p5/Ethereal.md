@@ -1,4 +1,9 @@
-# Ethereal
+---
+name: Ethereal
+tags: [p5]
+---
+
+# {{ name }}
 
 ::: full-width
 <ImageGallery :images="[
