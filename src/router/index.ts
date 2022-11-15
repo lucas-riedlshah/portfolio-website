@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import generatedPages from "virtual:generated-pages";
 import { setupLayouts } from "virtual:generated-layouts";
 
-import Projects from "../views/projects-list.vue";
+import Projects from "../views/Projects.vue";
 
 const routes = setupLayouts([
   ...generatedPages,

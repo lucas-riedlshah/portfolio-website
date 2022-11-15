@@ -8,6 +8,7 @@ import twitterIconUrl from "../assets/Twitter.svg"
 </script>
 
 <route lang="yaml">
+  path: '/menu'
   meta:
     gradientBackground: true
 </route>

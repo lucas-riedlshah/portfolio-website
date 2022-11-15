@@ -25,10 +25,6 @@ function getMenuItems(path: string) {
 let menuItems = ref(getMenuItems(router.currentRoute.value.path));
 </script>
 
-<route lang="yaml">
-  path: '/projects'
-</route>
-
 <template>
   <div>
     <MenuItemVue v-for="([name, route], _) in menuItems" :to="route">{{ name }}</MenuItemVue>
