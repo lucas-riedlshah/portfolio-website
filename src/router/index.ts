@@ -2,16 +2,8 @@ import { createRouter, createWebHistory } from "vue-router";
 import generatedPages from "virtual:generated-pages";
 import { setupLayouts } from "virtual:generated-layouts";
 
-import Projects from "../views/Projects.vue";
-
 const routes = setupLayouts([
   ...generatedPages,
-  {
-    // All routes to pages that are not menus and come under /projects/* must be defined prior to this.
-    path: "/projects/:project*",
-    component: Projects,
-    meta: { gradientBackground: true },
-  },
   {
     // Not found redirects to homepage.
     path: "/:pathMatch(.*)*",

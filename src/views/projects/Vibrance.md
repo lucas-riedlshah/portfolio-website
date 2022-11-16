@@ -1,9 +1,10 @@
----
-name: Vibrance
-tags: [p5]
----
+<route lang="yaml">
+meta:
+  title: Vibrance
+  tags: [p5]
+</route>
 
-# {{ name }}
+# Vibrance
 
 ::: full-width
 <ImageGallery :images="[

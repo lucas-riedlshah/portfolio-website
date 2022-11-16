@@ -19,7 +19,7 @@ import twitterIconUrl from "../assets/Twitter.svg"
       <SocialButton :src=instagramIconUrl href="https://www.instagram.com/lucas_riedlshah/" />
       <SocialButton :src=twitterIconUrl href="https://twitter.com/Lucas_RiedlShah" />
     </SocialsBar>
-    <MenuItemVue to="/projects">Projects</MenuItemVue>
+    <MenuItemVue to="/search?tags=projects">Projects</MenuItemVue>
     <!-- <MenuItemVue to="/work">Work</MenuItemVue>
   <MenuItemVue to="/blog">Blog</MenuItemVue>
   <MenuItemVue to="/contact">Contact</MenuItemVue> -->

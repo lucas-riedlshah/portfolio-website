@@ -1,6 +1,7 @@
 @font-face {
   font-family: "Josefin Sans";
-  src: url(./assets/JosefinSans-Light.ttf) format("truetype");
+  src: url(./assets/JosefinSans-VariableFont_wght.ttf) format("truetype");
+  font-weight: 100 700;
 }
 
 @font-face {
@@ -29,6 +30,7 @@
 
 :root {
   font-family: "Josefin Sans", Arial, sans-serif;
+  font-weight: 300;
   font-size: 16px;
   line-height: 1.15;
 

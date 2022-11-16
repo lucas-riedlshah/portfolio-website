@@ -6,6 +6,7 @@ import markdown from 'vite-plugin-md'
 import prism from 'markdown-it-prism'
 import anchor from 'markdown-it-anchor'
 import container from "markdown-it-container";
+import { RouteRecordRaw } from 'vue-router'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -23,6 +24,14 @@ export default defineConfig({
     pages({
       dirs: ['src/views'],
       extensions: ['vue', 'md'],
+      extendRoute(route: RouteRecordRaw, _parent) {
+        if (route.path.startsWith("/projects/")) {
+          if (!route.meta) route.meta = {}
+          if (!route.meta.tags) route.meta.tags = new Array<string>();
+          if (!(<string[]>route.meta.tags).includes("projects")) (<string[]>route.meta.tags).push("projects")
+          route.meta.showInSearch = true
+        }
+      },
     }), 
     layouts({
       layoutsDirs: 'src/layouts',

@@ -1,9 +1,10 @@
----
-name: Ethereal
-tags: [p5]
----
+<route lang="yaml">
+meta:
+  title: Ethereal
+  tags: [p5]
+</route>
 
-# {{ name }}
+# Ethereal
 
 ::: full-width
 <ImageGallery :images="[

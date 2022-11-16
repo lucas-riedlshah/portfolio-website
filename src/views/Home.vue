@@ -30,7 +30,7 @@ import twitterIconUrl from "../assets/Twitter.svg"
     </div>
     <div class="home__navigation gradient-background">
       <NavigationBar>
-        <NavigationButton to="/projects">Projects</NavigationButton>
+        <NavigationButton to="/search?tags=projects">Projects</NavigationButton>
         <!-- <NavigationButton to="/work">Work</NavigationButton>
         <NavigationButton to="/blog">Blog</NavigationButton>
         <NavigationButton to="/contact">Contact</NavigationButton> -->

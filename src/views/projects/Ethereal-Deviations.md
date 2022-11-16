@@ -1,9 +1,10 @@
----
-name: Ethereal Deviations
-tags: [p5]
----
+<route lang="yaml">
+meta:
+  title: Ethereal Deviations
+  tags: [p5]
+</route>
 
-# {{ name }}
+# Ethereal Deviations
 
 ::: full-width
 <ImageGallery :images="[

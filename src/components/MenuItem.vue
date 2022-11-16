@@ -21,6 +21,10 @@ defineProps<{ to: string }>();
   transition: font-size 0.5s 0.15s, padding-left 0.5s 0.15s;
 }
 
+.menu-item:first-of-type {
+  border-top: 0.04em solid white;
+}
+
 @media (hover: hover) {
   .menu-item:hover,
   .menu-item:focus {
@@ -34,8 +38,8 @@ defineProps<{ to: string }>();
 }
 
 @media (prefers-color-scheme: dark) {
-
-  .menu-item {
+  .menu-item,
+  .menu-item:first-of-type {
     border-width: 0.02em;
   }
 }

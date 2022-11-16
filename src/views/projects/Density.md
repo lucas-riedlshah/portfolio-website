@@ -1,9 +1,10 @@
----
-name: Density
-tags: [p5]
----
+<route lang="yaml">
+meta:
+  title: Density
+  tags: [p5]
+</route>
 
-# {{ name }}
+# Density
 
 ::: full-width
 <ImageGallery :images="[
