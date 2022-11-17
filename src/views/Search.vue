@@ -10,7 +10,7 @@ const router = useRouter();
 
 const selectedTags = ref(new Set(
   router.currentRoute.value.query.tags
-    ? (<string>router.currentRoute.value.query.tags).split(',')
+    ? (<string>router.currentRoute.value.query.tags).split(',').filter(tag => getValidTags().includes(tag))
     : []
 ))
 
@@ -82,8 +82,9 @@ meta:
     <Chip v-for="tag in getAvailableTags()" @click="selectTag(tag)">{{ tag }}</Chip>
   </div>
   <div>
-    <MenuItemVue v-for="route in getSearchResults()" :to="route.path">{{ route.meta?.title || route.path }}
-    </MenuItemVue>
+    <MenuItemVue v-for="route in getSearchResults()" :to="route.path">{{
+        route.meta?.title || route.path
+    }}</MenuItemVue>
     <span class="no-results-message">There were no results matching the selected tags.</span>
   </div>
 </template>
