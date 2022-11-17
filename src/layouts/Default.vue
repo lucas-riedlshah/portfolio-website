@@ -32,7 +32,7 @@ function handleScroll() {
       <MenuToggleButton :style="{ display: $route.meta.hideMenuToggleButton ? 'none' : '' }" />
     </div>
     <div class="content">
-      <RouterView :key="$route.fullPath" />
+      <RouterView :key="$route.path" />
       <!-- The key attribute ensures that the component is updated on route change.-->
     </div>
     <div class="smile" :style="{ backgroundImage: `url('${smileIconUrl}')` }"></div>

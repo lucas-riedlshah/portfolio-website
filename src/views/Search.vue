@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, watchEffect } from "vue";
-import { RouteRecordRaw, useRouter } from "vue-router";
+import { onBeforeRouteLeave, RouteRecordRaw, useRouter } from "vue-router";
 import generatedPages from "virtual:generated-pages"
 
 import MenuItemVue from '../components/MenuItem.vue';
@@ -14,9 +14,8 @@ const selectedTags = ref(new Set(
     : []
 ))
 
-watchEffect(() => router.push({ query: { tags: [...selectedTags.value].join(",") } }))
-
-selectedTags.value = new Set([...selectedTags.value].filter(tag => getValidTags().includes(tag)))
+const stopUpdateQueryParams = watchEffect(() => router.replace({ query: { tags: selectedTags.value.size > 0 ? [...selectedTags.value].join(",") : undefined } }))
+onBeforeRouteLeave(stopUpdateQueryParams)
 
 /**
  * Adds the tag to the current search.
