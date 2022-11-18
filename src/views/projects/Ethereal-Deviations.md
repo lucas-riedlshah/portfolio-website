@@ -2,6 +2,7 @@
 meta:
   title: Ethereal Deviations
   tags: [p5]
+  coverImage: https://res.cloudinary.com/generatively/ethereal-deviations/invictus.webp
 </route>
 
 # Ethereal Deviations

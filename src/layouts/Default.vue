@@ -88,14 +88,20 @@ function handleScroll() {
   border-bottom: 1px solid white;
 }
 
+.content,
+.content>.markdown-body {
+  display: grid;
+  grid-template-columns: [left-margin] auto [main] min(100%, 1100px) [right-margin] auto;
+}
+
 .content>*,
 .content>.markdown-body>* {
-  padding-inline: calc(0.5 * (100% - (min(100%, 1100px) - 3rem)));
+  grid-column: main;
 }
 
 .content>*.full-width,
 .content>.markdown-body,
 .content>.markdown-body>*.full-width {
-  padding-inline: initial;
+  grid-column: 1 / -1;
 }
 </style>

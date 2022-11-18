@@ -10,6 +10,7 @@ import twitterIconUrl from "../assets/Twitter.svg"
 <route lang="yaml">
   meta:
     gradientBackground: true
+    hideMenuToggleButton: true
 </route>
 
 <template>

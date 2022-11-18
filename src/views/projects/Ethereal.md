@@ -2,6 +2,7 @@
 meta:
   title: Ethereal
   tags: [p5]
+  coverImage: https://res.cloudinary.com/generatively/ethereal_butterfly/1920_12k_v2.webp
 </route>
 
 # Ethereal

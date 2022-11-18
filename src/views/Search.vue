@@ -3,7 +3,7 @@ import { ref, watchEffect } from "vue";
 import { onBeforeRouteLeave, RouteRecordRaw, useRouter } from "vue-router";
 import generatedPages from "virtual:generated-pages"
 
-import MenuItemVue from '../components/MenuItem.vue';
+import ImageCard from '../components/ImageCard.vue';
 import Chip from '../components/Chip.vue'
 
 const router = useRouter();
@@ -71,22 +71,21 @@ function getSearchResults(): RouteRecordRaw[] {
 }
 </script>
 
-<route lang="yaml">
-meta:
-  gradientBackground: true
-</route>
-
 <template>
   <div class="tags-container">
     <Chip selected v-for="tag in selectedTags" @click="deselectTag(tag)">{{ tag }}</Chip>
     <Chip v-for="tag in getAvailableTags()" @click="selectTag(tag)">{{ tag }}</Chip>
   </div>
-  <div>
-    <MenuItemVue v-for="route in getSearchResults()" :to="route.path">{{
-        route.meta?.title || route.path
-    }}</MenuItemVue>
-    <span class="no-results-message">There were no results matching the selected tags.</span>
-  </div>
+  <masonry-wall :items="getSearchResults()" :column-width="300" :gap="15">
+    <template #default="{ item }">
+      <RouterLink :to="item.path" class="search-results__card">
+        <ImageCard :src="item.meta.coverImage">{{ item.meta.title }}</ImageCard>
+      </RouterLink>
+    </template>
+  </masonry-wall>
+  <span v-if="getSearchResults().length === 0" class="no-results-message">
+    There were no results matching the selected tags.
+  </span>
 </template>
 
 <style scoped>
@@ -99,11 +98,6 @@ meta:
 }
 
 .no-results-message {
-  display: none;
   font-size: 2rem;
-}
-
-.no-results-message:only-child {
-  display: initial;
 }
 </style>

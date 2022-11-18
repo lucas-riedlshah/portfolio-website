@@ -2,6 +2,7 @@
 meta:
   title: Density
   tags: [p5]
+  coverImage: https://res.cloudinary.com/generatively/density/focus.webp
 </route>
 
 # Density

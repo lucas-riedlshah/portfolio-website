@@ -2,6 +2,7 @@
 meta:
   title: Vibrance
   tags: [p5]
+  coverImage: https://res.cloudinary.com/generatively/vibrance/neon.webp
 </route>
 
 # Vibrance
