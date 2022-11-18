@@ -78,7 +78,7 @@ function getSearchResults(): RouteRecordRaw[] {
   </div>
   <masonry-wall :items="getSearchResults()" :column-width="300" :gap="15">
     <template #default="{ item }">
-      <RouterLink :to="item.path" class="search-results__card">
+      <RouterLink :to="item.path" class="search-result-card">
         <ImageCard :src="item.meta.coverImage">{{ item.meta.title }}</ImageCard>
       </RouterLink>
     </template>
@@ -95,6 +95,10 @@ function getSearchResults(): RouteRecordRaw[] {
   gap: 1rem;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.search-result-card {
+  text-decoration: none;
 }
 
 .no-results-message {
