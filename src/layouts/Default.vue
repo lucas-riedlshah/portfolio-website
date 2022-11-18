@@ -91,7 +91,7 @@ function handleScroll() {
 .content,
 .content>.markdown-body {
   display: grid;
-  grid-template-columns: [left-margin] auto [main] min(100%, 1100px) [right-margin] auto;
+  grid-template-columns: [left-margin] auto [main] calc(min(100%, 1100px) - 3rem) [right-margin] auto;
 }
 
 .content>*,
