@@ -55,8 +55,8 @@ function handleScroll() {
   justify-items: center;
   align-items: center;
   z-index: 2;
-  background-color: rgb(var(--color-surface));
-  border-bottom: 1px solid rgb(var(--color-on-surface));
+  background-color: rgb(var(--color-background));
+  border-bottom: 1px solid rgb(var(--color-on-background));
   transition: top 0.2s;
 }
 
@@ -81,7 +81,7 @@ function handleScroll() {
 
 <style>
 .top-bar.gradient-background {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid rgb(var(--color-on-background));
 }
 
 .content,

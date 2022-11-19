@@ -71,6 +71,11 @@ function getSearchResults(): RouteRecordRaw[] {
 }
 </script>
 
+<route lang="yaml">
+meta:
+  gradientBackground: true
+</route>
+
 <template>
   <div class="tags-container">
     <Chip selected v-for="tag in selectedTags" @click="deselectTag(tag)">{{ tag }}</Chip>

@@ -12,7 +12,7 @@ defineProps<{ to: string }>();
 .menu-item {
   font-size: clamp(0.4rem, 7vw, 4rem);
   white-space: nowrap;
-  border-bottom: 0.04em solid white;
+  border-bottom: 0.04em solid rgb(var(--color-on-background));
   height: 2em;
   display: grid;
   align-items: center;
@@ -22,7 +22,7 @@ defineProps<{ to: string }>();
 }
 
 .menu-item:first-of-type {
-  border-top: 0.04em solid white;
+  border-top: 0.04em solid rgb(var(--color-on-background));
 }
 
 @media (hover: hover) {

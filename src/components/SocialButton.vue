@@ -37,7 +37,7 @@ defineProps<{ src?: string, href?: string }>()
   line-height: 1;
   border-radius: 100%;
   box-shadow: 0 0 10px rgba(var(--color-on-background), 0.1);
-  background-color: rgb(var(--color-background));
+  background-color: rgba(var(--color-background), 0.7);
   background-size: 70%;
   background-repeat: no-repeat;
   background-position: center center;
