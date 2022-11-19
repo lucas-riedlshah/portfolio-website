@@ -41,6 +41,13 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --color-background: 255, 255, 255;
+  --color-on-background: 0, 0, 0;
+  --color-surface: 255, 255, 255;
+  --color-on-surface: 0, 0, 0;
+  --color-primary: 100, 0, 100;
+  --color-on-primary: 0, 0, 0;
 }
 
 body {
@@ -73,7 +80,14 @@ body {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    background-color: rgb(18, 18, 18);
-    color: white;
+    background-color: rgb(var(--color-background));
+    color: rgb(var(--color-on-background));
+
+    --color-background: 18, 18, 18;
+    --color-on-background: 255, 255, 255;
+    --color-surface: 0, 0, 0;
+    --color-on-surface: 255, 255, 255;
+    --color-primary: 155, 255, 155;
+    --color-on-primary: 255, 255, 255;
   }
 }

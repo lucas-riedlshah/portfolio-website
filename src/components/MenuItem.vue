@@ -36,11 +36,4 @@ defineProps<{ to: string }>();
 .menu-item:active {
   text-decoration: line-through;
 }
-
-@media (prefers-color-scheme: dark) {
-  .menu-item,
-  .menu-item:first-of-type {
-    border-width: 0.02em;
-  }
-}
 </style>

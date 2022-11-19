@@ -16,8 +16,8 @@ defineProps<{ src?: string }>();
   position: relative;
   font-size: 2rem;
   padding: 0.2em;
-  background-color: white;
-  color: black;
+  background-color: rgb(var(--color-surface));
+  color: rgb(var(--color-on-surface));
   border-radius: 0.5rem;
 }
 
@@ -34,22 +34,11 @@ defineProps<{ src?: string }>();
   width: calc(100% - 100px);
   height: calc(100% - 100px);
   z-index: -1;
-  box-shadow: 0 0 150px 50px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 150px 50px rgba(var(--color-on-background), 0.4);
 }
 
 .image-card__title {
   display: block;
   text-align: center;
-}
-
-@media (prefers-color-scheme: dark) {
-  .image-card {
-    background-color: black;
-    color: white;
-  }
-
-  .image-card::before {
-    box-shadow: 0 0 150px 50px rgba(255, 255, 255, 0.4);
-  }
 }
 </style>

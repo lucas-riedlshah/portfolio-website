@@ -55,8 +55,8 @@ function handleScroll() {
   justify-items: center;
   align-items: center;
   z-index: 2;
-  background-color: white;
-  border-bottom: 1px solid black;
+  background-color: rgb(var(--color-surface));
+  border-bottom: 1px solid rgb(var(--color-on-surface));
   transition: top 0.2s;
 }
 
@@ -73,10 +73,6 @@ function handleScroll() {
 }
 
 @media (prefers-color-scheme: dark) {
-  .top-bar {
-    background-color: black;
-  }
-
   .smile {
     filter: invert();
   }

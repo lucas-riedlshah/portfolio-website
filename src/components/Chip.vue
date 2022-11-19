@@ -17,8 +17,9 @@ defineProps<{ selected?: boolean }>()
   gap: 0.5em;
   padding: 0 1em;
   height: 2.5em;
+  color: rgb(var(--color-on-primary));
   outline: none;
-  border: 1pt solid black;
+  border: 1pt solid rgb(var(--color-on-primary));
   border-radius: 1.25em;
   text-align: left;
   white-space: nowrap;
@@ -29,7 +30,7 @@ defineProps<{ selected?: boolean }>()
 }
 
 .chip--selected {
-  background-color: rgba(100, 0, 100, 0.5);
+  background-color: rgba(var(--color-primary), 0.4);
   border: none;
 }
 
@@ -39,16 +40,5 @@ defineProps<{ selected?: boolean }>()
 
 .chip--selected .chip__icon {
   display: initial;
-}
-
-@media (prefers-color-scheme: dark) {
-  .chip {
-    color: white;
-    border: 1pt solid white;
-  }
-  .chip--selected {
-    background-color: rgba(155, 255, 155, 0.3);
-    border: none;
-  }
 }
 </style>
