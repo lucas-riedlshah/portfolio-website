@@ -87,7 +87,7 @@ function handleScroll() {
 .content,
 .content>.markdown-body {
   display: grid;
-  grid-template-columns: [left-margin] auto [main] calc(min(100%, 1100px) - 3rem) [right-margin] auto;
+  grid-template-columns: [left-margin] auto [main] calc(clamp(70%, 1100px, 100%) - 3rem) [right-margin] auto;
 }
 
 .content>*,
@@ -99,12 +99,5 @@ function handleScroll() {
 .content>.markdown-body,
 .content>.markdown-body>*.full-width {
   grid-column: 1 / -1;
-}
-
-@media (min-width: 1100px) {
-  .content,
-  .content>.markdown-body {
-    grid-template-columns: [left-margin] auto [main] calc(max(1100px, 70%) - 3rem) [right-margin] auto;
-  }
 }
 </style>
