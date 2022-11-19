@@ -13,20 +13,43 @@ defineProps<{ src?: string }>();
 
 <style scoped>
 .image-card {
+  position: relative;
   font-size: 2rem;
   padding: 0.2em;
-  background-color: rgb(237, 237, 237);
+  background-color: white;
   color: black;
+  border-radius: 0.5rem;
 }
 
 .image-card__image {
-  width: calc(100% - 2px - 0.2em);
-  border: 1px solid black;
+  width: calc(100% - 0.2em);
   padding: 0.1em;
+}
+
+.image-card::before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: calc(100% - 100px);
+  height: calc(100% - 100px);
+  z-index: -1;
+  box-shadow: 0 0 150px 50px rgba(0, 0, 0, 0.4);
 }
 
 .image-card__title {
   display: block;
   text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  .image-card {
+    background-color: black;
+    color: white;
+  }
+
+  .image-card::before {
+    box-shadow: 0 0 150px 50px rgba(255, 255, 255, 0.4);
+  }
 }
 </style>
