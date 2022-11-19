@@ -100,4 +100,11 @@ function handleScroll() {
 .content>.markdown-body>*.full-width {
   grid-column: 1 / -1;
 }
+
+@media (min-width: 1100px) {
+  .content,
+  .content>.markdown-body {
+    grid-template-columns: [left-margin] auto [main] calc(max(1100px, 70%) - 3rem) [right-margin] auto;
+  }
+}
 </style>
