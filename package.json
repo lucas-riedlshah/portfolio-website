@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vueuse/head": "^1.0.22",
     "@yeger/vue-masonry-wall": "^3.2.24",
     "prism-themes": "^1.9.0",
     "vue": "^3.2.41",

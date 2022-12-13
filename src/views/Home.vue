@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useHead } from "@vueuse/head";
+
 import LogoVue from '../components/Logo.vue';
 import SloganVue from '../components/Slogan.vue';
 import SocialsBar from "../components/SocialsBar.vue"
@@ -8,6 +10,8 @@ import SocialButton from "../components/SocialButton.vue"
 import githubIconUrl from "../assets/GitHub.svg"
 import instagramIconUrl from "../assets/Instagram.svg"
 import twitterIconUrl from "../assets/Twitter.svg"
+
+useHead({title: "Lucas RiedlShah", titleTemplate: '%s'})
 </script>
 
 <route lang="yaml">
@@ -30,7 +34,7 @@ import twitterIconUrl from "../assets/Twitter.svg"
     </div>
     <div class="home__navigation gradient-background">
       <NavigationBar>
-        <NavigationButton to="/search?tags=projects">Projects</NavigationButton>
+        <NavigationButton to="/projects">Projects</NavigationButton>
         <!-- <NavigationButton to="/work">Work</NavigationButton>
         <NavigationButton to="/blog">Blog</NavigationButton>
         <NavigationButton to="/contact">Contact</NavigationButton> -->

@@ -19,7 +19,8 @@ export default defineConfig({
         prism, 
         [anchor, { permalink: anchor.permalink.headerLink() }],
         [container, 'full-width'],
-      ]
+      ],
+      wrapperComponent: 'MarkdownWrapper'
     }),
     pages({
       dirs: ['src/views'],

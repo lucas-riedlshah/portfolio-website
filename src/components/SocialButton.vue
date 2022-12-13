@@ -27,29 +27,24 @@ defineProps<{ src?: string, href?: string }>()
   padding: 0.05em 0 0.15em 0;
 }
 
-.social-button:active {
-  padding: 0 0 0.2em 0;
-}
-
 .social-button__button {
   width: var(--size);
   height: var(--size);
   line-height: 1;
   border-radius: 100%;
-  box-shadow: 0 0 10px rgba(var(--color-on-background), 0.1);
-  background-color: rgba(var(--color-background), 0.7);
+  background-color: transparent;
   background-size: 70%;
   background-repeat: no-repeat;
   background-position: center center;
-  transition: box-shadow 0.2s;
+  transition: background-color 0.2s;
 }
 
 .social-button:hover > .social-button__button {
-  box-shadow: 0 5px 15px rgba(var(--color-on-background), 0.15);
+  background-color: rgba(var(--color-primary), 0.1);
 }
 
 .social-button:active > .social-button__button {
-  box-shadow: 0 10px 20px rgba(var(--color-on-background), 0.2);
+  background-color: rgba(var(--color-primary), 0.2);
 }
 
 @media only screen and (min-width: 110vmin) {

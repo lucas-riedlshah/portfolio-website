@@ -5,8 +5,6 @@ meta:
   coverImage: https://res.cloudinary.com/generatively/vibrance/neon.webp
 </route>
 
-# Vibrance
-
 ::: full-width
 <ImageGallery :images="[
   'https://res.cloudinary.com/generatively/vibrance/droplet.webp',

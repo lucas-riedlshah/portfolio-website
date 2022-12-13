@@ -17,21 +17,21 @@ defineProps<{ selected?: boolean }>()
   gap: 0.5em;
   padding: 0 1em;
   height: 2.5em;
-  color: rgb(var(--color-on-primary));
+  color: rgb(var(--color-primary));
   outline: none;
-  border: 1pt solid rgb(var(--color-on-primary));
+  border: none;
+  background: rgba(var(--color-primary), 0.15);
   border-radius: 1.25em;
   text-align: left;
   white-space: nowrap;
   cursor: pointer;
   font-family: inherit;
   font-weight: 400;
-  background: transparent;
 }
 
 .chip--selected {
-  background-color: rgba(var(--color-primary), 0.4);
-  border: none;
+  background: linear-gradient(rgba(var(--color-primary), 0.1), rgba(var(--color-primary), 0.15));
+  border: 1pt solid rgba(var(--color-primary), 0.3);
 }
 
 .chip__icon {

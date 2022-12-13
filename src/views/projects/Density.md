@@ -5,8 +5,6 @@ meta:
   coverImage: https://res.cloudinary.com/generatively/density/focus.webp
 </route>
 
-# Density
-
 ::: full-width
 <ImageGallery :images="[
   'https://res.cloudinary.com/generatively/density/bugged.webp',

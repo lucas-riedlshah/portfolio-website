@@ -5,8 +5,6 @@ meta:
   coverImage: https://res.cloudinary.com/generatively/ethereal-deviations/invictus.webp
 </route>
 
-# Ethereal Deviations
-
 ::: full-width
 <ImageGallery :images="[
   'https://res.cloudinary.com/generatively/ethereal-deviations/invictus.webp',

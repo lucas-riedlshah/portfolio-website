@@ -1,15 +1,18 @@
 <script setup lang="ts">
+import { useHead } from "@vueuse/head";
+
 import MenuItemVue from '../components/MenuItem.vue';
 import SocialButton from "../components/SocialButton.vue"
 import SocialsBar from "../components/SocialsBar.vue"
 import githubIconUrl from "../assets/GitHub.svg"
 import instagramIconUrl from "../assets/Instagram.svg"
 import twitterIconUrl from "../assets/Twitter.svg"
+
+useHead({ title: 'Menu' })
 </script>
 
 <route lang="yaml">
   meta:
-    gradientBackground: true
     hideMenuToggleButton: true
 </route>
 

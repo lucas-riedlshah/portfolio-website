@@ -5,6 +5,10 @@ import { setupLayouts } from "virtual:generated-layouts";
 const routes = setupLayouts([
   ...generatedPages,
   {
+    path: "/projects",
+    redirect: "/search?tags=projects",
+  },
+  {
     // Not found redirects to homepage.
     path: "/:pathMatch(.*)*",
     redirect: "/",

@@ -5,8 +5,6 @@ meta:
   coverImage: https://img.itch.zone/aW1hZ2UvMTYyMTg3NS85NDk2ODY3LnBuZw==/794x1000/s1fI8M.png
 </route>
 
-# Dice Automata
-
 ### <a href="https://reedsman.itch.io/dice-automata">Play Dice Automata on itch.io</a>
 ### <a href="https://itch.io/jam/gmtk-jam-2022/rate/1621875" target="_blank">Game Jam Submission Page</a>
 

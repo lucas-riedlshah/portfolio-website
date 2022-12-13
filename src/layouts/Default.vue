@@ -24,9 +24,9 @@ function handleScroll() {
 </script>
 
 <template>
-  <div :class="{ 'container': true, 'gradient-background': $route.meta.gradientBackground }">
+  <div :class="{ 'container': true }">
     <div
-      :class="{ 'top-bar': true, 'top-bar--hidden': hideTopBar, 'gradient-background': $route.meta.gradientBackground }">
+      :class="{ 'top-bar': true, 'top-bar--hidden': hideTopBar }">
       <BackButton />
       <LogoVue small />
       <MenuToggleButton :style="{ display: $route.meta.hideMenuToggleButton ? 'none' : '' }" />
@@ -49,7 +49,7 @@ function handleScroll() {
   position: sticky;
   top: 0;
   padding: 1.5rem;
-  padding-inline: calc(0.5 * (100% - (min(100%, 1100px) - 3rem)));
+  padding-inline: calc(0.5 * (100% - (clamp(70%, 1100px, 100%) - 3rem)));
   display: grid;
   grid-template-columns: 3ex auto 3ex;
   justify-items: center;
