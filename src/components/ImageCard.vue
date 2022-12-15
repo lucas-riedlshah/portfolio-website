@@ -26,12 +26,12 @@ defineProps<{ src?: string }>();
   width: calc(100% - 100px);
   height: calc(100% - 100px);
   z-index: -1;
-  box-shadow: 0 0 150px 50px rgba(var(--color-on-background), var(--surface-shadow-intensity));
+  box-shadow: 0 0 150px 50px rgba(var(--color-surface-shadow), var(--surface-shadow-intensity));
   transition: box-shadow 1s;
 }
 
 .image-card-container:hover::before {
-  box-shadow: 0 0 150px 50px rgba(var(--color-on-background), var(--surface-hover-shadow-intensity));
+  box-shadow: 0 0 100px 50px rgba(var(--color-hover-surface-shadow), var(--surface-hover-shadow-intensity));
 }
 
 .image-card {

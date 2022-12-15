@@ -48,6 +48,8 @@
   --color-on-background: 0, 0, 0;
   --color-surface: 255, 255, 255;
   --color-on-surface: 0, 0, 0;
+  --color-surface-shadow: var(--color-on-background);
+  --color-hover-surface-shadow: var(--color-primary);
   --surface-shadow-intensity: 0.3;
   --surface-hover-shadow-intensity: 0.6;
   --color-primary: 82, 178, 255;
@@ -73,7 +75,7 @@ body {
     --color-surface: 10, 14, 20;
     --color-on-surface: 255, 255, 255;
     --surface-shadow-intensity: 0.1;
-    --surface-hover-shadow-intensity: 0.5;
+    --surface-hover-shadow-intensity: 0.4;
     --color-primary: 155, 255, 155;
     --color-on-primary: 255, 255, 255;
   }
