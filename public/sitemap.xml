@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://generatively.xyz</loc>
+  </url>
+  <url>
+    <loc>https://generatively.xyz/menu</loc>
+  </url>
+  <url>
+    <loc>https://generatively.xyz/projects</loc>
+  </url>
+  <url>
+    <loc>https://generatively.xyz/search</loc>
+  </url>
+  <url>
+    <loc>https://generatively.xyz/projects/vibrance</loc>
+  </url>
+  <url>
+    <loc>https://generatively.xyz/projects/ethereal</loc>
+  </url>
+  <url>
+    <loc>https://generatively.xyz/projects/ethereal-deviations</loc>
+  </url>
+  <url>
+    <loc>https://generatively.xyz/projects/density</loc>
+  </url>
+  <url>
+    <loc>https://generatively.xyz/projects/dice-automata</loc>
+  </url>
+</urlset>
