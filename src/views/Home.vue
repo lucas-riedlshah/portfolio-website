@@ -33,7 +33,7 @@ useHead({ title: "Lucas RiedlShah", titleTemplate: '%s' })
       </SocialsBar>
       <SloganVue class="info__slogan" />
     </div>
-    <div class="home__navigation gradient-background">
+    <div class="home__navigation">
       <!-- <NavigationBar>
         <NavigationButton to="/projects">Projects</NavigationButton>
         <NavigationButton to="/work">Work</NavigationButton>
@@ -64,7 +64,7 @@ useHead({ title: "Lucas RiedlShah", titleTemplate: '%s' })
   grid-area: navigation;
   padding: min(4rem, 4vw);
   padding-top: 0;
-  overflow-x: auto;
+  /* overflow-x: auto; */
 }
 
 .info {

@@ -80,10 +80,6 @@ function handleScroll() {
 </style>
 
 <style>
-.top-bar.gradient-background {
-  border-bottom: 1px solid rgb(var(--color-on-background));
-}
-
 .content,
 .content>.markdown-body {
   display: grid;

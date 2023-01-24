@@ -44,7 +44,7 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
-  --color-background: 255, 252, 249;
+  --color-background: 255, 255, 255;
   --color-on-background: 0, 0, 0;
   --color-surface: 255, 255, 255;
   --color-on-surface: 0, 0, 0;
@@ -62,14 +62,7 @@ body {
   min-height: 100vh;
 }
 
-.gradient-background {
-  background-image: url("./assets/gradient-background-light--blue.png");
-  background-size: cover;
-  background-position: top center;
-  color: rgb(var(--color-on-background));
-}
-
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --color-background: 8, 8, 8;
     --color-on-background: 255, 255, 255;
@@ -81,8 +74,4 @@ body {
     --color-on-primary: 255, 255, 255;
     --color-important: 255, 82, 111;
   }
-
-  .gradient-background {
-    background-image: url("./assets/gradient-background-dark.png");
-  }
-}
+} */
