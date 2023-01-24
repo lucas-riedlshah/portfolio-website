@@ -115,6 +115,7 @@ useHead({ title: "Lucas RiedlShah", titleTemplate: '%s' })
     grid-template-columns: initial;
     grid-template-rows: min-content min-content min-content;
     align-content: center;
+    height: calc(100vh - 2 * min(4rem, 4vw));
   }
 
   .info__socials {
