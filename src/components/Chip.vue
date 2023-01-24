@@ -1,11 +1,13 @@
 <script setup lang="ts">
-defineProps<{ selected?: boolean }>()
+defineProps<{ selected?: boolean, important?: boolean }>()
 </script>
 
 <template>
-  <button :class="{chip: true, 'chip--selected': selected}" type="button">
-    <span class="chip__icon">&check;</span>
-    <span><slot></slot></span>
+  <button :class="{ chip: true, 'chip--selected': selected, 'chip--important': important }" type="button">
+    <span v-if="selected">&check;</span>
+    <span>
+      <slot></slot>
+    </span>
   </button>
 </template>
 
@@ -29,16 +31,18 @@ defineProps<{ selected?: boolean }>()
   font-weight: 400;
 }
 
+.chip--important {
+  color: rgb(var(--color-important));
+  background: rgba(var(--color-important), 0.15);
+}
+
 .chip--selected {
   background: linear-gradient(rgba(var(--color-primary), 0.1), rgba(var(--color-primary), 0.15));
   border: 1pt solid rgba(var(--color-primary), 0.3);
 }
 
-.chip__icon {
-  display: none;
-}
-
-.chip--selected .chip__icon {
-  display: initial;
+.chip--selected.chip--important {
+  background: linear-gradient(rgba(var(--color-important), 0.1), rgba(var(--color-important), 0.15));
+  border: 1pt solid rgba(var(--color-important), 0.3);
 }
 </style>

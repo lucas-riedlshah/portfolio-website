@@ -7,11 +7,12 @@ import SocialsBar from "../components/SocialsBar.vue"
 import NavigationButton from "../components/NavigationButton.vue"
 import NavigationBar from "../components/NavigationBar.vue"
 import SocialButton from "../components/SocialButton.vue"
+import Search from "../components/Search.vue"
 import githubIconUrl from "../assets/GitHub.svg"
 import instagramIconUrl from "../assets/Instagram.svg"
 import twitterIconUrl from "../assets/Twitter.svg"
 
-useHead({title: "Lucas RiedlShah", titleTemplate: '%s'})
+useHead({ title: "Lucas RiedlShah", titleTemplate: '%s' })
 </script>
 
 <route lang="yaml">
@@ -33,12 +34,13 @@ useHead({title: "Lucas RiedlShah", titleTemplate: '%s'})
       <SloganVue class="info__slogan" />
     </div>
     <div class="home__navigation gradient-background">
-      <NavigationBar>
+      <!-- <NavigationBar>
         <NavigationButton to="/projects">Projects</NavigationButton>
-        <!-- <NavigationButton to="/work">Work</NavigationButton>
+        <NavigationButton to="/work">Work</NavigationButton>
         <NavigationButton to="/blog">Blog</NavigationButton>
-        <NavigationButton to="/contact">Contact</NavigationButton> -->
-      </NavigationBar>
+        <NavigationButton to="/contact">Contact</NavigationButton>
+      </NavigationBar> -->
+      <Search />
     </div>
   </div>
 </template>
@@ -60,9 +62,9 @@ useHead({title: "Lucas RiedlShah", titleTemplate: '%s'})
 
 .home__navigation {
   grid-area: navigation;
-  display: grid;
-  justify-content: center;
-  align-items: center;
+  padding: min(4rem, 4vw);
+  padding-top: 0;
+  overflow-x: auto;
 }
 
 .info {
