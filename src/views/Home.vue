@@ -97,7 +97,7 @@ useHead({ title: "Lucas RiedlShah", titleTemplate: '%s' })
   .home {
     grid-template-areas: "info navigation";
     grid-template-rows: initial;
-    grid-template-columns: min-content minmax(auto, 50vw);
+    grid-template-columns: min-content auto;
     justify-content: space-between;
   }
 
