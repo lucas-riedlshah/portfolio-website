@@ -47,7 +47,7 @@ useHead({ title: "Lucas RiedlShah", titleTemplate: '%s' })
 
 <style scoped>
 .home {
-  height: 100vh;
+  /* height: 100vh; */
   display: grid;
   grid-template-areas:
     "info"
@@ -64,7 +64,6 @@ useHead({ title: "Lucas RiedlShah", titleTemplate: '%s' })
   grid-area: navigation;
   padding: min(4rem, 4vw);
   padding-top: 0;
-  /* overflow-x: auto; */
 }
 
 .info {
@@ -99,6 +98,12 @@ useHead({ title: "Lucas RiedlShah", titleTemplate: '%s' })
     grid-template-rows: initial;
     grid-template-columns: min-content auto;
     justify-content: space-between;
+  }
+
+  .home__info {
+    align-self: start;
+    position: sticky;
+    top: 0;
   }
 
   .info {
