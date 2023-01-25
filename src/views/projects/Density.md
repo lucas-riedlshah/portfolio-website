@@ -1,6 +1,7 @@
 <route lang="yaml">
 meta:
   title: Density
+  year: 2020
   tags: [p5]
   coverImage: https://res.cloudinary.com/generatively/density/focus.webp
 </route>

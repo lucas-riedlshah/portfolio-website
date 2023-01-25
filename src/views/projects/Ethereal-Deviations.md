@@ -1,6 +1,7 @@
 <route lang="yaml">
 meta:
   title: Ethereal Deviations
+  year: 2021
   tags: [p5]
   coverImage: https://res.cloudinary.com/generatively/ethereal-deviations/invictus.webp
 </route>

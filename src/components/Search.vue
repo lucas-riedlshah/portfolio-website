@@ -113,7 +113,10 @@ onBeforeRouteLeave(stopUpdateQueryParams)
   <masonry-wall :items="getSearchResults()" :column-width="300" :gap="15">
     <template #default="{ item }">
       <RouterLink :to="item.path" class="search-result-card">
-        <ImageCard :src="item.meta.coverImage">{{ item.meta.title }}</ImageCard>
+        <ImageCard 
+          :src="item.meta.coverImage"
+          :year="item.meta.year"
+        >{{ item.meta.title }}</ImageCard>
       </RouterLink>
     </template>
   </masonry-wall>

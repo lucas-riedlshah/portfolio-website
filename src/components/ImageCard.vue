@@ -1,14 +1,17 @@
 <script setup lang="ts">
-defineProps<{ src?: string }>();
+defineProps<{ src?: string, year?: string }>();
 </script>
 
 <template>
   <div class="image-card-container">
     <div class="image-card">
       <img :src="src" class="image-card__image" />
-      <span class="image-card__title">
-        <slot></slot>
-      </span>
+      <div class="image-card__info info">
+        <span class="info__title">
+          <slot></slot>
+        </span>
+        <span class="info__year" v-if="year">{{ " - " + year }}</span>
+      </div>
     </div>
   </div>
 </template>
@@ -47,9 +50,15 @@ defineProps<{ src?: string }>();
   display: block;
 }
 
-.image-card__title {
-  display: block;
+.image-card__info {
   text-align: center;
   margin: 0.4em 0 0.2em 0;
+}
+
+.info__title {
+}
+
+.info__year {
+  font-size: 0.6em;
 }
 </style>
