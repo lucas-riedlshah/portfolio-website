@@ -84,6 +84,10 @@ function getSearchResults(): RouteRecordRaw[] {
         if (!(<string[]>route.meta?.tags).includes(tag)) return false
       return true
     })
+    .sort((routeA, routeB) => {
+      return parseInt((String(routeB.meta?.year)).substring(-4)) 
+        - parseInt((String(routeA.meta?.year)).substring(-4))
+    })
 }
 
 const stopUpdateQueryParams = watchEffect(() => {
@@ -113,10 +117,7 @@ onBeforeRouteLeave(stopUpdateQueryParams)
   <masonry-wall :items="getSearchResults()" :column-width="300" :gap="15">
     <template #default="{ item }">
       <RouterLink :to="item.path" class="search-result-card">
-        <ImageCard 
-          :src="item.meta.coverImage"
-          :year="item.meta.year"
-        >{{ item.meta.title }}</ImageCard>
+        <ImageCard :src="item.meta.coverImage" :year="item.meta.year">{{ item.meta.title }}</ImageCard>
       </RouterLink>
     </template>
   </masonry-wall>
