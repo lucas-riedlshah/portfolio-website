@@ -27,10 +27,6 @@ useHead({ title: <string>route.meta.title })
   text-align: center;
 }
 
-.heading>h1 {
-  margin-bottom: 0;
-}
-
 .tags {
   display: flex;
   justify-content: center;
