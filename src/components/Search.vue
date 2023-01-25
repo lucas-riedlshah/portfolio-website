@@ -88,7 +88,11 @@ function getSearchResults(): RouteRecordRaw[] {
 
 const stopUpdateQueryParams = watchEffect(() => {
   router.replace({ query: { tags: selectedTags.value.size > 0 ? [...selectedTags.value].join(",") : undefined } })
-  useHead({ title: `Search${selectedTags.value.size > 0 ? ': ' + [...selectedTags.value].join(", ") : ''}` })
+  useHead({
+    title: (selectedTags.value.size > 0 ? 'Search: ' + [...selectedTags.value].join(", ") + ' - ' : '')
+      + 'Lucas RiedlShah',
+    titleTemplate: '%s'
+  })
 })
 onBeforeRouteLeave(stopUpdateQueryParams)
 </script>
