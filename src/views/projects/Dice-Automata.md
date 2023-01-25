@@ -2,7 +2,7 @@
 meta:
   title: Dice Automata
   tags: [game jam]
-  coverImage: https://img.itch.zone/aW1hZ2UvMTYyMTg3NS85NDk2ODY3LnBuZw==/794x1000/s1fI8M.png
+  coverImage: https://img.itch.zone/aW1nLzk1NDM0OTAuanBn/315x250%23c/gHXvDD.jpg
 </route>
 
 <iframe 

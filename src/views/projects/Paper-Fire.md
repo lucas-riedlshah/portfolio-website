@@ -2,7 +2,7 @@
 meta:
   title: Paper Fire
   tags: [game jam]
-  coverImage: https://img.itch.zone/aW1hZ2UvMTYyMTg3NS85NDk2ODY3LnBuZw==/794x1000/s1fI8M.png
+  coverImage: https://img.itch.zone/aW1nLzExMTA5MTIxLnBuZw==/315x250%23c/N%2FLs9a.png
 </route>
 
 <iframe 
