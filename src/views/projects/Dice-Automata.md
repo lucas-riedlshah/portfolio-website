@@ -5,10 +5,20 @@ meta:
   coverImage: https://img.itch.zone/aW1hZ2UvMTYyMTg3NS85NDk2ODY3LnBuZw==/794x1000/s1fI8M.png
 </route>
 
-### <a href="https://reedsman.itch.io/dice-automata">Play Dice Automata on itch.io</a>
-### <a href="https://itch.io/jam/gmtk-jam-2022/rate/1621875" target="_blank">Game Jam Submission Page</a>
+<iframe 
+  frameborder="0" 
+  src="https://itch.io/embed-upload/6802807"
+  width="975" 
+  height="635"
+  style="
+    justify-self: center;
+    margin: 20px;
+  "
+>
+  <a href="https://reedsman.itch.io/dice-automata">Play Dice Automata on itch.io</a>
+</iframe>
 
-On July 16th 2022, I partipated in the GMTK Game Jam 2022 with my friend Sam. We were given the theme "**Roll of the Dice**", from which we were to design and produce a game in just 48 hours. Inspired by games such as [Opus Magnum](https://www.zachtronics.com/opus-magnum/) and [The Sequence](https://play.google.com/store/apps/details?id=com.onemanband.thesequence), we chose to create an automation game.
+### <a href="https://itch.io/jam/gmtk-jam-2022/rate/1621875" target="_blank">GMTK Game Jam 2022 Submission Page</a>
 
 The aim of the game is to manoeuvre the dice over checkpoints, making sure that the correct side of the dice is facing upwards in order to solve the puzzle. Along with manoeuvring the dice, block can also manoeuvre other blocks.
 
