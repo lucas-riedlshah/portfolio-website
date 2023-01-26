@@ -57,6 +57,7 @@ useHead({ title: "Lucas RiedlShah", titleTemplate: '%s' })
 
 .home__info {
   padding: min(4rem, 4vw);
+  padding-bottom: 0;
   grid-area: info;
 }
 
@@ -69,9 +70,9 @@ useHead({ title: "Lucas RiedlShah", titleTemplate: '%s' })
 .info {
   display: grid;
   grid-template-areas:
-    "logo socials"
-    "slogan socials";
-  grid-template-columns: auto min-content;
+    "logo"
+    "socials"
+    "slogan";
 }
 
 .info__logo {
@@ -82,14 +83,14 @@ useHead({ title: "Lucas RiedlShah", titleTemplate: '%s' })
 .info__socials {
   grid-area: socials;
   align-self: center;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: row;
   height: 100%;
 }
 
 .info__slogan {
   grid-area: slogan;
   align-self: flex-start;
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width: 110vmin) {
@@ -104,23 +105,12 @@ useHead({ title: "Lucas RiedlShah", titleTemplate: '%s' })
     align-self: start;
     position: sticky;
     top: 0;
+    padding-bottom: min(4rem, 4vw);
   }
 
   .info {
-    display: grid;
-    grid-template-areas:
-      "logo"
-      "socials"
-      "slogan";
-    grid-template-columns: initial;
-    grid-template-rows: min-content min-content min-content;
     align-content: center;
-    height: calc(100vh - 2 * min(4rem, 4vw));
-  }
-
-  .info__socials {
-    flex-direction: row;
-    justify-content: flex-start;
+    min-height: calc(100vh - 2 * min(4rem, 4vw));
   }
 }
 </style>
