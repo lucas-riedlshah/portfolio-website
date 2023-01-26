@@ -62,7 +62,7 @@ body {
   min-height: 100vh;
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
     --color-background: 8, 8, 8;
     --color-on-background: 255, 255, 255;
@@ -74,4 +74,4 @@ body {
     --color-on-primary: 255, 255, 255;
     --color-important: 255, 82, 111;
   }
-} */
+}
