@@ -32,3 +32,10 @@ Hover over enemies to while you’re holding fire to damage them.
  - Your bonfire to avoid wasting the fire in your hand
  - Onto the turrets on the left to charge up the meter so you can place them
  - Onto the ground to create temporary walls of fire that burn the enemies
+
+## Music:
+
+Medieval Chateau by Alexander Nakarada | https://www.serpentsoundstudios.com/  
+Music promoted by https://www.free-stock-music.com/  
+Attribution 4.0 International (CC BY 4.0)  
+https://creativecommons.org/licenses/by/4.0/  
