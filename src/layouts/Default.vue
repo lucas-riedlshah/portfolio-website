@@ -29,7 +29,7 @@ function handleScroll() {
       :class="{ 'top-bar': true, 'top-bar--hidden': hideTopBar }">
       <BackButton />
       <LogoVue small />
-      <MenuToggleButton :style="{ display: $route.meta.hideMenuToggleButton ? 'none' : '' }" />
+      <!-- <MenuToggleButton :style="{ display: $route.meta.hideMenuToggleButton ? 'none' : '' }" /> -->
     </div>
     <div class="content">
       <RouterView :key="$route.path" />
