@@ -101,6 +101,10 @@ useHead({ title: "Lucas RiedlShah", titleTemplate: '%s' })
     justify-content: space-between;
   }
 
+  .home__navigation {
+    padding-top: min(3rem, 3vw);
+  }
+
   .home__info {
     align-self: start;
     position: sticky;
