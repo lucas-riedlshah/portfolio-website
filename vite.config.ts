@@ -29,7 +29,7 @@ export default defineConfig({
         if (route.path.startsWith("/projects/")) {
           if (!route.meta) route.meta = {}
           if (!route.meta.tags) route.meta.tags = new Array<string>();
-          if (!(<string[]>route.meta.tags).includes("projects")) (<string[]>route.meta.tags).push("projects")
+          if (!(<string[]>route.meta.tags).includes("projects")) (<string[]>route.meta.tags).unshift("projects")
           route.meta.showInSearch = true
         }
       },
