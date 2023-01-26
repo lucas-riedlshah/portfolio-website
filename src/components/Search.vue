@@ -128,7 +128,7 @@ onBeforeRouteLeave(stopUpdateQueryParams)
 
 <style scoped>
 .tags-container {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   display: flex;
   gap: 1rem;
   align-items: center;
@@ -136,7 +136,7 @@ onBeforeRouteLeave(stopUpdateQueryParams)
 }
 
 .tags-container:first-of-type {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .search-result-card {
