@@ -85,8 +85,15 @@ function getSearchResults(): RouteRecordRaw[] {
       return true
     })
     .sort((routeA, routeB) => {
-      return parseInt((String(routeB.meta?.year)).substring(-4)) 
-        - parseInt((String(routeA.meta?.year)).substring(-4))
+      return (<string>routeB.meta?.title) < (<string>routeA.meta?.title) ? 1 : -1
+    })
+    .sort((routeA, routeB) => {
+      return parseInt((String(routeB.meta?.year)).slice(0, 4))
+        - parseInt((String(routeA.meta?.year)).slice(0, 4))
+    })
+    .sort((routeA, routeB) => {
+      return parseInt((String(routeB.meta?.year)).slice(-4))
+        - parseInt((String(routeA.meta?.year)).slice(-4))
     })
 }
 
