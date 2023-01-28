@@ -90,7 +90,6 @@ useHead({ title: "Lucas RiedlShah", titleTemplate: '%s' })
 .info__slogan {
   grid-area: slogan;
   align-self: flex-start;
-  margin-bottom: 0;
 }
 
 @media only screen and (min-width: 110vmin) {
@@ -102,7 +101,7 @@ useHead({ title: "Lucas RiedlShah", titleTemplate: '%s' })
   }
 
   .home__navigation {
-    padding-top: min(3rem, 3vw);
+    padding-top: min(4rem, 4vw);
   }
 
   .home__info {

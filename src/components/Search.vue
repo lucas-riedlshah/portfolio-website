@@ -109,14 +109,14 @@ onBeforeRouteLeave(stopUpdateQueryParams)
 </script>
 
 <template>
-  <div>
+  <div class="tags-container">
     <!-- Main Category Tags -->
-    <div class="tags-container">
+    <div class="tags">
       <Chip important selected v-for="tag in getSelectedMainTags()" @click="deselectTag(tag)">{{ tag }}</Chip>
       <Chip important v-for="tag in getAvailableMainTags()" @click="selectTag(tag)">{{ tag }}</Chip>
     </div>
     <!-- All Other Tags -->
-    <div class="tags-container">
+    <div class="tags">
       <Chip selected v-for="tag in getSelectedOtherTags()" @click="deselectTag(tag)">{{ tag }}</Chip>
       <Chip v-for="tag in getAvailableOtherTags()" @click="selectTag(tag)">{{ tag }}</Chip>
     </div>
@@ -135,15 +135,15 @@ onBeforeRouteLeave(stopUpdateQueryParams)
 
 <style scoped>
 .tags-container {
+  margin-bottom: min(2rem, 2vw);
+}
+
+.tags {
   margin-bottom: 1rem;
   display: flex;
   gap: 1rem;
   align-items: center;
   flex-wrap: wrap;
-}
-
-.tags-container:first-of-type {
-  margin-top: 1rem;
 }
 
 .search-result-card {
