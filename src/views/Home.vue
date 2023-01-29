@@ -108,7 +108,7 @@ useHead({ title: "Lucas RiedlShah", titleTemplate: '%s' })
     align-self: start;
     position: sticky;
     top: 0;
-    padding-bottom: min(4rem, 4vw);
+    /* padding-bottom: min(4rem, 4vw); */
   }
 
   .info {

@@ -10,7 +10,7 @@
 <style scoped>
 .socials-bar {
   display: flex;
-  flex-wrap: wrap;
-  gap: clamp(1.5rem, 1vw, 3rem);
+  /* flex-wrap: wrap; */
+  gap: clamp(0.2rem, 1vw, 3rem);
 }
 </style>
