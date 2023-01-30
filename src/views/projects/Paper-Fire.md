@@ -8,7 +8,7 @@ meta:
 
 <iframe 
   frameborder="0" 
-  src="https://itch.io/embed-upload/1889884"
+  src="https://itch.io/embed-upload/7248833"
   width="976" 
   height="576"
   style="
