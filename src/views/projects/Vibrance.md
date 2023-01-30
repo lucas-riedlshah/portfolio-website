@@ -1,8 +1,8 @@
 <route lang="yaml">
 meta:
   title: Vibrance
-  year: 2018 to 2021
-  tags: [p5]
+  year: 2019 to 2021
+  tags: [generative art]
   coverImage: https://res.cloudinary.com/generatively/vibrance/neon.webp
 </route>
 
