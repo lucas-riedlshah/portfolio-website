@@ -11,6 +11,7 @@ useHead({ title: <string>route.meta.title })
 <template>
   <div class="heading">
     <h1 class="title">{{ $route.meta.title }}</h1>
+    <p class="year">{{ $route.meta.year }}</p>
     <span class="tags">
       <RouterLink v-for="tag in $route.meta.tags" :to="{ path: '/', query: { tags: tag } }" class="tags__tag">{{
           tag
@@ -25,6 +26,14 @@ useHead({ title: <string>route.meta.title })
 .heading {
   font-size: clamp(1em, 2vw, 1.5rem);
   text-align: center;
+}
+
+.title {
+  margin-bottom: 0;
+}
+
+.year {
+  margin-top: 0;
 }
 
 .tags {
