@@ -3,7 +3,7 @@ meta:
   title: Terramagotchi
   year: 2022
   tags: [generative art]
-  coverImage: /src/assets/terramagotchi/1.svg
+  coverImage: /static/terramagotchi/1.svg
 </route>
 
 <!-- <iframe
@@ -27,7 +27,7 @@ meta:
 <center><p><a href="https://github.com/generatively/terramagotchi">GitHub Repo</a></p></center>
 
 :::full-width
-![1](../../assets/terramagotchi/1.svg)
+![1](/static/terramagotchi/1.svg)
 :::
 
 ## Introduction
