@@ -62,5 +62,9 @@ useHead({ title: <string>route.meta.title })
   text-decoration: none;
   color: inherit;
 }
+
+.markdown-body > * {
+  margin-top: 0;
+}
 </style>
  
