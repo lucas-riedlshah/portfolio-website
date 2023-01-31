@@ -32,6 +32,12 @@ export default defineConfig({
           if (!(<string[]>route.meta.tags).includes("projects")) (<string[]>route.meta.tags).unshift("projects")
           route.meta.showInSearch = true
         }
+        if (route.path.startsWith("/work/")) {
+          if (!route.meta) route.meta = {}
+          if (!route.meta.tags) route.meta.tags = new Array<string>();
+          if (!(<string[]>route.meta.tags).includes("work")) (<string[]>route.meta.tags).unshift("work")
+          route.meta.showInSearch = true
+        }
       },
     }), 
     layouts({

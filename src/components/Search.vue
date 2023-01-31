@@ -7,7 +7,7 @@ import generatedPages from "virtual:generated-pages"
 import ImageCard from '../components/ImageCard.vue';
 import Chip from '../components/Chip.vue'
 
-const MAIN_CATEGORY_TAGS = ['projects'/*, 'work', 'blog' */]
+const MAIN_CATEGORY_TAGS = ['projects', 'work'/*, 'blog' */]
 
 const router = useRouter();
 
