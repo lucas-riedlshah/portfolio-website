@@ -1,121 +1,38 @@
 <route lang="yaml">
 meta:
   title: Terramagotchi
-  year: 2022
+  year: Team Lead, 2022
   tags: [generative art]
   coverImage: /static/terramagotchi/1.svg
 </route>
 
-<!-- <iframe
+<iframe
   frameborder="0"
   src="https://terramagotchi.web.app/"
   title="Terramagotchi App"
-  height="540"
-  width="960"
-  class="full-width"
   style="
     justify-self: center;
-    margin: 20px;
     width: 100%;
-    height: 90vh;
+    height: 80vh;
+    max-height: 100vw;
     color-scheme: initial;
+    margin-bottom: 1em;
   "
 >
   <a href="https://terramagotchi.web.app/">terramagotchi.web.app</a>
-</iframe> -->
+</iframe>
 
-<center><p><a href="https://github.com/generatively/terramagotchi">GitHub Repo</a></p></center>
+[Live Site](https://terramagotchi.web.app/) (Note that it may not perform well on smaller devices) |
+[GitHub Repository](https://github.com/generatively/terramagotchi)
 
-:::full-width
-![1](/static/terramagotchi/1.svg)
-:::
+## What is Terramagotchi?
 
-## Introduction
+Terramagotchi is a nearist neighbour pixel simulation inspired by the classic [Falling-sand game](https://en.wikipedia.org/wiki/Falling-sand_game). It simulates a simplified version of the water and nutrient cycles found in nature. It was created to be displayed on a portrait monitor, hence the portrait aspect ratio.
 
-### What is the problem we are trying to solve? Why is it important?
+There is a QR code displayed in the bottom left, which when scanned will lead you to a "remote" website (powered by Firebase) via which you can add various particle types into the environment. The concept for this remote was that, when the main piece is displayed to an audience, they may all interact with it at once.
 
-The goal of this application was to create a realistic and interactive art piece which educates people by simulating the nature cycles and the processes that underlie them.  
-The application presents environmental concepts in a fun, interesting way, which viewers can engage with together.
+## Why is Terramagotchi?
 
-## Motivation
+Terramagotchi was created as my capstone project, alongside my team, to close out my Bachelor of Science, majoring in Computer Science. The purpose of the capstone project is to work in a small team and demonstrate the knowledge we have learnt over the course of our degree, and to further develop our technical and communication skills.
 
-### Novelty of our solution, and how it is different from existing projects.
-
-Our application is inspired by the classic [falling-sand game](https://en.wikipedia.org/wiki/Falling-sand_game), which many have built upon, most notably, [Sandspiel](https://sandspiel.club/). What makes our application unique, is the user interaction approach. People cannot draw into the environment directly, but instead interact with it via a “remote”. This allows many people to interact with the same environment at once.
-
-## Environment
-
-### Terrain Generation
-
-The environment is generated using several layers of Simplex noise at different scales. This creates a relatively realistic terrain slice which is different each time the application is loaded but is still visually appealing.
-
-A key feature which we desired was to have a river running through the middle of the terrain. To achieve this, a sine wave is used to dip into the terrain. This space is then filled in with water. The noise is applied atop the sign wave, meaning that the terrain in the river still retains some of the bumps in the terrain.
-
-To add more visual interest to the bottom half of the environment, a mixture of a linear gradient and some banding gives the effect of the soil darkening the deeper it goes.
-
-### The Water Cycle
-
- - Day-Night Cycle  
- - Water Cycle  
-   - Evaporation (Steam from water)
-   - Transpiration (Steam from plants)
-   - Condensation (Rain)  
- - Randomized Clouds - 2D Simplex Noise
-
-As time passes, the environment will cycle through day and night. This is simply achieved via an overlayed block of colour, which darkens the sky, and the soil equally.
-
-
-
-## Absorption & Roots
-
-Key aspect to the cycle is absorption  
-Soil absorbs from bodies of water and compost, and distributes water and nutrients amongst itself  
-Roots absorb water and nutrients from soil and transfers them to plants  
-All done on a particle level  
-Roots are grown randomly and are dependent on few variables that can be changed easily  
-Allows for diversity  
-
-## Plants
-
-### Plant Design Specifications
-
-The role of plants in Terramagotchi  
-Complete Life Cycle of a Plant  
-Plant Growth  
-What about the leaves?  
-Plant death  
-
-### Implementation
-
-Simulating Genetic Code & DNA
-
-Nearest-Neighbour Limitations  
-Growth Mechanics  
-Vectors and Curve Fitting  
-
-## Worms
-
-Organisms are responsible for consuming dead plants and producing compost.
-
-### Movement
-
-### Dead Plant Consumption
-
-### Compost Production
-
-### Wandering
-
-### Death
-
-## Remote Application & User Interaction
-
-### User Interaction
-
-### Remote App
-
-#### Why?
-
-#### Design
-
-#### Features
-
+_Created by Lucas RiedlShah, Dominik Lange, Giovanni Glendining, Dion Wharerau and Blake Louis for Simon Ingram and Terrestrial Assemblages._
