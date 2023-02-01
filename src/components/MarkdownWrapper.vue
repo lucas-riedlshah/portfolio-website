@@ -39,7 +39,8 @@ useHead({ title: <string>route.meta.title })
 .tags {
   display: flex;
   justify-content: center;
-  gap: 0.5em
+  gap: 0.5em;
+  margin-block: 1em;
 }
 
 .tags > a {

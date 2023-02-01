@@ -52,7 +52,7 @@ defineProps<{ src?: string, year?: string }>();
 
 .image-card__info {
   text-align: center;
-  margin: 0.4em 0 0.2em 0;
+  margin: 0.4em 0.2em;
 }
 
 .info__title {
