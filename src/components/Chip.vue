@@ -22,7 +22,7 @@ defineProps<{ selected?: boolean, important?: boolean }>()
   color: rgb(var(--color-primary));
   outline: none;
   border: none;
-  background: rgba(var(--color-primary), 0.15);
+  background: rgba(var(--color-primary), 0.08);
   border-radius: 1.25em;
   text-align: left;
   white-space: nowrap;
@@ -33,7 +33,7 @@ defineProps<{ selected?: boolean, important?: boolean }>()
 
 .chip--important {
   color: rgb(var(--color-important));
-  background: rgba(var(--color-important), 0.15);
+  background: rgba(var(--color-important), 0.08);
 }
 
 .chip--selected {
