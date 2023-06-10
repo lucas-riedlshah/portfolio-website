@@ -2,7 +2,7 @@
 meta:
   title: Terramagotchi
   year: Team Lead, 2022
-  tags: [generative art]
+  tags: [creative coding]
   coverImage: /static/terramagotchi/1.svg
 </route>
 

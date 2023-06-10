@@ -2,7 +2,7 @@
 meta:
   title: Ethereal Deviations
   year: 2021
-  tags: [generative art]
+  tags: [creative coding]
   coverImage: https://res.cloudinary.com/generatively/ethereal-deviations/invictus.webp
 </route>
 

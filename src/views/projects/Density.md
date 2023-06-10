@@ -2,7 +2,7 @@
 meta:
   title: Density
   year: 2020
-  tags: [generative art]
+  tags: [creative coding]
   coverImage: https://res.cloudinary.com/generatively/density/focus.webp
 </route>
 
