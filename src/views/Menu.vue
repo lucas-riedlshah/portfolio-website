@@ -19,7 +19,7 @@ useHead({ title: 'Menu' })
 <template>
   <div>
     <SocialsBar class="socials">
-      <SocialButton :src=githubIconUrl href="https://github.com/generatively/" />
+      <SocialButton :src=githubIconUrl href="https://github.com/lucas-riedlshah" />
       <SocialButton :src=instagramIconUrl href="https://www.instagram.com/lucas_riedlshah/" />
       <SocialButton :src=twitterIconUrl href="https://twitter.com/Lucas_RiedlShah" />
     </SocialsBar>

@@ -26,7 +26,7 @@ useHead({ title: "Lucas RiedlShah", titleTemplate: '%s' })
     <div class="home__info info">
       <LogoVue class="info__logo" />
       <SocialsBar class="info__socials">
-        <SocialButton :src=githubIconUrl href="https://github.com/generatively/" />
+        <SocialButton :src=githubIconUrl href="https://github.com/lucas-riedlshah/" />
         <SocialButton :src=instagramIconUrl href="https://www.instagram.com/lucas_riedlshah/" />
         <SocialButton :src=twitterIconUrl href="https://twitter.com/Lucas_RiedlShah" />
         <!-- <SocialButton>+</SocialButton> -->
