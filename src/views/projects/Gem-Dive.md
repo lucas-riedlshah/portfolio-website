@@ -1,0 +1,36 @@
+<route lang="yaml">
+meta:
+  title: Gem Dive
+  year: 2024
+  tags: [game jam, unity]
+  coverImage: https://img.itch.zone/aW1nLzE1MzM5NTgzLnBuZw==/315x250%23c/fAEEsc.png
+</route>
+
+<iframe 
+  frameborder="0" 
+  src="https://itch.io/embed-upload/9909186"
+  width="976" 
+  height="576"
+  style="
+    justify-self: center;
+    margin: 20px;
+  "
+>
+  <a href="https://lucas-riedlshah.itch.io/putt-putt-perfection">Play Gem Dive on itch.io</a>
+</iframe>
+
+*<center>You may need to click in the game window before it will register inputs.</center>*
+
+## Description
+
+This game was created for Trijam #260. A restriction of this game jam is that you may only work on the actual game for a total of 3 hours per person; There were two of us. You are, however, allowed as much planning time as you need. In total I estimate this game took us about 6 hours each, with a heavy amount of planning going into it before we began working on it.
+
+Dive into the depths with your drill, steering left or right using A/D or Arrow Keys. Aim for the deepest maximum depth; collect gems to upgrade your drill and fuel to sustain your descent. 
+
+Controls:  
+- A/D
+- Left/Right Arrow Keys
+
+## Game Jam Submission Page
+
+https://itch.io/jam/trijam-260/rate/2577048
