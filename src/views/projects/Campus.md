@@ -21,9 +21,17 @@ meta:
 
 _<center>Build a campus, one piece at a time.</center>_
 
-## Controls
+## Description
+
+Created for Brackeys Game Jam 2023.1. Placed #52 overall, out of 729 entries.
+
+### Controls
 
 - **[LEFT CLICK]** to select a card, and then again to place the building onto the board.  
 - **[RIGHT CLICK]** to rotate the selected building.  
 - **[LEFT CLICK] and DRAG** to pan view camera.  
 - **[RIGHT CLICK] and DRAG** to rotate view camera.  
+
+## Game Jam Submission Page
+
+https://itch.io/jam/brackeys-9/rate/1928507

@@ -21,4 +21,12 @@ meta:
 
 _<center>Help Bartholomew construct his dream golf course.</center>_
 
+## Description
+
+Created for GMTK Game Jam 2023. Placed #114 out of 6769 entries.
+
 Place bumpers, buttons, and boosters so Bartholomew's customers get a hole in one. However, every item you place counts as a stroke for you! So aim to stay under par and solve fun and engaging puzzles.
+
+## Game Jam Submission Page
+
+https://itch.io/jam/gmtk-2023/rate/2156366

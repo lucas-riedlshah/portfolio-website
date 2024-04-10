@@ -23,7 +23,7 @@ meta:
 
 ## Description
 
-This game was created for Trijam #260. A restriction of this game jam is that you may only work on the actual game for a total of 3 hours per person; There were two of us. You are, however, allowed as much planning time as you need. In total I estimate this game took us about 6 hours each, with a heavy amount of planning going into it before we began working on it.
+This game was created for Trijam #260. Placed #5 overall out of 38 entries. A restriction of this game jam is that you may only work on the actual game for a total of 3 hours per person; There were two of us. You are, however, allowed as much planning time as you need. In total I estimate this game took us about 6 hours each, with a heavy amount of planning going into it before we began working on it.
 
 Dive into the depths with your drill, steering left or right using A/D or Arrow Keys. Aim for the deepest maximum depth; collect gems to upgrade your drill and fuel to sustain your descent. 
 

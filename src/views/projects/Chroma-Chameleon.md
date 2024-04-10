@@ -19,13 +19,15 @@ meta:
   <a href="https://taintedflamegames.itch.io/chroma-chameleon">Play Chroma Chameleon on itch.io</a>
 </iframe>
 
-<center><i>NOTE: This game may not perform well on low end devices.</i></center>
+_<center>NOTE: This game may not perform well on low end devices.</center>_
 
-Chroma Chameleon, A game made in 48 hours by TaintedFlame Games for Kiwijam 2021!
+## Description
+
+Chroma Chameleon was created for KiwiJam 2021. 
 
 Morph and blend colours while utilising your chameleon's tongue and tail to solve puzzles through a series of dynamic levels.
 
-## Controls:
+### Controls:
 
 **W A S D** to move, following the mouse
 
@@ -36,3 +38,7 @@ Morph and blend colours while utilising your chameleon's tongue and tail to solv
 **E** to set Chroma's colours
 
 **Q** to merge Chroma's colours
+
+## Game Jam Submission Page
+
+https://itch.io/jam/kiwijam21/rate/1135472
