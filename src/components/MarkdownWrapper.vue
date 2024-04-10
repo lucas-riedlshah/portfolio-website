@@ -67,5 +67,17 @@ useHead({ title: <string>route.meta.title })
 .markdown-body > * {
   margin-top: 0;
 }
+
+.markdown-body > p:has(img) {
+  text-align: center;
+}
+
+.markdown-body > p > img {
+  width: 50%;
+}
+
+.markdown-body > p:has(img) + p {
+  text-align: center;
+}
 </style>
  
