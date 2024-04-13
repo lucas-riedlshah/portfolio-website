@@ -6,20 +6,7 @@ meta:
   coverImage: https://img.itch.zone/aW1nLzY3MTYxMzQucG5n/315x250%23c/YN8wRm.png
 </route>
 
-<iframe 
-  frameborder="0" 
-  src="https://itch.io/embed-upload/7241981"
-  width="980" 
-  height="640"
-  style="
-    justify-self: center;
-    margin: 20px;
-  "
->
-  <a href="https://taintedflamegames.itch.io/chroma-chameleon">Play Chroma Chameleon on itch.io</a>
-</iframe>
-
-_<center>NOTE: This game may not perform well on low end devices.</center>_
+<ItchIFrame src="https://html-classic.itch.zone/html/7241981/index.html" itchio-link="https://lucas-riedlshah.itch.io/chroma-chameleon" width=976 height=616 />
 
 ## Description
 

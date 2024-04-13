@@ -6,20 +6,7 @@ meta:
   coverImage: https://img.itch.zone/aW1nLzE1MzM5NTgzLnBuZw==/315x250%23c/fAEEsc.png
 </route>
 
-<iframe 
-  frameborder="0" 
-  src="https://itch.io/embed-upload/9909186"
-  width="976" 
-  height="576"
-  style="
-    justify-self: center;
-    margin: 20px;
-  "
->
-  <a href="https://lucas-riedlshah.itch.io/putt-putt-perfection">Play Gem Dive on itch.io</a>
-</iframe>
-
-*<center>You may need to click in the game window before it will register inputs.</center>*
+<ItchIFrame src="https://html-classic.itch.zone/html/9909186/index.html" itchio-link="https://lucas-riedlshah.itch.io/gem-dive" />
 
 ## Description
 

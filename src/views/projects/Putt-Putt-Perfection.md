@@ -6,22 +6,11 @@ meta:
   coverImage: https://img.itch.zone/aW1nLzEyNzE3MDQ3LnBuZw==/315x250%23c/%2FJMIIk.png
 </route>
 
-<iframe 
-  frameborder="0" 
-  src="https://itch.io/embed-upload/8265597"
-  width="976" 
-  height="576"
-  style="
-    justify-self: center;
-    margin: 20px;
-  "
->
-  <a href="https://lucas-riedlshah.itch.io/putt-putt-perfection">Play Putt Putt Perfection: Bartholemew's Tee Time Triumph on itch.io</a>
-</iframe>
-
-_<center>Help Bartholomew construct his dream golf course.</center>_
+<ItchIFrame src="https://html-classic.itch.zone/html/8265597/index.html" itchio-link="https://lucas-riedlshah.itch.io/putt-putt-perfection" width=960 height=540 />
 
 ## Description
+
+Help Bartholomew construct his dream golf course.
 
 Created for GMTK Game Jam 2023. Placed #114 out of 6769 entries.
 

@@ -6,18 +6,7 @@ meta:
   coverImage: https://img.itch.zone/aW1nLzk1NDM0OTAuanBn/315x250%23c/gHXvDD.jpg
 </route>
 
-<iframe 
-  frameborder="0" 
-  src="https://itch.io/embed-upload/6802807"
-  width="975" 
-  height="635"
-  style="
-    justify-self: center;
-    margin: 20px;
-  "
->
-  <a href="https://reedsman.itch.io/dice-automata">Play Dice Automata on itch.io</a>
-</iframe>
+<ItchIFrame src="https://html-classic.itch.zone/html/6802807/index.html" itchio-link="https://lucas-riedlshah.itch.io/dice-automata" width=976 height=616 />
 
 ## Description
 

@@ -6,23 +6,11 @@ meta:
   coverImage: https://img.itch.zone/aW1nLzExMTA5MTIxLnBuZw==/315x250%23c/N%2FLs9a.png
 </route>
 
-<iframe 
-  frameborder="0" 
-  src="https://itch.io/embed-upload/7248833"
-  width="976" 
-  height="576"
-  style="
-    justify-self: center;
-    margin: 20px;
-  "
->
-  <a href="https://lucas-riedlshah.itch.io/paper-fire">Play Paper Fire on itch.io</a>
-</iframe>
-
-_<center>Defend your bonfire from the shadows, but make sure it doesn’t go out, because how bright the bonfire burns is your score.</center>_
-
+<ItchIFrame src="https://html-classic.itch.zone/html/7248833/index.html" itchio-link="https://lucas-riedlshah.itch.io/paper-fire" width=976 height=556 />
 
 ## Description
+
+Defend your bonfire from the shadows, but make sure it doesn’t go out, because how bright the bonfire burns is your score.
 
 Created for Mini Jam #124: Warmth. Placed #34 overall, out of 115 entries.
 

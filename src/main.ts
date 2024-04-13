@@ -7,6 +7,7 @@ import "./style.css";
 import App from "./App.vue";
 import router from "./router";
 import ImageGallery from "./components/ImageGallery.vue";
+import ItchIFrame from "./components/ItchIFrame.vue";
 import MarkdownWrapper from "./components/MarkdownWrapper.vue";
 
 if (window.location.hostname == 'generatively.xyz')
@@ -17,5 +18,6 @@ createApp(App)
   .use(router)
   .use(MasonryWall)
   .component("ImageGallery", ImageGallery)
+  .component("ItchIFrame", ItchIFrame)
   .component("markdownwrapper", MarkdownWrapper)
   .mount("#app");

@@ -6,22 +6,11 @@ meta:
   coverImage: https://img.itch.zone/aW1nLzExMzY2MTE4LnBuZw==/315x250%23c/IN5NtY.png
 </route>
 
-<iframe 
-  frameborder="0" 
-  src="https://itch.io/embed-upload/7379352"
-  width="976" 
-  height="576"
-  style="
-    justify-self: center;
-    margin: 20px;
-  "
->
-  <a href="https://lucas-riedlshah.itch.io/campus">Play Campus on itch.io</a>
-</iframe>
-
-_<center>Build a campus, one piece at a time.</center>_
+<ItchIFrame src="https://html-classic.itch.zone/html/7379352/index.html" itchio-link="https://lucas-riedlshah.itch.io/campus" />
 
 ## Description
+
+Build a campus, one piece at a time.
 
 Created for Brackeys Game Jam 2023.1. Placed #52 overall, out of 729 entries.
 
