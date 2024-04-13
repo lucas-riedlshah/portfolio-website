@@ -25,13 +25,13 @@ useHead({ title: "Lucas RiedlShah", titleTemplate: '%s' })
   <div class="home">
     <div class="home__info info">
       <LogoVue class="info__logo" />
+      <SloganVue class="info__slogan" />
       <SocialsBar class="info__socials">
         <SocialButton :src=githubIconUrl href="https://github.com/lucas-riedlshah/" />
         <SocialButton :src=instagramIconUrl href="https://www.instagram.com/lucas_riedlshah/" />
         <SocialButton :src=twitterIconUrl href="https://twitter.com/Lucas_RiedlShah" />
         <!-- <SocialButton>+</SocialButton> -->
       </SocialsBar>
-      <SloganVue class="info__slogan" />
     </div>
     <div class="home__navigation">
       <!-- <NavigationBar>
@@ -71,8 +71,9 @@ useHead({ title: "Lucas RiedlShah", titleTemplate: '%s' })
   display: grid;
   grid-template-areas:
     "logo"
+    "slogan"
     "socials"
-    "slogan";
+    ;
 }
 
 .info__logo {
@@ -85,6 +86,7 @@ useHead({ title: "Lucas RiedlShah", titleTemplate: '%s' })
   align-self: center;
   flex-direction: row;
   height: 100%;
+  margin-block-end: 1.2rem;
 }
 
 .info__slogan {
