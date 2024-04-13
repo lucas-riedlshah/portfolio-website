@@ -41,6 +41,7 @@ useHead({ title: <string>route.meta.title })
   justify-content: center;
   gap: 0.5em;
   margin-block: 1em;
+  flex-wrap: wrap;
 }
 
 .tags > a {
@@ -50,6 +51,7 @@ useHead({ title: <string>route.meta.title })
   border: 1pt solid rgba(var(--color-primary), 0.3);
   padding: 0.3em 0.7em;
   border-radius: 1.6em;
+  text-wrap: nowrap;
 }
 </style>
 
