@@ -3,7 +3,7 @@ meta:
   title: The Comic Book Library
   year: 2021
   tags: [python, flask, sql]
-  coverImage: /src/assets/TheComicBookLibrary_CoverImage.png
+  coverImage: /assets/TheComicBookLibrary_CoverImage.png
 </route>
 
 Created in my second year of university, this project uses Python with Flask and SQLAlchemy to present a dataset of comic books.  
