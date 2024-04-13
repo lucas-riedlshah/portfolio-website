@@ -34,7 +34,7 @@ defineProps<{ src?: string, year?: string }>();
 }
 
 .image-card-container:hover::before {
-  box-shadow: 0 0 100px 50px rgba(var(--color-hover-surface-shadow), var(--surface-hover-shadow-intensity));
+  box-shadow: 0 0 10px 50px rgba(var(--color-hover-surface-shadow), var(--surface-hover-shadow-intensity));
 }
 
 .image-card {
@@ -42,7 +42,13 @@ defineProps<{ src?: string, year?: string }>();
   background-color: rgb(var(--color-surface));
   color: rgb(var(--color-on-surface));
   border-radius: 0.5rem;
+  border: 1pt solid rgba(var(--color-surface-shadow), 0.05);
+  transition: border-color 1s;
   overflow: hidden;
+}
+
+.image-card-container:hover .image-card {
+  border-color: rgba(var(--color-hover-surface-shadow), 0.3);
 }
 
 .image-card__image {
