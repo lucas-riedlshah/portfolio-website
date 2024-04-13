@@ -6,7 +6,7 @@ meta:
   coverImage: https://img.itch.zone/aW1nLzY3MTYxMzQucG5n/315x250%23c/YN8wRm.png
 </route>
 
-<ItchIFrame src="https://html-classic.itch.zone/html/7241981/index.html" itchio-link="https://lucas-riedlshah.itch.io/chroma-chameleon" width=976 height=616 />
+<ItchIFrame src="https://html-classic.itch.zone/html/7241981/index.html" itchio-link="https://taintedflamegames.itch.io/chroma-chameleon" width=976 height=616 />
 
 ## Description
 

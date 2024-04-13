@@ -6,7 +6,7 @@ meta:
   coverImage: https://img.itch.zone/aW1nLzk1NDM0OTAuanBn/315x250%23c/gHXvDD.jpg
 </route>
 
-<ItchIFrame src="https://html-classic.itch.zone/html/6802807/index.html" itchio-link="https://lucas-riedlshah.itch.io/dice-automata" width=976 height=616 />
+<ItchIFrame src="https://html-classic.itch.zone/html/6802807/index.html" itchio-link="https://reedsman.itch.io/dice-automata" width=976 height=616 />
 
 ## Description
 
