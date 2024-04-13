@@ -29,13 +29,13 @@ export default defineConfig({
         if (route.path.startsWith("/projects/")) {
           if (!route.meta) route.meta = {}
           if (!route.meta.tags) route.meta.tags = new Array<string>();
-          if (!(<string[]>route.meta.tags).includes("projects")) (<string[]>route.meta.tags).unshift("projects")
+          if (!(<string[]>route.meta.tags).includes("Projects")) (<string[]>route.meta.tags).unshift("Projects")
           route.meta.showInSearch = true
         }
         if (route.path.startsWith("/work/")) {
           if (!route.meta) route.meta = {}
           if (!route.meta.tags) route.meta.tags = new Array<string>();
-          if (!(<string[]>route.meta.tags).includes("work")) (<string[]>route.meta.tags).unshift("work")
+          if (!(<string[]>route.meta.tags).includes("Work")) (<string[]>route.meta.tags).unshift("Work")
           route.meta.showInSearch = true
         }
       },

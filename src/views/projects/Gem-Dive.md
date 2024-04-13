@@ -2,7 +2,7 @@
 meta:
   title: Gem Dive
   year: 2024
-  tags: [game jam, unity]
+  tags: [Game Jam, Unity, C# / .NET]
   coverImage: https://img.itch.zone/aW1nLzE1MzM5NTgzLnBuZw==/315x250%23c/fAEEsc.png
 </route>
 

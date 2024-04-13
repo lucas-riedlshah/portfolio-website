@@ -2,7 +2,7 @@
 meta:
   title: Chroma Chameleon
   year: 2021
-  tags: [game jam, unity]
+  tags: [Game Jam, Unity, C# / .NET]
   coverImage: https://img.itch.zone/aW1nLzY3MTYxMzQucG5n/315x250%23c/YN8wRm.png
 </route>
 

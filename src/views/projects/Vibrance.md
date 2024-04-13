@@ -2,7 +2,7 @@
 meta:
   title: Vibrance
   year: 2019 to 2021
-  tags: [creative coding]
+  tags: [Creative Coding, JavaScript, p5.js]
   coverImage: https://res.cloudinary.com/generatively/vibrance/neon.webp
 </route>
 

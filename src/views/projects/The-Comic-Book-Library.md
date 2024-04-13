@@ -2,7 +2,7 @@
 meta:
   title: The Comic Book Library
   year: 2021
-  tags: [python, flask, sql]
+  tags: [Python, Flask, SQL, HTML / CSS]
   coverImage: /static/TheComicBookLibrary_CoverImage.png
 </route>
 

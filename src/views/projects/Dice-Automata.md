@@ -2,7 +2,7 @@
 meta:
   title: Dice Automata
   year: 2022
-  tags: [game jam, unity]
+  tags: [Game Jam, Unity, C# / .NET]
   coverImage: https://img.itch.zone/aW1nLzk1NDM0OTAuanBn/315x250%23c/gHXvDD.jpg
 </route>
 
