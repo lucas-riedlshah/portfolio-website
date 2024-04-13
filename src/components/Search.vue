@@ -62,19 +62,19 @@ function getAvailableTags(): string[] {
 }
 
 function getAvailableMainTags(): string[] {
-  return getAvailableTags().filter(tag => MAIN_CATEGORY_TAGS.includes(tag))
+  return getAvailableTags().filter(tag => MAIN_CATEGORY_TAGS.includes(tag)).sort()
 }
 
 function getAvailableOtherTags(): string[] {
-  return getAvailableTags().filter(tag => !MAIN_CATEGORY_TAGS.includes(tag))
+  return getAvailableTags().filter(tag => !MAIN_CATEGORY_TAGS.includes(tag)).sort()
 }
 
 function getSelectedMainTags(): string[] {
-  return [...selectedTags.value].filter(tag => MAIN_CATEGORY_TAGS.includes(tag))
+  return [...selectedTags.value].filter(tag => MAIN_CATEGORY_TAGS.includes(tag)).sort()
 }
 
 function getSelectedOtherTags(): string[] {
-  return [...selectedTags.value].filter(tag => !MAIN_CATEGORY_TAGS.includes(tag))
+  return [...selectedTags.value].filter(tag => !MAIN_CATEGORY_TAGS.includes(tag)).sort()
 }
 
 function getSearchResults(): RouteRecordRaw[] {
