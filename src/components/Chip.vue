@@ -1,9 +1,13 @@
 <script setup lang="ts">
-defineProps<{ selected?: boolean, important?: boolean }>()
+defineProps<{ selected?: boolean, important?: boolean, chipColor?: string }>()
 </script>
 
 <template>
-  <button :class="{ chip: true, 'chip--selected': selected, 'chip--important': important }" type="button">
+  <button 
+    :class="{ chip: true, 'chip--selected': selected, 'chip--important': important }"
+    :style="{ '--chip-color': chipColor }"
+    type="button"
+  >
     <span v-if="selected">&check;</span>
     <span>
       <slot></slot>
@@ -13,16 +17,17 @@ defineProps<{ selected?: boolean, important?: boolean }>()
 
 <style scoped>
 .chip {
+  --chip-color: var(--color-primary);
   font-size: clamp(1em, 2vw, 1.5rem);
   display: flex;
   align-items: center;
   gap: 0.5em;
   padding: 0 1em;
   height: 2.5em;
-  color: rgb(var(--color-primary));
+  color: rgb(var(--chip-color));
   outline: none;
   border: none;
-  background: rgba(var(--color-primary), 0.08);
+  background: rgba(var(--chip-color), 0.08);
   border-radius: 1.25em;
   text-align: left;
   white-space: nowrap;
@@ -37,8 +42,8 @@ defineProps<{ selected?: boolean, important?: boolean }>()
 }
 
 .chip--selected {
-  background: linear-gradient(rgba(var(--color-primary), 0.1), rgba(var(--color-primary), 0.15));
-  border: 1pt solid rgba(var(--color-primary), 0.3);
+  background: linear-gradient(rgba(var(--chip-color), 0.1), rgba(var(--chip-color), 0.15));
+  border: 1pt solid rgba(var(--chip-color), 0.3);
 }
 
 .chip--selected.chip--important {

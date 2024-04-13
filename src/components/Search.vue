@@ -7,7 +7,8 @@ import generatedPages from "virtual:generated-pages"
 import ImageCard from '../components/ImageCard.vue';
 import Chip from '../components/Chip.vue'
 
-const MAIN_CATEGORY_TAGS = ['projects', 'work'/*, 'blog' */]
+const MAIN_CATEGORY_TAGS = ['projects', 'work']
+const MEDIUM_TAGS = ['python', 'sql', 'flask', 'javascript', 'typescript', 'p5.js', 'c#', 'unity']
 
 const router = useRouter();
 
@@ -65,16 +66,24 @@ function getAvailableMainTags(): string[] {
   return getAvailableTags().filter(tag => MAIN_CATEGORY_TAGS.includes(tag)).sort()
 }
 
+function getAvailableMediumTags(): string[] {
+  return getAvailableTags().filter(tag => MEDIUM_TAGS.includes(tag)).sort()
+}
+
 function getAvailableOtherTags(): string[] {
-  return getAvailableTags().filter(tag => !MAIN_CATEGORY_TAGS.includes(tag)).sort()
+  return getAvailableTags().filter(tag => !(MAIN_CATEGORY_TAGS.concat(MEDIUM_TAGS)).includes(tag)).sort()
 }
 
 function getSelectedMainTags(): string[] {
   return [...selectedTags.value].filter(tag => MAIN_CATEGORY_TAGS.includes(tag)).sort()
 }
 
+function getSelectedMediumTags(): string[] {
+  return [...selectedTags.value].filter(tag => MEDIUM_TAGS.includes(tag)).sort()
+}
+
 function getSelectedOtherTags(): string[] {
-  return [...selectedTags.value].filter(tag => !MAIN_CATEGORY_TAGS.includes(tag)).sort()
+  return [...selectedTags.value].filter(tag => !(MAIN_CATEGORY_TAGS.concat(MEDIUM_TAGS)).includes(tag)).sort()
 }
 
 function getSearchResults(): RouteRecordRaw[] {
@@ -112,8 +121,13 @@ onBeforeRouteLeave(stopUpdateQueryParams)
   <div class="tags-container">
     <!-- Main Category Tags -->
     <div class="tags">
-      <Chip important selected v-for="tag in getSelectedMainTags()" @click="deselectTag(tag)">{{ tag }}</Chip>
-      <Chip important v-for="tag in getAvailableMainTags()" @click="selectTag(tag)">{{ tag }}</Chip>
+      <Chip chip-color="var(--color-important)" selected v-for="tag in getSelectedMainTags()" @click="deselectTag(tag)">{{ tag }}</Chip>
+      <Chip chip-color="var(--color-important)" v-for="tag in getAvailableMainTags()" @click="selectTag(tag)">{{ tag }}</Chip>
+    </div>
+    <!-- Medium Tags -->
+    <div class="tags">
+      <Chip chip-color="138, 92, 255" selected v-for="tag in getSelectedMediumTags()" @click="deselectTag(tag)">{{ tag }}</Chip>
+      <Chip chip-color="138, 92, 255" v-for="tag in getAvailableMediumTags()" @click="selectTag(tag)">{{ tag }}</Chip>
     </div>
     <!-- All Other Tags -->
     <div class="tags">
