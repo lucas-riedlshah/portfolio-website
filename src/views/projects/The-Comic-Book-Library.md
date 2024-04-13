@@ -6,8 +6,7 @@ meta:
   coverImage: /static/TheComicBookLibrary_CoverImage.png
 </route>
 
-Created in my second year of university, this project uses Python with Flask and SQLAlchemy to present a dataset of comic books.  
-It is quite a simple application and definitely has room for improvement, but given that it was created as an assignment for a university course, I have no plans to take it any further.
+Created in my second year of university, this project uses Python with Flask and SQLAlchemy to present a dataset of comic books.
 
 You can directly access the website [here](https://lucasrs.pythonanywhere.com/).  
 [View on GitHub](https://github.com/lucas-riedlshah/compsci235-assignment2)
@@ -89,3 +88,8 @@ The "Books" page contains the whole catalogue of books and can be filtered by ye
 >
   <a href="https://lucasrs.pythonanywhere.com/search?q=the">The Comic Book Library - Search Page</a>
 </iframe>
+
+## Final Thoughts
+
+It is quite a simple application and definitely has room for improvement, however given that it was created as an assignment for a university course, I have no plans to take it any further.
+Personally if I were to produce an application for something like this, I would use a JavaScript framework such as React or Vue, and then use something like Flask or ASP.NET exclusively for the backend of the stack. I think this would keep the codebase a lot tidier and it would be a more modern implementation of an application like this.
