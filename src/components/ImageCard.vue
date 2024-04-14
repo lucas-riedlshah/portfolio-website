@@ -1,9 +1,9 @@
 <script setup lang="ts">
-defineProps<{ src?: string, date?: string }>();
+defineProps<{ src?: string, date?: string, pinned?: boolean }>();
 </script>
 
 <template>
-  <div class="image-card-container">
+  <div class="image-card-container" :class="{ 'image-card-container--pinned': pinned }">
     <div class="image-card">
       <img :src="src" class="image-card__image" />
       <div class="image-card__info info">
@@ -66,5 +66,10 @@ defineProps<{ src?: string, date?: string }>();
 
 .info__date {
   font-size: 0.6em;
+}
+
+.image-card-container--pinned .image-card {
+  border-color: rgba(var(--color-hover-surface-shadow), 0.3);
+  background-color: color-mix(in srgb, rgb(var(--color-surface)), rgb(var(--color-primary)) 10%);
 }
 </style>

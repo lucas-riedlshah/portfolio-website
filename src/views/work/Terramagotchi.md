@@ -3,6 +3,7 @@ meta:
   title: Terramagotchi
   subtitle: Team Lead
   date: Nov 2022
+  pinned: true
   tags: [Projects, Creative Coding, JavaScript, p5.js, HTML / CSS]
   coverImage: /static/terramagotchi/1.svg
 </route>
