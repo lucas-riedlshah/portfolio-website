@@ -1,7 +1,8 @@
 <route lang="yaml">
 meta:
   title: Terramagotchi
-  year: Team Lead, 2022
+  subtitle: Team Lead
+  date: Nov 2022
   tags: [Projects, Creative Coding, JavaScript, p5.js, HTML / CSS]
   coverImage: /static/terramagotchi/1.svg
 </route>

@@ -1,7 +1,7 @@
 <route lang="yaml">
 meta:
   title: The Comic Book Library
-  year: 2021
+  date: 2021
   tags: [Python, Flask, SQL, HTML / CSS]
   coverImage: /static/TheComicBookLibrary_CoverImage.png
 </route>

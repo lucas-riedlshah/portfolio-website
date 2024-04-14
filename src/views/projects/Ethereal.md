@@ -1,7 +1,7 @@
 <route lang="yaml">
 meta:
   title: Ethereal
-  year: 2021
+  date: 2021
   tags: [Creative Coding, JavaScript, p5.js, HTML / CSS]
   coverImage: https://res.cloudinary.com/generatively/ethereal_butterfly/1920_12k_v2.webp
 </route>

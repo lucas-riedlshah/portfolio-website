@@ -1,5 +1,5 @@
 <script setup lang="ts">
-defineProps<{ src?: string, year?: string }>();
+defineProps<{ src?: string, date?: string }>();
 </script>
 
 <template>
@@ -10,7 +10,7 @@ defineProps<{ src?: string, year?: string }>();
         <span class="info__title">
           <slot></slot>
         </span>
-        <span class="info__year" v-if="year">{{ " - " + year }}</span>
+        <span class="info__date" v-if="date">{{ " - " + date }}</span>
       </div>
     </div>
   </div>
@@ -64,7 +64,7 @@ defineProps<{ src?: string, year?: string }>();
 .info__title {
 }
 
-.info__year {
+.info__date {
   font-size: 0.6em;
 }
 </style>

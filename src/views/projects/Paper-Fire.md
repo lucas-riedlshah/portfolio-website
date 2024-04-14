@@ -1,7 +1,7 @@
 <route lang="yaml">
 meta:
   title: Paper Fire
-  year: 2023
+  date: Jan 2023
   tags: [Game Jam, Unity, C# / .NET]
   coverImage: https://img.itch.zone/aW1nLzExMTA5MTIxLnBuZw==/315x250%23c/N%2FLs9a.png
 </route>

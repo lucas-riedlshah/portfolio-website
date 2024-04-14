@@ -97,12 +97,11 @@ function getSearchResults(): RouteRecordRaw[] {
       return (<string>routeB.meta?.title) < (<string>routeA.meta?.title) ? 1 : -1
     })
     .sort((routeA, routeB) => {
-      return parseInt((String(routeB.meta?.year)).slice(0, 4))
-        - parseInt((String(routeA.meta?.year)).slice(0, 4))
-    })
-    .sort((routeA, routeB) => {
-      return parseInt((String(routeB.meta?.year)).slice(-4))
-        - parseInt((String(routeA.meta?.year)).slice(-4))
+      let dateA: string = String(routeA.meta?.date)
+      let dateB: string = String(routeB.meta?.date)
+      if (dateA.length > 4) dateA = "01 " + dateA
+      if (dateB.length > 4) dateB = "01 " + dateB
+      return Date.parse(dateB) - Date.parse(dateA)
     })
 }
 
@@ -138,7 +137,7 @@ onBeforeRouteLeave(stopUpdateQueryParams)
   <masonry-wall :items="getSearchResults()" :column-width="300" :gap="15">
     <template #default="{ item }">
       <RouterLink :to="item.path" class="search-result-card">
-        <ImageCard :src="item.meta.coverImage" :year="item.meta.year">{{ item.meta.title }}</ImageCard>
+        <ImageCard :src="item.meta.coverImage" :date="String(item.meta.date)">{{ item.meta.title }}</ImageCard>
       </RouterLink>
     </template>
   </masonry-wall>

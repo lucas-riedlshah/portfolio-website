@@ -1,7 +1,7 @@
 <route lang="yaml">
 meta:
   title: Putt Putt Perfection
-  year: 2023
+  date: Jul 2023
   tags: [Game Jam, Unity, C# / .NET]
   coverImage: https://img.itch.zone/aW1nLzEyNzE3MDQ3LnBuZw==/315x250%23c/%2FJMIIk.png
 </route>

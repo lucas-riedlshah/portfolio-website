@@ -11,7 +11,7 @@ useHead({ title: <string>route.meta.title })
 <template>
   <div class="heading">
     <h1 class="title">{{ $route.meta.title }}</h1>
-    <p class="year">{{ $route.meta.year }}</p>
+    <p class="date">{{ $route.meta.date }}</p>
     <span class="tags">
       <RouterLink v-for="tag in $route.meta.tags" :to="{ path: '/', query: { tags: tag } }" class="tags__tag">{{
           tag
@@ -32,7 +32,7 @@ useHead({ title: <string>route.meta.title })
   margin-bottom: 0;
 }
 
-.year {
+.date {
   margin-top: 0;
 }
 
