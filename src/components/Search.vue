@@ -33,6 +33,12 @@ function deselectTag(tag: string) {
   selectedTags.value.delete(tag)
 }
 
+function deselectTags(tags: string[]) {
+  for (let tag of tags) {
+    deselectTag(tag)
+  }
+}
+
 /**
  * Returns a list of routes marked to be included in search results.
  */
@@ -130,16 +136,19 @@ onBeforeRouteLeave(stopUpdateQueryParams)
     <div class="tags">
       <Chip chip-color="var(--color-important)" selected v-for="tag in getSelectedMainTags()" @click="deselectTag(tag)">{{ tag }}</Chip>
       <Chip chip-color="var(--color-important)" v-for="tag in getAvailableMainTags()" @click="selectTag(tag)">{{ tag }}</Chip>
+      <Chip chip-color="transparent" class="tags__clear-button" v-if="getSelectedMainTags().length > 0" @click="deselectTags(MAIN_CATEGORY_TAGS)">Clear</Chip>
     </div>
     <!-- Medium Tags -->
     <div class="tags">
       <Chip chip-color="138, 92, 255" selected v-for="tag in getSelectedMediumTags()" @click="deselectTag(tag)">{{ tag }}</Chip>
       <Chip chip-color="138, 92, 255" v-for="tag in getAvailableMediumTags()" @click="selectTag(tag)">{{ tag }}</Chip>
+      <Chip chip-color="transparent" class="tags__clear-button" v-if="getSelectedMediumTags().length > 0" @click="deselectTags(MEDIUM_TAGS)">Clear</Chip>
     </div>
     <!-- All Other Tags -->
     <div class="tags">
       <Chip selected v-for="tag in getSelectedOtherTags()" @click="deselectTag(tag)">{{ tag }}</Chip>
       <Chip v-for="tag in getAvailableOtherTags()" @click="selectTag(tag)">{{ tag }}</Chip>
+      <Chip chip-color="transparent" class="tags__clear-button" v-if="getSelectedOtherTags().length > 0" @click="deselectTags(getSelectedOtherTags())">Clear</Chip>
     </div>
   </div>
   <masonry-wall :items="getSearchResults()" :column-width="300" :gap="15">
@@ -165,6 +174,10 @@ onBeforeRouteLeave(stopUpdateQueryParams)
   gap: 1rem;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.tags__clear-button {
+  padding: 0;
 }
 
 .search-result-card {
