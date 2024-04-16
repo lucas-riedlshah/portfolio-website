@@ -2,6 +2,7 @@
 import MenuToggleButton from '../components/MenuToggleButton.vue';
 import BackButton from '../components/BackButton.vue';
 import LogoVue from '../components/Logo.vue';
+import DarkModeToggle from '../components/DarkModeToggle.vue'
 import smileIconUrl from '../assets/smile.svg';
 import { onMounted, onUnmounted, ref } from 'vue';
 
@@ -37,6 +38,7 @@ function handleScroll() {
     </div>
     <!-- <div class="smile" :style="{ backgroundImage: `url('${smileIconUrl}')` }"></div> -->
   </div>
+  <DarkModeToggle />
 </template>
 
 <style scoped>

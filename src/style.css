@@ -38,10 +38,6 @@
   font-weight: 300;
   font-size: 16px;
   line-height: 1.15;
-  background-color: rgb(var(--color-background));
-  color: rgb(var(--color-on-background));
-
-  color-scheme: light dark;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -62,12 +58,28 @@
   --color-important: 255, 50, 105;
 }
 
+.dark-mode {
+  --color-background: 8, 8, 8;
+  --color-on-background: 255, 255, 255;
+  --color-surface: 10, 14, 20;
+  --color-on-surface: 255, 255, 255;
+  --surface-shadow-intensity: 0;
+  --surface-hover-shadow-intensity: 0.4;
+  --color-primary: 100, 155, 255;
+  --color-on-primary: 255, 255, 255;
+  --color-important: 255, 82, 111;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
+
+  color-scheme: light dark;
+  background-color: rgb(var(--color-background));
+  color: rgb(var(--color-on-background));
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --color-background: 8, 8, 8;
     --color-on-background: 255, 255, 255;
@@ -79,4 +91,4 @@ body {
     --color-on-primary: 255, 255, 255;
     --color-important: 255, 82, 111;
   }
-}
+} */
