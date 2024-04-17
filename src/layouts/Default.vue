@@ -30,6 +30,7 @@ function handleScroll() {
       :class="{ 'top-bar': true, 'top-bar--hidden': hideTopBar }">
       <BackButton />
       <LogoVue small />
+      <DarkModeToggle />
       <!-- <MenuToggleButton :style="{ display: $route.meta.hideMenuToggleButton ? 'none' : '' }" /> -->
     </div>
     <div class="content">
@@ -38,7 +39,6 @@ function handleScroll() {
     </div>
     <!-- <div class="smile" :style="{ backgroundImage: `url('${smileIconUrl}')` }"></div> -->
   </div>
-  <DarkModeToggle />
 </template>
 
 <style scoped>

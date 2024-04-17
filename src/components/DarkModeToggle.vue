@@ -34,18 +34,31 @@ onMounted(updateDarkMode)
     chip-color="transparent"
     @click="toggleDarkMode"
   >
-    <span v-if="isEnabled">🌛</span>
-    <span v-else>🌞</span>
+
+    <img 
+      v-if="isEnabled" 
+      src="../assets/First_Quarter_Moon_Face.png" 
+      alt="First Quarter Moon Face" 
+      width="50" 
+      height="50" 
+    />
+    <img 
+      v-else 
+      src="../assets/Sun_with_Face.png" 
+      alt="Sun with Face" 
+      width="50" 
+      height="50" 
+    />
   </Chip>
 </template>
 
 <style scoped>
 .chip {
-  position: fixed;
-  bottom: 1rem;
-  left: 1rem;
   padding: 0;
   height: initial;
-  font-size: 3rem;
+}
+
+.chip img {
+  display: block;
 }
 </style>

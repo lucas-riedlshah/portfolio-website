@@ -8,6 +8,7 @@ import NavigationButton from "../components/NavigationButton.vue"
 import NavigationBar from "../components/NavigationBar.vue"
 import SocialButton from "../components/SocialButton.vue"
 import Search from "../components/Search.vue"
+import DarkModeToggle from '../components/DarkModeToggle.vue'
 import githubIconUrl from "../assets/GitHub.svg"
 import instagramIconUrl from "../assets/Instagram.svg"
 import twitterIconUrl from "../assets/Twitter.svg"
@@ -24,6 +25,7 @@ useHead({ title: "Lucas RiedlShah", titleTemplate: '%s' })
 <template>
   <div class="home">
     <div class="home__info info">
+      <DarkModeToggle class="info__dark-mode-toggle" />
       <LogoVue class="info__logo" />
       <SloganVue class="info__slogan" />
       <SocialsBar class="info__socials">
@@ -70,15 +72,19 @@ useHead({ title: "Lucas RiedlShah", titleTemplate: '%s' })
 .info {
   display: grid;
   grid-template-areas:
-    "logo"
-    "slogan"
-    "socials"
+    "logo dark-mode-toggle"
+    "slogan slogan"
+    "socials socials"
     ;
 }
 
 .info__logo {
   grid-area: logo;
   align-self: flex-end;
+}
+
+.info__dark-mode-toggle {
+  justify-self: right;
 }
 
 .info__socials {
@@ -111,11 +117,23 @@ useHead({ title: "Lucas RiedlShah", titleTemplate: '%s' })
     position: sticky;
     top: 0;
     /* padding-bottom: min(4rem, 4vw); */
+    grid-template-areas:
+      "dark-mode-toggle"
+      "logo"
+      "slogan"
+      "socials"
+      ;
   }
 
   .info {
     align-content: center;
     min-height: calc(100vh - 2 * min(4rem, 4vw));
+  }
+
+  .info__dark-mode-toggle {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
   }
 }
 </style>
