@@ -36,14 +36,14 @@ onMounted(updateDarkMode)
   >
 
     <img 
-      v-if="isEnabled" 
+      :style="{ display: isEnabled ? 'initial' : 'none'}"
       src="../assets/First_Quarter_Moon_Face.png" 
       alt="First Quarter Moon Face" 
       width="50" 
       height="50" 
     />
     <img 
-      v-else 
+      :style="{ display: isEnabled ? 'none' : 'initial'}"
       src="../assets/Sun_with_Face.png" 
       alt="Sun with Face" 
       width="50" 
