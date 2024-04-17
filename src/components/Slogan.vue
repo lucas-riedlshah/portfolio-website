@@ -17,7 +17,7 @@ onBeforeMount(() => {
   ]
 
   slogan.value = slogans[slogans.length * Math.random() | 0]
-  slogan.value = slogans[slogans.length - 1]
+  // slogan.value = slogans[slogans.length - 1]
 })
 </script>
 
