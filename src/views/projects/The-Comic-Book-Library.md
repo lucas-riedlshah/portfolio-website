@@ -3,7 +3,7 @@ meta:
   title: The Comic Book Library
   date: 2021
   pinned: true
-  tags: [Python, Flask, SQL, HTML / CSS]
+  tags: [Python, Flask, SQL, HTML / CSS, Web Development]
   coverImage: /static/TheComicBookLibrary_CoverImage.png
 </route>
 
