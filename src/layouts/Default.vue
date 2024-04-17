@@ -50,7 +50,7 @@ function handleScroll() {
   font-size: calc(1.5 * min(1.8rem, 5vw));
   position: sticky;
   top: 0;
-  padding: 0.5rem;
+  padding: 1rem;
   padding-inline: calc(0.5 * (100% - (clamp(70%, 1100px, 100%) - 3rem)));
   display: grid;
   grid-template-columns: 3ex auto 3ex;
