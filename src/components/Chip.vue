@@ -9,7 +9,7 @@ defineProps<{ selected?: boolean, important?: boolean, chipColor?: string }>()
     type="button"
   >
     <span v-if="selected">&check;</span>
-    <span>
+    <span class="chip__slot">
       <slot></slot>
     </span>
   </button>
@@ -49,5 +49,9 @@ defineProps<{ selected?: boolean, important?: boolean, chipColor?: string }>()
 .chip--selected.chip--important {
   background: linear-gradient(rgba(var(--color-important), 0.1), rgba(var(--color-important), 0.15));
   border: 1pt solid rgba(var(--color-important), 0.3);
+}
+
+.chip__slot {
+  display: inline-flex;
 }
 </style>
