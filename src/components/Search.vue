@@ -8,7 +8,7 @@ import ImageCard from '../components/ImageCard.vue';
 import Chip from '../components/Chip.vue'
 
 const MAIN_CATEGORY_TAGS = ['Projects', 'Work']
-const MEDIUM_TAGS = ['Oil on Canvas', 'Python', 'SQL', 'Flask', 'JavaScript', 'TypeScript', 'p5.js', 'C# / .NET', 'Unity', 'HTML / CSS', 'C', 'Arduino', 'WebGL', 'Rust']
+const MEDIUM_TAGS = ['Oil on Canvas', 'Python', 'SQL', 'Flask', 'JavaScript', 'TypeScript', 'p5.js', 'C# / .NET', 'Unity', 'HTML / CSS', 'C', 'Arduino', 'WebGL', 'Rust', 'Vue']
 
 const router = useRouter();
 
