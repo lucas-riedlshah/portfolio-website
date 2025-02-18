@@ -11,7 +11,7 @@ import Search from "../components/Search.vue"
 import DarkModeToggle from '../components/DarkModeToggle.vue'
 import githubIconUrl from "../assets/GitHub.svg"
 import instagramIconUrl from "../assets/Instagram.svg"
-import twitterIconUrl from "../assets/Twitter.svg"
+import bskyIconUrl from "../assets/Bluesky.svg"
 
 useHead({ title: "Lucas RiedlShah", titleTemplate: '%s' })
 </script>
@@ -31,7 +31,7 @@ useHead({ title: "Lucas RiedlShah", titleTemplate: '%s' })
       <SocialsBar class="info__socials">
         <SocialButton :src=githubIconUrl href="https://github.com/lucas-riedlshah/" />
         <SocialButton :src=instagramIconUrl href="https://www.instagram.com/lucas_riedlshah/" />
-        <SocialButton :src=twitterIconUrl href="https://twitter.com/Lucas_RiedlShah" />
+        <SocialButton :src=bskyIconUrl href="https://bsky.app/profile/lucasrs.dev" />
         <!-- <SocialButton>+</SocialButton> -->
       </SocialsBar>
     </div>
