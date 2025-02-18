@@ -6,7 +6,7 @@ import SocialButton from "../components/SocialButton.vue"
 import SocialsBar from "../components/SocialsBar.vue"
 import githubIconUrl from "../assets/GitHub.svg"
 import instagramIconUrl from "../assets/Instagram.svg"
-import twitterIconUrl from "../assets/Twitter.svg"
+import bskyIconUrl from "../assets/Bluesky.svg"
 
 useHead({ title: 'Menu' })
 </script>
@@ -21,7 +21,7 @@ useHead({ title: 'Menu' })
     <SocialsBar class="socials">
       <SocialButton :src=githubIconUrl href="https://github.com/lucas-riedlshah" />
       <SocialButton :src=instagramIconUrl href="https://www.instagram.com/lucas_riedlshah/" />
-      <SocialButton :src=twitterIconUrl href="https://twitter.com/Lucas_RiedlShah" />
+      <SocialButton :src=bskyIconUrl href="https://bsky.app/profile/lucasrs.dev" />
     </SocialsBar>
     <MenuItemVue to="/search?tags=projects">Projects</MenuItemVue>
     <!-- <MenuItemVue to="/work">Work</MenuItemVue>
