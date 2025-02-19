@@ -50,11 +50,11 @@ function getSearchablePages() {
  * Returns a list of tags which exist in on at least one route.
  */
 function getValidTags(): string[] {
-  return (<string[]>[...(new Set(
+  return <string[]>[...(new Set(
     getSearchablePages()
       .map(route => route.meta?.tags)
       .flat()
-  ))]).filter(tag => !tag.startsWith("."))
+  ))]
 }
 
 /**
@@ -77,7 +77,7 @@ function getAvailableMediumTags(): string[] {
 }
 
 function getAvailableOtherTags(): string[] {
-  return getAvailableTags().filter(tag => !(MAIN_CATEGORY_TAGS.concat(MEDIUM_TAGS)).includes(tag)).sort()
+  return getAvailableTags().filter(tag => !(MAIN_CATEGORY_TAGS.concat(MEDIUM_TAGS)).includes(tag)).filter(tag => !tag.startsWith(".")).sort()
 }
 
 function getSelectedMainTags(): string[] {
@@ -146,7 +146,7 @@ onBeforeRouteLeave(stopUpdateQueryParams)
     </div>
     <!-- All Other Tags -->
     <div class="tags">
-      <Chip selected v-for="tag in getSelectedOtherTags()" @click="deselectTag(tag)">{{ tag }}</Chip>
+      <Chip selected v-for="tag in getSelectedOtherTags()" @click="deselectTag(tag)">{{ tag.replace(/^./, '') }}</Chip>
       <Chip v-for="tag in getAvailableOtherTags()" @click="selectTag(tag)">{{ tag }}</Chip>
       <Chip chip-color="transparent" class="tags__clear-button" v-if="getSelectedOtherTags().length > 0" @click="deselectTags(getSelectedOtherTags())">Clear</Chip>
     </div>
