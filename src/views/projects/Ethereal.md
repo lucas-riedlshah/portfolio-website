@@ -2,7 +2,7 @@
 meta:
   title: Ethereal
   date: 2021
-  tags: [Creative Coding, JavaScript, p5.js, HTML / CSS]
+  tags: [Creative Coding, JavaScript, p5.js, HTML / CSS, .Vibrance]
   coverImage: https://res.cloudinary.com/generatively/ethereal_butterfly/1920_12k_v2.webp
 </route>
 

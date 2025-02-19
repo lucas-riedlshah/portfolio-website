@@ -2,7 +2,7 @@
 meta:
   title: Vibrance
   date: 2019
-  tags: [Creative Coding, JavaScript, p5.js, HTML / CSS]
+  tags: [Creative Coding, JavaScript, p5.js, HTML / CSS, .Vibrance]
   coverImage: https://res.cloudinary.com/generatively/vibrance/neon.webp
 </route>
 

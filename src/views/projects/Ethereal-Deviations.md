@@ -2,7 +2,7 @@
 meta:
   title: Ethereal Deviations
   date: 2021
-  tags: [Creative Coding, JavaScript, p5.js, HTML / CSS]
+  tags: [Creative Coding, JavaScript, p5.js, HTML / CSS, .Vibrance]
   coverImage: https://res.cloudinary.com/generatively/ethereal-deviations/invictus.webp
 </route>
 

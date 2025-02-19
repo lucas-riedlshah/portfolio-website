@@ -50,11 +50,11 @@ function getSearchablePages() {
  * Returns a list of tags which exist in on at least one route.
  */
 function getValidTags(): string[] {
-  return <string[]>[...(new Set(
+  return (<string[]>[...(new Set(
     getSearchablePages()
       .map(route => route.meta?.tags)
       .flat()
-  ))]
+  ))]).filter(tag => !tag.startsWith("."))
 }
 
 /**
