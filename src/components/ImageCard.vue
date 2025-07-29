@@ -10,7 +10,7 @@ defineProps<{ src?: string, date?: string, pinned?: boolean }>();
         <span class="info__title">
           <slot></slot>
         </span>
-        <span class="info__date" v-if="date">{{ " - " + date }}</span>
+        <!-- <span class="info__date" v-if="date">{{ " - " + date }}</span> -->
       </div>
     </div>
   </div>

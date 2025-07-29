@@ -6,6 +6,7 @@ import markdown from 'vite-plugin-md'
 import prism from 'markdown-it-prism'
 import anchor from 'markdown-it-anchor'
 import container from "markdown-it-container";
+import mila from 'markdown-it-link-attributes'
 import { RouteRecordRaw } from 'vue-router'
 
 // https://vitejs.dev/config/
@@ -15,11 +16,25 @@ export default defineConfig({
       include: [/\.vue$/, /\.md$/],
     }),
     markdown({
+      markdownItOptions: {
+        linkify: true,
+      },
       markdownItUses: [
         prism, 
         [anchor, { permalink: anchor.permalink.headerLink() }],
         [container, 'full-width'],
+        [mila, {
+          pattern: /^https?:\/\//,
+          attrs: {
+            target: '_blank',
+            rel: 'noopener'
+          }
+        }]
       ],
+      markdownItSetup(md) {
+        md.linkify.set({ fuzzyLink: true });
+        md.linkify.tlds(['nz', 'dev', 'au', 'tech', 'app'], true);
+      },
       wrapperComponent: 'MarkdownWrapper'
     }),
     pages({

@@ -106,8 +106,8 @@ function getSearchResults(): RouteRecordRaw[] {
       let weightA = 0
       let weightB = 0
 
-      let dateA: string = String(routeA.meta?.date)
-      let dateB: string = String(routeB.meta?.date)
+      let dateA: string = String(routeA.meta?.date ?? "3000")
+      let dateB: string = String(routeB.meta?.date ?? "3000")
       if (dateA.length > 4) dateA = "01 " + dateA
       if (dateB.length > 4) dateB = "01 " + dateB
       weightA += Math.sign(Date.parse(dateA) - Date.parse(dateB))
