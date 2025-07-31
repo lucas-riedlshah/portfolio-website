@@ -10,12 +10,18 @@ let previousScrollY = Infinity
 let hideTopBar = ref(false);
 
 onMounted(() => {
-  window.addEventListener("scroll", handleScroll)
-})
+  window.addEventListener("scroll", handleScroll);
+  window.addEventListener("hashchange", handleHashChange);
+});
 
 onUnmounted(() => {
-  window.removeEventListener("scroll", handleScroll)
-})
+  window.removeEventListener("scroll", handleScroll);
+  window.removeEventListener("hashchange", handleHashChange);
+});
+
+function handleHashChange() {
+  hideTopBar.value = true;
+}
 
 function handleScroll() {
   hideTopBar.value = window.scrollY > previousScrollY
