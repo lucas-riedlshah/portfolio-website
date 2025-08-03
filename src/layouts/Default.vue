@@ -64,7 +64,6 @@ function handleScroll() {
   align-items: center;
   z-index: 2;
   background-color: rgb(var(--color-background));
-  border-bottom: 1px solid rgb(var(--color-on-background));
   transition: top 0.2s;
 }
 

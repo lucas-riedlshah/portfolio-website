@@ -40,10 +40,12 @@ export default defineConfig({
         // TODO: Would be nice to parse --- style front matter and turn it into this <route> one.
         const originalRender = md.render.bind(md)
         md.render = (src, env) => {
-          src = src.replace(
-            /^<route\s+lang=["']yaml["']>\n([\s\S]*?)<\/route>/,
-            (match) => `${match}\n\n[[toc]]`
-          )
+          if ((src.match(/^##\s/gm) || []).length > 2) {
+            src = src.replace(
+              /^<route\s+lang=["']yaml["']>\n([\s\S]*?)<\/route>/,
+              (match) => `${match}\n\n[[toc]]`
+            )
+          }
           return originalRender(src, env)
         }
         md.linkify.set({ fuzzyLink: true });
