@@ -103,4 +103,29 @@ function handleScroll() {
 .content>.markdown-body>*.full-width {
   grid-column: 1 / -1;
 }
+
+.table-of-contents ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  /* gap: 0.5em; */
+  flex-wrap: wrap;
+}
+
+.table-of-contents li {
+  border-right: 1px solid rgba(var(--color-on-background), 0.1);
+  padding-inline: 0.5em;
+}
+
+.table-of-contents li:first-child {
+  padding-left: 0;
+}
+
+.table-of-contents li:last-child {
+  border-right: none;
+}
+
+.table-of-contents li a {
+  text-decoration: none;
+}
 </style>
