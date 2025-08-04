@@ -51,32 +51,24 @@ export default {
     };
 
     const updateScrollPositions = () => {
-      if (doUpdateScrollPositions) {
-        state.scrollPosition =
-          Math.min(1, sticky.value.offsetTop / stickyHeight) *
-          (props.images.length);
-        window.requestAnimationFrame(updateScrollPositions);
-      }
+      if (!doUpdateScrollPositions) return
+      state.scrollPosition = Math.min(1, sticky.value.offsetTop / stickyHeight) * (props.images.length);
+      window.requestAnimationFrame(updateScrollPositions);
     };
 
     // TODO: All three of the functions below could actually just be one function for the most part.
     //       This would also then make allowing for custom layouts, via a custom easing function, more simple to implement as it would just replace that one function.
 
     const getXPosition = () => {
+      // Don't do fancy math on small displays - it looks bad.
       if (state.smallDisplay) {
         return Math.abs(((state.scrollPosition + 3) % 4) - 2) - 1;
-      } else {
-        const mod = (state.scrollPosition / 4) % 1;
-        if (mod <= 0.5 && mod > 0) {
-          return Math.cos(Math.PI * (state.scrollPosition + 1)) * 0.5 + 0.5;
-        } else {
-          return (
-            -1 -
-            Math.cos(Math.PI * ((2 * state.scrollPosition) / 2 + 1)) * 0.5 +
-            0.5
-          );
-        }
       }
+      const mod = (state.scrollPosition / 4) % 1;
+      if (mod <= 0.5 && mod > 0) {
+        return Math.cos(Math.PI * (state.scrollPosition + 1)) * 0.5 + 0.5;
+      }
+      return ((-1 - Math.cos(Math.PI * ((2 * state.scrollPosition) / 2 + 1))) * 0.5);
     };
 
     const getContainerTransform = () => {
