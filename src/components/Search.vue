@@ -140,7 +140,7 @@ onBeforeRouteLeave(stopUpdateQueryParams)
       <Chip chip-color="138, 92, 255" selected v-for="tag in getSelectedMediumTags()" @click="deselectTag(tag)">{{ tag }}</Chip>
       <Chip chip-color="138, 92, 255" v-for="tag in getAvailableMediumTags()" @click="selectTag(tag)">{{ tag }}</Chip>
       
-      <Chip selected v-for="tag in getSelectedOtherTags()" @click="deselectTag(tag)">{{ tag.replace(/^./, '') }}</Chip>
+      <Chip selected v-for="tag in getSelectedOtherTags()" @click="deselectTag(tag)">{{ tag.replace(/^\./, '') }}</Chip>
       <Chip v-for="tag in getAvailableOtherTags()" @click="selectTag(tag)">{{ tag }}</Chip>
 
       <Chip chip-color="transparent" class="tags__clear-button" v-if="selectedTags.size > 0" @click="deselectTags([...selectedTags])">Clear</Chip>
