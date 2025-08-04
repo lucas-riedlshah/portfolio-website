@@ -56,33 +56,31 @@ export default {
       window.requestAnimationFrame(updateScrollPositions);
     };
 
-    // TODO: All three of the functions below could actually just be one function for the most part.
-    //       This would also then make allowing for custom layouts, via a custom easing function, more simple to implement as it would just replace that one function.
-
-    const getXPosition = () => {
-      // Don't do fancy math on small displays - it looks bad.
-      if (state.smallDisplay) {
-        return Math.abs(((state.scrollPosition + 3) % 4) - 2) - 1;
+    const getXPosition = (position, simpleMode) => {
+      if (simpleMode) {
+        return Math.abs(((position + 3) % 4) - 2) - 1;
       }
-      const mod = (state.scrollPosition / 4) % 1;
+      const mod = (position / 4) % 1;
       if (mod <= 0.5 && mod > 0) {
-        return Math.cos(Math.PI * (state.scrollPosition + 1)) * 0.5 + 0.5;
+        return Math.cos(Math.PI * (position + 1)) * 0.5 + 0.5;
       }
-      return ((-1 - Math.cos(Math.PI * ((2 * state.scrollPosition) / 2 + 1))) * 0.5);
+      return ((-1 - Math.cos(Math.PI * ((2 * position) / 2 + 1))) * 0.5);
     };
 
+    const getXYZ = (position, simpleMode = false) => {
+      const x = getXPosition(position, simpleMode) * 50
+      const y = position * 50
+      const z = position * 100
+      return [x, y, z]
+    }
+
     const getContainerTransform = () => {
-      const x = getXPosition() * -50;
-      const y = state.scrollPosition * -50;
-      const z = state.scrollPosition * 100;
-      return `perspective(100px) translate3d(${x}vw, ${y}vh, ${z}px)`;
+      const [x, y, z] = getXYZ(state.scrollPosition, state.smallDisplay)
+      return `perspective(100px) translate3d(${-x}vw, ${-y}vh, ${z}px)`;
     };
 
     const getSlideTransform = (index) => {
-      let x = Math.abs(((index + 3) % 4) - 2) - 1
-      x *= 50;
-      const y = index * 50;
-      const z = index * 100;
+      const [x, y, z] = getXYZ(index, true)
       return `translate3d(calc(-50% + ${x}vw), calc(-50% + ${y}vh), -${z}px)`;
     };
 
