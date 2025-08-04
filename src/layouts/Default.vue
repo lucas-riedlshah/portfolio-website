@@ -108,7 +108,7 @@ function handleScroll() {
   list-style: none;
   padding: 0;
   display: flex;
-  /* gap: 0.5em; */
+  justify-content: center;
   flex-wrap: wrap;
 }
 
