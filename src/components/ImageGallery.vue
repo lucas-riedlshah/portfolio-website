@@ -107,7 +107,7 @@ onUnmounted(() => {
 });
 </script>
 
-<style>
+<style scoped>
 .gallery {
   position: relative;
   /* pointer-events: none; */

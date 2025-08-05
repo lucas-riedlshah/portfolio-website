@@ -19,6 +19,11 @@ defineProps<{ src?: string, date?: string, pinned?: boolean }>();
 <style scoped>
 .image-card-container {
   position: relative;
+  transition: transform 1s;
+}
+
+.image-card-container:hover {
+  transform: translateY(-0.1rem) scale(1.01);
 }
 
 .image-card-container::before {
@@ -34,7 +39,7 @@ defineProps<{ src?: string, date?: string, pinned?: boolean }>();
 }
 
 .image-card-container:hover::before {
-  box-shadow: 0 0 10px 50px rgba(var(--color-hover-surface-shadow), var(--surface-hover-shadow-intensity));
+  box-shadow: 0 0 30px 50px rgba(var(--color-hover-surface-shadow), var(--surface-hover-shadow-intensity));
 }
 
 .image-card {
