@@ -1,97 +1,112 @@
 <template>
-  <div class="gallery" :style="{
-    height: 'calc(' + images.length + ' * 100vh)',
-    zIndex: overlap && state.scrollPosition > images.length - 1 ? 1 : 0,
-    marginBottom: '-75vh'
-  }">
+  <div
+    class="gallery"
+    :style="{
+      height: 'calc(' + images.length + ' * 100vh)',
+      zIndex: overlap && state.scrollPosition > images.length - 1 ? 1 : 0,
+      marginBottom: '-75vh'
+    }"
+  >
     <div class="gallery__sticky" ref="sticky">
-      <div class="gallery__container" :style="{
-        transform: getContainerTransform(),
-      }">
-        <img class="gallery__slide" v-for="(data, index) in images" :key="index" :style="{
-          transform: getSlideTransform(index),
-        }" :src="data" :alt="'image-' + index" />
+      <div
+        class="gallery__container"
+        :style="{
+          transform: getContainerTransform(),
+        }"
+      >
+        <img
+          class="gallery__slide"
+          v-for="(data, index) in images"
+          :key="index"
+          :style="{
+            transform: getSlideTransform(index),
+          }"
+          :src="data"
+          :alt="'image-' + index"
+        />
       </div>
     </div>
   </div>
 </template>
 
-<script>
-import { onMounted, onUnmounted, reactive, ref } from "vue";
-export default {
-  name: "GallerySlideShow",
-  props: {
-    images: Array, // array of url strings for images
-    overlap: { default: true, type: Boolean }
+<script setup>
+import { onMounted, onUnmounted, reactive, ref, toRefs } from "vue";
+import { computed } from "vue";
+
+const props = defineProps({
+  images: {
+    type: Array,
+    required: true
   },
-  setup(props) {
-    onMounted(() => {
-      updateStickyHeight();
-      window.addEventListener("resize", updateStickyHeight);
-      window.requestAnimationFrame(updateScrollPositions);
-    });
+  overlap: {
+    type: Boolean,
+    default: true
+  }
+});
 
-    onUnmounted(() => {
-      window.removeEventListener("resize", updateStickyHeight);
-      doUpdateScrollPositions = false;
-    });
+const sticky = ref(null);
+let doUpdateScrollPositions = true;
+let stickyHeight = 0;
 
-    const sticky = ref(null);
-    let doUpdateScrollPositions = true;
-    let stickyHeight = 0;
-    let state = reactive({
-      smallDisplay: window.matchMedia("(hover: none), (max-width: 800px)")
-        .matches,
-      scrollPosition: 0,
-    });
+const state = reactive({
+  smallDisplay: window.matchMedia("(hover: none), (max-width: 800px)").matches,
+  scrollPosition: 0,
+});
 
-    const updateStickyHeight = () => {
-      stickyHeight =
-        sticky.value.offsetParent.offsetHeight - sticky.value.offsetHeight;
-    };
-
-    const updateScrollPositions = () => {
-      if (!doUpdateScrollPositions) return
-      state.scrollPosition = Math.min(1, sticky.value.offsetTop / stickyHeight) * (props.images.length);
-      window.requestAnimationFrame(updateScrollPositions);
-    };
-
-    const getXPosition = (position, simpleMode) => {
-      if (simpleMode) {
-        return Math.abs(((position + 3) % 4) - 2) - 1;
-      }
-      const mod = (position / 4) % 1;
-      if (mod <= 0.5 && mod > 0) {
-        return Math.cos(Math.PI * (position + 1)) * 0.5 + 0.5;
-      }
-      return ((-1 - Math.cos(Math.PI * ((2 * position) / 2 + 1))) * 0.5);
-    };
-
-    const getXYZ = (position, simpleMode = false) => {
-      const x = getXPosition(position, simpleMode) * 50
-      const y = position * 50
-      const z = position * 100
-      return [x, y, z]
-    }
-
-    const getContainerTransform = () => {
-      const [x, y, z] = getXYZ(state.scrollPosition, state.smallDisplay)
-      return `perspective(100px) translate3d(${-x}vw, ${-y}vh, ${z}px)`;
-    };
-
-    const getSlideTransform = (index) => {
-      const [x, y, z] = getXYZ(index, true)
-      return `translate3d(calc(-50% + ${x}vw), calc(-50% + ${y}vh), -${z}px)`;
-    };
-
-    return {
-      sticky,
-      state,
-      getContainerTransform,
-      getSlideTransform,
-    };
-  },
+const updateStickyHeight = () => {
+  if (sticky.value && sticky.value.offsetParent) {
+    stickyHeight =
+      sticky.value.offsetParent.offsetHeight - sticky.value.offsetHeight;
+  }
 };
+
+const updateScrollPositions = () => {
+  if (!doUpdateScrollPositions) return;
+  if (sticky.value && stickyHeight > 0) {
+    state.scrollPosition =
+      Math.min(1, sticky.value.offsetTop / stickyHeight) * props.images.length;
+  }
+  window.requestAnimationFrame(updateScrollPositions);
+};
+
+const getXPosition = (position, simpleMode) => {
+  if (simpleMode) {
+    return Math.abs(((position + 3) % 4) - 2) - 1;
+  }
+  const mod = (position / 4) % 1;
+  if (mod <= 0.5 && mod > 0) {
+    return Math.cos(Math.PI * (position + 1)) * 0.5 + 0.5;
+  }
+  return (-1 - Math.cos(Math.PI * ((2 * position) / 2 + 1))) * 0.5;
+};
+
+const getXYZ = (position, simpleMode = false) => {
+  const x = getXPosition(position, simpleMode) * 50;
+  const y = position * 50;
+  const z = position * 100;
+  return [x, y, z];
+};
+
+const getContainerTransform = () => {
+  const [x, y, z] = getXYZ(state.scrollPosition, state.smallDisplay);
+  return `perspective(100px) translate3d(${-x}vw, ${-y}vh, ${z}px)`;
+};
+
+const getSlideTransform = (index) => {
+  const [x, y, z] = getXYZ(index, true);
+  return `translate3d(calc(-50% + ${x}vw), calc(-50% + ${y}vh), -${z}px)`;
+};
+
+onMounted(() => {
+  updateStickyHeight();
+  window.addEventListener("resize", updateStickyHeight);
+  window.requestAnimationFrame(updateScrollPositions);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("resize", updateStickyHeight);
+  doUpdateScrollPositions = false;
+});
 </script>
 
 <style scoped>
