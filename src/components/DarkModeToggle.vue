@@ -3,7 +3,7 @@ import { onMounted, ref } from 'vue'
 
 import Chip from './Chip.vue'
 
-const isEnabled = ref(true)
+const isEnabled = ref(false)
 
 function toggleDarkMode() {
   isEnabled.value = !isEnabled.value
