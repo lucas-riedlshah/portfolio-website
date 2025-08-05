@@ -2,8 +2,8 @@
   <div
     class="gallery"
     :style="{
-      height: 'calc(' + images.length + ' * 100vh)',
-      zIndex: overlap && state.scrollPosition > images.length - 1 ? 1 : 0,
+      height: 'calc(' + getItemCount() + ' * 100vh)',
+      zIndex: overlap && state.scrollPosition > getItemCount() - 1 ? 1 : 0,
       marginBottom: '-75vh'
     }"
   >
@@ -14,15 +14,12 @@
           transform: getContainerTransform(),
         }"
       >
-        <img
-          class="gallery__slide"
-          v-for="(data, index) in images"
+        <component
+          v-for="(vnode, index) in $slots.default?.()"
           :key="index"
-          :style="{
-            transform: getSlideTransform(index),
-          }"
-          :src="data"
-          :alt="'image-' + index"
+          :is="vnode"
+          :style="{ transform: getSlideTransform(index) }"
+          class="gallery__slide"
         />
       </div>
     </div>
@@ -30,19 +27,16 @@
 </template>
 
 <script setup>
-import { onMounted, onUnmounted, reactive, ref, toRefs } from "vue";
-import { computed } from "vue";
+import { onMounted, onUnmounted, reactive, ref, useSlots } from "vue";
 
 const props = defineProps({
-  images: {
-    type: Array,
-    required: true
-  },
   overlap: {
     type: Boolean,
     default: true
   }
 });
+
+const slots = useSlots();
 
 const sticky = ref(null);
 let doUpdateScrollPositions = true;
@@ -64,7 +58,7 @@ const updateScrollPositions = () => {
   if (!doUpdateScrollPositions) return;
   if (sticky.value && stickyHeight > 0) {
     state.scrollPosition =
-      Math.min(1, sticky.value.offsetTop / stickyHeight) * props.images.length;
+      Math.min(1, sticky.value.offsetTop / stickyHeight) * getItemCount();
   }
   window.requestAnimationFrame(updateScrollPositions);
 };
@@ -97,6 +91,10 @@ const getSlideTransform = (index) => {
   return `translate3d(calc(-50% + ${x}vw), calc(-50% + ${y}vh), -${z}px)`;
 };
 
+const getItemCount = () => {
+  return (slots.default?.() ?? []).length
+}
+
 onMounted(() => {
   updateStickyHeight();
   window.addEventListener("resize", updateStickyHeight);
@@ -109,10 +107,10 @@ onUnmounted(() => {
 });
 </script>
 
-<style scoped>
+<style>
 .gallery {
   position: relative;
-  pointer-events: none;
+  /* pointer-events: none; */
 }
 
 .gallery__sticky {
@@ -128,7 +126,9 @@ onUnmounted(() => {
   will-change: transform;
   transform-style: preserve-3d;
 }
+</style>
 
+<style>
 .gallery__slide {
   position: absolute;
   top: 50%;

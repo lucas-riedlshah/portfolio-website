@@ -7,21 +7,21 @@ meta:
 </route>
 
 ::: full-width
-<ImageGallery :images="[
-  'https://res.cloudinary.com/generatively/vibrance/droplet.webp',
-  'https://res.cloudinary.com/generatively/vibrance/meteor.webp',
-  'https://res.cloudinary.com/generatively/vibrance/twin_i.webp',
-  'https://res.cloudinary.com/generatively/vibrance/twin_ii.webp',
-  'https://res.cloudinary.com/generatively/vibrance/twin_iii.webp',
-  'https://res.cloudinary.com/generatively/vibrance/portal.webp',
-  'https://res.cloudinary.com/generatively/vibrance/wave.webp',
-  'https://res.cloudinary.com/generatively/vibrance/default.webp',
-  'https://res.cloudinary.com/generatively/vibrance/zoom.webp',
-  'https://res.cloudinary.com/generatively/vibrance/net.webp',
-  'https://res.cloudinary.com/generatively/vibrance/neon.webp',
-  'https://res.cloudinary.com/generatively/vibrance/rose.webp',
-  'https://res.cloudinary.com/generatively/vibrance/abstraction.webp',
-  'https://res.cloudinary.com/generatively/vibrance/dotdotdot.webp',
-  'https://res.cloudinary.com/generatively/vibrance/default_from_image.webp',
-]" />
+<ImageGallery>
+  <img src="https://res.cloudinary.com/generatively/vibrance/droplet.webp" />
+  <img src="https://res.cloudinary.com/generatively/vibrance/meteor.webp" />
+  <img src="https://res.cloudinary.com/generatively/vibrance/twin_i.webp" />
+  <img src="https://res.cloudinary.com/generatively/vibrance/twin_ii.webp" />
+  <img src="https://res.cloudinary.com/generatively/vibrance/twin_iii.webp" />
+  <img src="https://res.cloudinary.com/generatively/vibrance/portal.webp" />
+  <img src="https://res.cloudinary.com/generatively/vibrance/wave.webp" />
+  <img src="https://res.cloudinary.com/generatively/vibrance/default.webp" />
+  <img src="https://res.cloudinary.com/generatively/vibrance/zoom.webp" />
+  <img src="https://res.cloudinary.com/generatively/vibrance/net.webp" />
+  <img src="https://res.cloudinary.com/generatively/vibrance/neon.webp" />
+  <img src="https://res.cloudinary.com/generatively/vibrance/rose.webp" />
+  <img src="https://res.cloudinary.com/generatively/vibrance/abstraction.webp" />
+  <img src="https://res.cloudinary.com/generatively/vibrance/dotdotdot.webp" />
+  <img src="https://res.cloudinary.com/generatively/vibrance/default_from_image.webp" />
+</ImageGallery>
 :::

@@ -7,13 +7,13 @@ meta:
 </route>
 
 ::: full-width
-<ImageGallery :images="[
-  'https://res.cloudinary.com/generatively/ethereal-deviations/invictus.webp',
-  'https://res.cloudinary.com/generatively/ethereal-deviations/pax.webp',
-  'https://res.cloudinary.com/generatively/ethereal-deviations/indiges.webp',
-  'https://res.cloudinary.com/generatively/ethereal-deviations/polemos.webp',
-  'https://res.cloudinary.com/generatively/ethereal-deviations/not_fibonacci.webp',
-  'https://res.cloudinary.com/generatively/ethereal-deviations/deer.webp',
-  'https://res.cloudinary.com/generatively/ethereal-deviations/lotus.webp',
-]" />
+<ImageGallery>
+  <img src="https://res.cloudinary.com/generatively/ethereal-deviations/invictus.webp" />
+  <img src="https://res.cloudinary.com/generatively/ethereal-deviations/pax.webp" />
+  <img src="https://res.cloudinary.com/generatively/ethereal-deviations/indiges.webp" />
+  <img src="https://res.cloudinary.com/generatively/ethereal-deviations/polemos.webp" />
+  <img src="https://res.cloudinary.com/generatively/ethereal-deviations/not_fibonacci.webp" />
+  <img src="https://res.cloudinary.com/generatively/ethereal-deviations/deer.webp" />
+  <img src="https://res.cloudinary.com/generatively/ethereal-deviations/lotus.webp" />
+</ImageGallery>
 :::
