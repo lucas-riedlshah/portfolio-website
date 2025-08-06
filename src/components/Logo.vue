@@ -15,7 +15,7 @@ defineProps<{ small?: boolean }>();
 }
 
 .logo--small {
-  font-size: min(1.8rem, 10vw);
+  font-size: min(1.3rem, 10vw);
 }
 
 .logo--small > br {
