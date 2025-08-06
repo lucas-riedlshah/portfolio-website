@@ -30,6 +30,10 @@
 import { onMounted, onUnmounted, reactive, ref, useSlots } from "vue";
 
 const props = defineProps({
+  movement: {
+    type: Function,
+    default: null
+  },
   overlap: {
     type: Boolean,
     default: true
@@ -74,7 +78,8 @@ const getXPosition = (position, simpleMode) => {
   return (-1 - Math.cos(Math.PI * ((2 * position) / 2 + 1))) * 0.5;
 };
 
-const getXYZ = (position, simpleMode = false) => {
+const getXYZ = (position, maxPosition, simpleMode = false) => {
+  if (props.movement) return props.movement(position, maxPosition, simpleMode)
   const x = getXPosition(position, simpleMode) * 50;
   const y = position * 50;
   const z = position * 100;
@@ -82,12 +87,12 @@ const getXYZ = (position, simpleMode = false) => {
 };
 
 const getContainerTransform = () => {
-  const [x, y, z] = getXYZ(state.scrollPosition, state.smallDisplay);
+  const [x, y, z] = getXYZ(state.scrollPosition, getItemCount(), state.smallDisplay);
   return `perspective(100px) translate3d(${-x}vw, ${-y}vh, ${z}px)`;
 };
 
 const getSlideTransform = (index) => {
-  const [x, y, z] = getXYZ(index, true);
+  const [x, y, z] = getXYZ(index, getItemCount(), true);
   return `translate3d(calc(-50% + ${x}vw), calc(-50% + ${y}vh), -${z}px)`;
 };
 
