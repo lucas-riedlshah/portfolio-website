@@ -14,13 +14,31 @@
           transform: getContainerTransform(),
         }"
       >
-        <component
-          v-for="(vnode, index) in $slots.default?.()"
-          :key="index"
-          :is="vnode"
-          :style="{ transform: getSlideTransform(index) }"
-          class="gallery__slide"
-        />
+        <template v-for="(vnode, index) in $slots.default?.()" :key="index">
+          <button
+            v-if="index > 0"
+            :style="{
+              transform: getSlideTransform(index),
+              opacity: fadeNavButtons(index),
+            }"
+            class="gallery__slide-prev-button"
+            @click="scrollToIndex(index - 1)"
+          ><span>←</span></button>
+          <component
+            :is="vnode"
+            :style="{ transform: getSlideTransform(index) }"
+            class="gallery__slide"
+          />
+          <button
+            v-if="index < getItemCount() - 1"
+            :style="{
+              transform: getSlideTransform(index),
+              opacity: fadeNavButtons(index),
+            }"
+            class="gallery__slide-next-button"
+            @click="scrollToIndex(index + 1)"
+          ><span>→</span></button>
+        </template>
       </div>
     </div>
   </div>
@@ -100,6 +118,15 @@ const getItemCount = () => {
   return (slots.default?.() ?? []).length
 }
 
+const fadeNavButtons = (index) => {
+  const t = Math.abs(state.scrollPosition - index) / 0.6;
+  return t > 1 ? 0 : 1 - t;
+}
+
+const scrollToIndex = (index) => {
+  window.scrollTo({ top: sticky.value.offsetParent.offsetTop + index * window.innerHeight * (getItemCount() - 1) / (getItemCount()), behavior: "smooth"})
+}
+
 onMounted(() => {
   updateStickyHeight();
   window.addEventListener("resize", updateStickyHeight);
@@ -142,5 +169,51 @@ onUnmounted(() => {
   max-height: 90vmin;
   border-radius: 4px;
   border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.gallery__slide-next-button,
+.gallery__slide-prev-button {
+  position: absolute;
+  padding: 0;
+  top: 50%;
+  font-size: 1.5em;
+  width: 1.5em;
+  height: 3em;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  border-radius: 1em;
+  border: none;
+  box-shadow: 0 0 5px rgba(var(--color-hover-surface-shadow), 0.5);
+  background-color: rgb(var(--color-surface));
+  color: rgb(var(--color-on-surface));
+}
+
+.gallery__slide-next-button {
+  right: calc(50% - 45vmin - 3em);
+}
+
+.gallery__slide-prev-button {
+  left: calc(50% - 45vmin - 1.5em);
+}
+
+@media (orientation: portrait) {
+  .gallery__slide-next-button,
+  .gallery__slide-prev-button {
+    top: initial;
+    bottom: calc(50% - 45vmin - 4em);
+    width: 5em;
+    height: 2em;
+  }
+
+  .gallery__slide-next-button {
+    right: calc(50% - 8em);
+  }
+
+  .gallery__slide-prev-button {
+    left: calc(50% - 3em);
+  }
 }
 </style>
