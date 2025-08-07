@@ -6,7 +6,7 @@ import MasonryWall from "@yeger/vue-masonry-wall";
 import "./style.css";
 import App from "./App.vue";
 import router from "./router";
-import ImageGallery from "./components/ImageGallery.vue";
+import ImageGallery from "./components/ImageGallery/ImageGallery.vue";
 import ItchIFrame from "./components/ItchIFrame.vue";
 import MarkdownWrapper from "./components/MarkdownWrapper.vue";
 
