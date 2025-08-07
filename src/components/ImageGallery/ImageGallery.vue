@@ -4,7 +4,7 @@
     :style="{
       height: 'calc(' + getItemCount() + ' * 100vh)',
       zIndex: overlap && state.scrollPosition > getItemCount() - 1 ? 1 : 0,
-      marginBottom: '-75vh'
+      marginBottom: '-100vh'
     }"
   >
     <div class="gallery__sticky" ref="sticky">
