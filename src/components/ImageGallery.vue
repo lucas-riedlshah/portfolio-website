@@ -186,9 +186,13 @@ onUnmounted(() => {
   z-index: 1;
   border-radius: 1em;
   border: none;
-  box-shadow: 0 0 5px rgba(var(--color-hover-surface-shadow), 0.5);
-  background-color: rgb(var(--color-surface));
-  color: rgb(var(--color-on-surface));
+  background-color: rgba(var(--color-background), 1);
+  color: rgb(var(--color-primary));
+}
+
+body.dark-mode .gallery__slide-next-button,
+body.dark-mode .gallery__slide-prev-button {
+  color: rgb(var(--color-on-background));
 }
 
 .gallery__slide-next-button {
