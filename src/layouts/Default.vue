@@ -59,7 +59,7 @@ function handleScroll() {
   top: 1rem;
   padding: min(2vw, 1rem) min(4vw, 2rem);
   background-color: rgb(var(--color-background));
-  box-shadow: 0 0 5px rgba(var(--color-hover-surface-shadow), 0.5);
+  box-shadow: 0 0 5px rgba(var(--color-on-background), 0.1);
   border-radius: 30vw;
   margin: 1rem 0 0 1rem;
   /* padding-inline: calc(0.5 * (100% - (clamp(70%, 1100px, 100%) - 3rem))); */
