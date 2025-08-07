@@ -7,9 +7,7 @@ defineProps<{ href?: string; image?: string }>();
     <img
       v-if="image"
       :src="image"
-      alt="View more background"
       class="view-more__bg"
-      draggable="false"
     />
     <a :href="href" class="view-more__button">View More →</a>
   </div>
@@ -41,7 +39,7 @@ defineProps<{ href?: string; image?: string }>();
 
 .view-more__button {
   font-family: Josefin Sans;
-  color: rgb(var(--color-surface));
+  color: rgb(255,255,255);
   text-decoration: none;
   padding: 0.7em 2em;
   font-size: 1.2em;
