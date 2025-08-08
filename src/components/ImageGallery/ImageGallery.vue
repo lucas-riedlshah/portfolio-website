@@ -4,7 +4,7 @@
     :style="{
       height: 'calc(' + getItemCount() + ' * 100vh)',
       zIndex: overlap && state.scrollPosition > getItemCount() - 1 ? 1 : 0,
-      marginBottom: '-100vh'
+      marginBottom: '-75vh'
     }"
   >
     <div class="gallery__sticky" ref="sticky">
@@ -48,10 +48,8 @@
 import { onMounted, onUnmounted, reactive, ref, useSlots } from "vue";
 
 const props = defineProps({
-  movement: {
-    type: Function,
-    default: null
-  },
+  cameraMovement: Function,
+  slidePositionOverride: Function,
   overlap: {
     type: Boolean,
     default: true
@@ -96,8 +94,7 @@ const getXPosition = (position, simpleMode) => {
   return (-1 - Math.cos(Math.PI * ((2 * position) / 2 + 1))) * 0.5;
 };
 
-const getXYZ = (position, maxPosition, simpleMode = false) => {
-  if (props.movement) return props.movement(position, maxPosition, simpleMode)
+const defaultCameraMovement = (position, maxPosition, simpleMode = false) => {
   const x = getXPosition(position, simpleMode) * 50;
   const y = position * 50;
   const z = position * 100;
@@ -105,12 +102,15 @@ const getXYZ = (position, maxPosition, simpleMode = false) => {
 };
 
 const getContainerTransform = () => {
-  const [x, y, z] = getXYZ(state.scrollPosition, getItemCount(), state.smallDisplay);
+  const [x, y, z] = props.cameraMovement?.(state.scrollPosition, getItemCount(), state.smallDisplay) ?? 
+    defaultCameraMovement(state.scrollPosition, getItemCount(), state.smallDisplay);
   return `perspective(100px) translate3d(${-x}vw, ${-y}vh, ${z}px)`;
 };
 
 const getSlideTransform = (index) => {
-  const [x, y, z] = getXYZ(index, getItemCount(), true);
+  const [x, y, z] = props.slidePositionOverride?.(index, getItemCount(), true) ??
+    props.cameraMovement?.(index, getItemCount(), true) ?? 
+    defaultCameraMovement(index, getItemCount(), true);
   return `translate3d(calc(-50% + ${x}vw), calc(-50% + ${y}vh), -${z}px)`;
 };
 
