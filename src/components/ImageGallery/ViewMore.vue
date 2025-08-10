@@ -28,9 +28,8 @@ defineProps<{ href?: string; image?: string }>();
   position: absolute;
   inset: 0;
   width: 100%;
-  height: 100%;
   object-fit: cover;
-  transform: scale(1.1);
+  transform: scale(4);
   filter: blur(5px);
   z-index: 0;
 }
@@ -41,36 +40,18 @@ defineProps<{ href?: string; image?: string }>();
   padding: 0.7em 2em;
   font-size: 1.2em;
   border-radius: 1.3em;
-  border: 1px solid rgba(255,255,255,0.5);
-  box-shadow:
-    inset -3px -6px 5px rgba(255,255,255,0.05),
-    inset -6px -6px 20px rgba(255,255,255,0.18),
-    -6px -6px 20px rgba(0,0,0,0.15),
-    inset 3px 6px 5px rgba(0,0,0,0.05),
-    inset 6px 6px 20px rgba(0,0,0,0.18),
-    6px 6px 20px rgba(255,255,255,0.15);
-  backdrop-filter: saturate(1) blur(20px) opacity(1);
   background-color: rgb(var(--color-background));
-  color: rgb(var(--color-on-background));
+  color: rgb(var(--color-primary));
   position: relative;
   z-index: 1;
   transition: backdrop-filter 0.5s ease-out, padding 0.5s ease-out;
 }
 
 .view-more__button:hover {
-  backdrop-filter: saturate(2) blur(20px) opacity(0.7);
-  padding: 0.65em 2.1em;
+  padding: 0.6em 2.2em;
 }
 
 body.dark-mode .view-more__button {
-  box-shadow: none;
-  background-color: rgb(var(--color-background), 0.2);
-  backdrop-filter: saturate(2) blur(20px) opacity(0.5);
-  text-shadow: 0 0 10px rgba(var(--color-background), 0.5);
-}
-
-body.dark-mode .view-more__button:hover {
-  padding: 0.7em 2em;
-  backdrop-filter: saturate(2) blur(20px) opacity(0.75);
+  color: rgb(var(--color-on-background));
 }
 </style>

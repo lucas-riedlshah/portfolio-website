@@ -103,8 +103,10 @@ const defaultCameraMovement = (position, maxPosition, simpleMode = false) => {
 };
 
 const getContainerTransform = () => {
-  const [x, y, z] = props.cameraMovement?.(state.scrollPosition, getItemCount(), state.smallDisplay) ?? 
-    defaultCameraMovement(state.scrollPosition, getItemCount(), state.smallDisplay);
+  let pos = state.scrollPosition;
+  if (pos < 1) pos = Math.pow(pos, 1.5);
+  const [x, y, z] = props.cameraMovement?.(pos, getItemCount(), state.smallDisplay) ?? 
+    defaultCameraMovement(pos, getItemCount(), state.smallDisplay);
   return `perspective(100px) translate3d(${-x}vw, ${-y}vh, ${z}px)`;
 };
 
