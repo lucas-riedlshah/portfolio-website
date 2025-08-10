@@ -8,6 +8,7 @@ import anchor from 'markdown-it-anchor'
 import container from 'markdown-it-container'
 import mila from 'markdown-it-link-attributes'
 import toc from 'markdown-it-table-of-contents'
+import footnote from 'markdown-it-footnote'
 import scriptInjector from './src/markdown-it-plugins/script-injector'
 import { RouteRecordRaw } from 'vue-router'
 
@@ -36,7 +37,8 @@ export default defineConfig({
             rel: 'noopener'
           }
         }],
-        [toc]
+        [toc],
+        [footnote]
       ],
       markdownItSetup(md) {
         // TODO: Would be nice to parse --- style front matter and turn it into this <route> one.

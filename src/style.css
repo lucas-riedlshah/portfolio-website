@@ -52,7 +52,7 @@
   --color-surface-shadow: var(--color-on-background);
   --color-hover-surface-shadow: var(--color-primary);
   --surface-shadow-intensity: 0;
-  --surface-hover-shadow-intensity: 0.6;
+  --surface-hover-shadow-intensity: 0.4;
   --color-primary: 50, 105, 255;
   --color-on-primary: 255, 255, 255;
   --color-important: 255, 50, 105;
