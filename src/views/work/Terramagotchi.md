@@ -14,7 +14,7 @@ Terramagotchi is a nearist neighbour pixel simulation inspired by the classic [F
 
 There is a QR code displayed in the bottom left, which when scanned will lead you to a "remote" website (powered by Firebase) via which you can add various particle types into the environment. The concept for this remote was that, when the main piece is displayed to an audience, they may all interact with it at once.
 
-![](/src/assets/20221115_184938-EDIT.jpg)  
+![](/static/terramagotchi/20221115_184938-EDIT.jpg)  
 *Photograph of the project running in the intended display. I know the photo quality isn't great... This is the best photo I could find. The browser window isn't even full-screened 😭.*
 
 ## Why is Terramagotchi?
