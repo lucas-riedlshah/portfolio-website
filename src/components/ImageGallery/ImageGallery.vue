@@ -142,7 +142,7 @@ onUnmounted(() => {
 <style scoped>
 .gallery {
   position: relative;
-  /* pointer-events: none; */
+  pointer-events: none;
 }
 
 .gallery__sticky {
@@ -157,6 +157,7 @@ onUnmounted(() => {
   height: 100vh;
   will-change: transform;
   transform-style: preserve-3d;
+  pointer-events: auto;
 }
 </style>
 
