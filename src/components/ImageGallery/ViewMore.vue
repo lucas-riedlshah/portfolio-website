@@ -40,7 +40,7 @@ defineProps<{ href?: string; image?: string }>();
   text-decoration: none;
   padding: 0.7em 2em;
   font-size: 1.2em;
-  border-radius: 9999px;
+  border-radius: 1.3em;
   border: 1px solid rgba(255,255,255,0.5);
   box-shadow:
     inset -3px -6px 5px rgba(255,255,255,0.05),
@@ -54,7 +54,12 @@ defineProps<{ href?: string; image?: string }>();
   color: rgb(var(--color-on-background));
   position: relative;
   z-index: 1;
-  transition: backdrop-filter 0.2s;
+  transition: backdrop-filter 0.5s ease-out, padding 0.5s ease-out;
+}
+
+.view-more__button:hover {
+  backdrop-filter: saturate(2) blur(20px) opacity(0.7);
+  padding: 0.65em 2.1em;
 }
 
 body.dark-mode .view-more__button {
@@ -65,6 +70,7 @@ body.dark-mode .view-more__button {
 }
 
 body.dark-mode .view-more__button:hover {
-  backdrop-filter: saturate(2) blur(20px) opacity(0.7);
+  padding: 0.7em 2em;
+  backdrop-filter: saturate(2) blur(20px) opacity(0.75);
 }
 </style>
