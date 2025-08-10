@@ -28,6 +28,7 @@
             :is="vnode"
             :style="{ transform: getSlideTransform(index) }"
             class="gallery__slide"
+            @click="scrollToIndex(index)"
           />
           <button
             v-if="index < getItemCount() - 1"
@@ -157,7 +158,6 @@ onUnmounted(() => {
   height: 100vh;
   will-change: transform;
   transform-style: preserve-3d;
-  pointer-events: auto;
 }
 </style>
 
@@ -170,6 +170,7 @@ onUnmounted(() => {
   max-height: 90vmin;
   border-radius: 4px;
   border: 1px solid rgba(0, 0, 0, 0.2);
+  pointer-events: auto;
 }
 
 .gallery__slide-next-button,
@@ -189,6 +190,7 @@ onUnmounted(() => {
   border: none;
   background-color: rgba(var(--color-background), 1);
   color: rgb(var(--color-primary));
+  pointer-events: auto;
 }
 
 body.dark-mode .gallery__slide-next-button,
