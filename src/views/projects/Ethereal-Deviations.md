@@ -15,5 +15,11 @@ meta:
   <img src="/static/ethereal-deviations/not_fibonacci.webp" />
   <img src="/static/ethereal-deviations/deer.webp" />
   <img src="/static/ethereal-deviations/lotus.webp" />
+  <img src="/static/ethereal-deviations/1920_Aurora.jpg" />
+  <img src="/static/ethereal-deviations/Crop_Aurora.jpg" />
+  <img src="/static/ethereal-deviations/1920_Autumn.jpg" />
+  <img src="/static/ethereal-deviations/Crop_Autumn.jpg" />
+  <img src="/static/ethereal-deviations/1920_Red.jpg" />
+  <img src="/static/ethereal-deviations/Crop_Red.jpg" />
 </ImageGallery>
 :::
