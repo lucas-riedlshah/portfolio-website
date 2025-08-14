@@ -1,6 +1,6 @@
 <route lang="yaml">
 meta:
-  title: Ethereal Deviations
+  title: After the Butterflies
   date: 2021
   tags: [Creative Coding, JavaScript, p5.js, HTML / CSS, .Vibrance]
   coverImage: /static/ethereal-deviations/invictus.webp

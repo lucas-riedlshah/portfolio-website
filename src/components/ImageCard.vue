@@ -23,7 +23,7 @@ defineProps<{ src?: string, date?: string, pinned?: boolean }>();
 }
 
 .image-card-container:hover {
-  transform: translateY(-0.05rem) scale(1.002);
+  transform: translateY(-0.05rem);
 }
 
 .image-card-container::before {
