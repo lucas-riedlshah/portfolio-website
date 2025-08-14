@@ -1,6 +1,6 @@
 <route lang="yaml">
 meta:
-  title: Vibrance
+  title: Early Sketches
   date: 2019
   tags: [Creative Coding, JavaScript, p5.js, HTML / CSS, .Vibrance]
   coverImage: /static/vibrance/neon.webp

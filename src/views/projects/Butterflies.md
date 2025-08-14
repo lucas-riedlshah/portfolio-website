@@ -1,6 +1,6 @@
 <route lang="yaml">
 meta:
-  title: Ethereal
+  title: Butterflies
   date: 2021
   tags: [Creative Coding, JavaScript, p5.js, HTML / CSS, .Vibrance]
   coverImage: /static/ethereal-butterfly/1920_12k_v2.webp
