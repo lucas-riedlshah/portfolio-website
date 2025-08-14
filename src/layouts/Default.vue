@@ -5,6 +5,7 @@ import LogoVue from '../components/Logo.vue';
 import DarkModeToggle from '../components/DarkModeToggle.vue'
 import smileIconUrl from '../assets/smile.svg';
 import { onMounted, onUnmounted, ref } from 'vue';
+import Home from '../views/Home.vue';
 
 let previousScrollY = Infinity
 let hideTopBar = ref(false);
@@ -45,6 +46,8 @@ function handleScroll() {
     </div>
     <!-- <div class="smile" :style="{ backgroundImage: `url('${smileIconUrl}')` }"></div> -->
   </div>
+  <hr style="opacity: 0.1" />
+  <Home></Home>
 </template>
 
 <style scoped>

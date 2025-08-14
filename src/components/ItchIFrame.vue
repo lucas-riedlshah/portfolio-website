@@ -9,7 +9,7 @@ const checkWidth = () => {
         window.removeEventListener('resize', checkWidth)
         return
     }
-    screenTooSmall.value = window.matchMedia(`(max-width: ${props.width || 960}px)`).matches
+    screenTooSmall.value = window.matchMedia(`(max-width: ${props.width || 1000}px)`).matches
 }
 
 checkWidth()
@@ -53,6 +53,9 @@ iframe {
     justify-self: center;
     width: 960px;
     height: 540px;
+    box-shadow: 0 0 50px rgba(var(--color-surface-shadow), 0.1);
+    border: 1pt solid color-mix(rgb(var(--color-background)), rgb(var(--color-surface-shadow)), 0.1);
+    border-radius: 0.5rem;
 }
 
 .screen-too-small-warn {
