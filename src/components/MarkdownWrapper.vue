@@ -4,7 +4,7 @@ import { useHead } from "@vueuse/head";
 
 const route = useRoute()
 
-useHead({ title: <string>route.meta.title })
+useHead({ title: <string>(route.meta.extendedTitle || route.meta.title) })
 
 function getTags(): string[] {
   return (<string[]>route.meta.tags).filter(tag => !tag.startsWith(".")).sort()
@@ -14,7 +14,7 @@ function getTags(): string[] {
 
 <template>
   <div class="heading">
-    <h1 class="title">{{ $route.meta.title }}</h1>
+    <h1 class="title">{{ $route.meta.extendedTitle || $route.meta.title }}</h1>
     <p class="date">{{ $route.meta.date }}</p>
     <span class="tags">
       <RouterLink v-for="tag in getTags()" :to="{ path: '/', query: { tags: tag } }" class="tags__tag">{{

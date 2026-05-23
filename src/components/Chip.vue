@@ -18,7 +18,7 @@ defineProps<{ selected?: boolean, important?: boolean, chipColor?: string }>()
 <style scoped>
 .chip {
   --chip-color: var(--color-primary);
-  font-size: clamp(1em, 2vw, 1.5rem);
+  font-size: clamp(1em, 1vw, 1rem);
   display: flex;
   align-items: center;
   gap: 0.5em;

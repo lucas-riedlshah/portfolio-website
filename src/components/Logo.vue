@@ -9,7 +9,7 @@ defineProps<{ small?: boolean }>();
 <style scoped>
 .logo {
   font-family: "Bagnard";
-  font-size: min(10rem, 8vw, 12vh);
+  font-size: min(10rem, 6vw, 12vh);
   color: inherit;
   text-decoration: none;
 }

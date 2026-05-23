@@ -7,7 +7,7 @@ import generatedPages from "virtual:generated-pages"
 import ImageCard from '../components/ImageCard.vue';
 import Chip from '../components/Chip.vue'
 
-const MAIN_CATEGORY_TAGS = ['Projects', 'Work']
+const MAIN_CATEGORY_TAGS = ['Creative Coding', 'Game Jam']
 const MEDIUM_TAGS = ['Oil on Canvas', 'Python', 'SQL', 'Flask', 'JavaScript', 'TypeScript', 'p5.js', 'C# / .NET', 'Unity', 'HTML / CSS', 'C', 'Arduino', 'WebGL', 'Rust', 'Vue']
 
 const router = useRouter();
@@ -166,7 +166,7 @@ onBeforeRouteLeave(stopUpdateQueryParams)
 .tags {
   margin-bottom: 1rem;
   display: flex;
-  gap: 1rem;
+  gap: 0.7rem;
   align-items: center;
   flex-wrap: wrap;
 }

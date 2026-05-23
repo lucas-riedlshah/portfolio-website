@@ -30,7 +30,7 @@ useHead({ title: "Lucas RiedlShah", titleTemplate: '%s' })
       <SloganVue class="info__slogan" />
       <SocialsBar class="info__socials">
         <SocialButton :src=githubIconUrl href="https://github.com/lucas-riedlshah/" />
-        <SocialButton :src=instagramIconUrl href="https://www.instagram.com/lucas_riedlshah/" />
+        <SocialButton :src=instagramIconUrl href="https://www.instagram.com/lucasrs.dev/" />
         <SocialButton :src=bskyIconUrl href="https://bsky.app/profile/lucasrs.dev" />
         <!-- <SocialButton>+</SocialButton> -->
       </SocialsBar>
@@ -58,14 +58,14 @@ useHead({ title: "Lucas RiedlShah", titleTemplate: '%s' })
 }
 
 .home__info {
-  padding: min(4rem, 4vw);
+  padding: min(3rem, 3vw);
   padding-bottom: 0;
   grid-area: info;
 }
 
 .home__navigation {
   grid-area: navigation;
-  padding: min(4rem, 4vw);
+  padding: min(3rem, 3vw);
   padding-top: 0;
 }
 
@@ -109,7 +109,7 @@ useHead({ title: "Lucas RiedlShah", titleTemplate: '%s' })
   }
 
   .home__navigation {
-    padding-top: min(4rem, 4vw);
+    padding-top: min(3rem, 3vw);
   }
 
   .home__info {
