@@ -6,7 +6,7 @@ meta:
   coverImage: https://img.itch.zone/aW1nLzEyNzE3MDQ3LnBuZw==/315x250%23c/%2FJMIIk.png
 </route>
 
-<ItchIFrame src="https://html-classic.itch.zone/html/8265597/index.html" itchio-link="https://lucas-riedlshah.itch.io/putt-putt-perfection" width=960 height=540 />
+<ItchIFrame src="https://itch.io/embed-upload/8265597?color=56b500" itchio-link="https://lucas-riedlshah.itch.io/putt-putt-perfection"/>
 
 ## Description
 

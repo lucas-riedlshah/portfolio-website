@@ -6,7 +6,7 @@ meta:
   coverImage: https://img.itch.zone/aW1nLzExMTA5MTIxLnBuZw==/315x250%23c/N%2FLs9a.png
 </route>
 
-<ItchIFrame src="https://html-classic.itch.zone/html/7248833/index.html" itchio-link="https://lucas-riedlshah.itch.io/paper-fire" width=976 height=556 />
+<ItchIFrame src="https://itch.io/embed-upload/7248833?color=1b1512" itchio-link="https://lucas-riedlshah.itch.io/paper-fire" width=976 height=556 />
 
 ## Description
 

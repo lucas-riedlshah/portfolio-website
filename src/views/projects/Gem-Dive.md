@@ -6,7 +6,7 @@ meta:
   coverImage: https://img.itch.zone/aW1nLzE1MzM5NTgzLnBuZw==/315x250%23c/fAEEsc.png
 </route>
 
-<ItchIFrame src="https://html-classic.itch.zone/html/9909186/index.html" itchio-link="https://lucas-riedlshah.itch.io/gem-dive" />
+<ItchIFrame src="https://itch.io/embed-upload/9909186?color=000000" itchio-link="https://lucas-riedlshah.itch.io/gem-dive" />
 
 ## Description
 
