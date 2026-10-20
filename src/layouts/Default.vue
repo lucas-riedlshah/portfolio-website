@@ -46,7 +46,6 @@ function handleScroll() {
     </div>
     <!-- <div class="smile" :style="{ backgroundImage: `url('${smileIconUrl}')` }"></div> -->
   </div>
-  <hr style="opacity: 0.1" />
   <!-- <Home></Home> -->
 </template>
 

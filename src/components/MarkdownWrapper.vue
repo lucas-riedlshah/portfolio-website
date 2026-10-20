@@ -82,6 +82,17 @@ function getTags(): string[] {
   width: 50%;
 }
 
+.markdown-body video {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  margin-block: 20px;
+  border: 1pt solid rgba(var(--color-surface-shadow), 0.1);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 50px rgba(var(--color-surface-shadow), 0.1);
+}
+
 .markdown-body > p:has(img) + p {
   text-align: center;
 }
